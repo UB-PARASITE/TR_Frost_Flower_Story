@@ -245,7 +245,7 @@ async function bootstrapRepository(){
       .map(x=>({name:x.path,url:'https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flower_Story/main/'+x.path}));
     const imgs=files.filter(f=>/\.(png|jpe?g|webp|gif)$/i.test(f.name)).length;
     const auds=files.filter(f=>/\.(ogg|wav|mp3|m4a|mp4)$/i.test(f.name)).length;
-    $('assetNote').textContent=`已自動載入 TR_Frost_Flower_Story 素材索引 ${files.length} 個檔案；之後新增符合 TXT 路徑的圖片與音效，重新整理後即可配對。`;
+    $('assetNote').textContent=`已自動載入 TR_Frost_Flower_Story 素材索引 ${files.length} 個檔案。`;
     if(storyStarted)render();
   }catch(e){
     console.warn('素材索引載入失敗，但劇情仍可正常閱讀：',e);
