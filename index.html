@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101522"><title>FrostFlower1｜互動劇情重現</title>
+<meta name="theme-color" content="#101522"><title>情感群島：霜花冰島的故事</title>
 <style>
 :root{color-scheme:dark;--gold:#e8d09a;--muted:#aab6ca;--panel:rgba(7,11,22,.91);--line:rgba(232,208,154,.4)}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:18px;background:radial-gradient(ellipse at 50% 0,#29334a 0,#111827 52%,#080b12 100%);color:#f0f3fa;font-family:system-ui,"Noto Sans TC","Noto Sans KR",sans-serif}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #ffffff26;background:#1b2438d9;border-radius:10px;padding:9px 13px;transition:.16s}button:hover{border-color:var(--gold);background:#303b53}button:disabled{opacity:.36;cursor:not-allowed}.shell{max-width:1280px;margin:auto}.header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 auto 14px;max-width:1520px}.brand{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f1dfb2,#997c4c);color:#1b2030;font-size:22px}.brand b{letter-spacing:.12em}.brand small{display:block;color:#aeb9cc;font-size:10px;letter-spacing:.13em;margin-top:3px}.head-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.head-actions button{font-size:12px}.chapters{display:flex;gap:7px;overflow:auto;max-width:100%;margin:0 auto 12px;padding:2px 1px 8px}.chapter{min-width:112px;text-align:left;flex:1 0 auto;background:#172137d9;border-color:#ffffff19}.chapter small{display:block;color:var(--gold);font-size:10px;letter-spacing:.15em;margin-bottom:3px}.chapter span{font-size:12px;white-space:nowrap}.chapter.active{border-color:#d8bd82;background:linear-gradient(130deg,#77644577,#202c45)}
@@ -52,9 +52,9 @@
 </aside>
 <main class="story-column">
 <section class="selection-screen" id="selectionScreen" aria-live="polite">
-  <div class="selection-kicker">FROST FLOWER I · STORY SELECT</div>
+  <div class="selection-kicker">霜花冰島．章節選擇</div>
   <h1 id="selectionTitle">請先選擇 Episode</h1>
-  <p id="selectionHint">從左側選擇已開放的 Episode，接著選擇 Chapter 開始閱讀。</p>
+  <p id="selectionHint">從左側選擇已開放的 Episode，然後選擇 Chapter 開始閱讀。</p>
   <div class="selection-mark">✧</div>
 </section>
 <nav class="chapters" id="chapters" hidden aria-label="Chapter 選擇"></nav>
@@ -121,11 +121,11 @@ function updateStartScreen(){
   $('skipBtn').hidden=!storyStarted;
   if(!storyStarted){
     $('selectionTitle').textContent=hasEpisode?`Episode. ${String(selectedEpisode).padStart(2,'0')} · ${EPISODE_OPTIONS.find(x=>x.number===selectedEpisode)?.title||''}`:'請先選擇 Episode';
-    $('selectionHint').textContent=hasEpisode?'請從上方選擇 Chapter；選擇後才會開始播放劇情。':'從左側選擇已開放的 Episode，接著選擇 Chapter 開始閱讀。';
+    $('selectionHint').textContent=hasEpisode?'請從下方選擇 Chapter；選擇後才會開始播放劇情。':'從左側選擇已開放的 Episode，然後選擇 Chapter 開始閱讀。';
   }
 }
 function buildChapterTabs(){let n=$('chapters');n.innerHTML='';chapterTitles.forEach((t,i)=>{let b=document.createElement('button');b.className='chapter'+(storyStarted&&i===chapter?' active':'');b.innerHTML=`<small>CHAPTER 0${i+1}</small><span>${escapeHTML(t)}</span>`;b.onclick=()=>loadChapter(i);n.appendChild(b)})}
-const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天 · 我們',available:false},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
+const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天．我們',available:false},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
 function buildEpisodeList(){const box=$('episodeList');box.innerHTML='';EPISODE_OPTIONS.forEach(ep=>{const b=document.createElement('button');b.type='button';b.className='episode-option'+(ep.number===selectedEpisode?' active':'');b.disabled=!ep.available||!STORY;b.innerHTML=`<span class="episode-number">EPISODE. ${ep.number}</span><span class="episode-name">${escapeHTML(ep.title)}</span>${!ep.available?'<span class="episode-status">尚未開放</span>':(!STORY?'<span class="episode-status">讀取中…</span>':'')}`;if(ep.available)b.onclick=()=>selectEpisode(ep.number);box.appendChild(b)})}
 function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='自動播放：關';buildEpisodeList();buildChapterTabs();updateStartScreen()}
 // Chapter 1 is special: show nodes 1–18 first, then wait for exactly one choice.
