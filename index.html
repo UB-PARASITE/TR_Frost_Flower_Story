@@ -54,7 +54,7 @@
 <section class="selection-screen" id="selectionScreen" aria-live="polite">
   <div class="selection-kicker">霜花冰島．章節選擇</div>
   <h1 id="selectionTitle">請先選擇章節</h1>
-  <p id="selectionHint">從左側選擇已開放的章節，然後選擇其中一話來開始閱讀。</p>
+  <p id="selectionHint">從左側選擇已開放的章節，然後選擇其中一話來開始閱讀。<br>（目前不支援手機模式）</p>
   <div class="selection-mark">✧</div>
 </section>
 <nav class="chapters" id="chapters" hidden aria-label="Chapter 選擇"></nav>
@@ -225,7 +225,7 @@ async function bootstrapRepository(){
     buildEpisodeList();
     buildChapterTabs();
     updateStartScreen();
-    $('selectionHint').textContent='從左側選擇已開放的章節，再選擇其中一話來開始閱讀。<br>（目前不支援手機模式）';
+    $('selectionHint').textContent='從左側選擇已開放的章節，再選擇其中一話來開始閱讀。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
     $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
