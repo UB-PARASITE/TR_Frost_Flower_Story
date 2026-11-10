@@ -229,7 +229,6 @@ async function bootstrapRepository(){
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
     $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
-    $('loadStatus').textContent=e.message;
     return;
   }
 
