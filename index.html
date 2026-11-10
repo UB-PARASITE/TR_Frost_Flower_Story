@@ -91,7 +91,21 @@ function applyMasterVolume(value,save=true){const n=Math.max(0,Math.min(100,Numb
 function initVolume(){let saved=100;try{const v=localStorage.getItem('frostflower1-volume');if(v!==null&&Number.isFinite(Number(v)))saved=Math.max(0,Math.min(100,Number(v)))}catch(e){}applyMasterVolume(saved,false)}
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function htmlText(s){return escapeHTML(s||'').replace(/&lt;br\s*\/?&gt;/gi,'<br>')}
-function fileURL(ref){if(!ref)return '';let path=String(ref).replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();let f=files.find(x=>{let n=(x.webkitRelativePath||x.name).replace(/\\/g,'/').toLowerCase();return n===path||n.endsWith('/'+path)});if(!f){let base=path.split('/').pop();f=files.find(x=>(x.webkitRelativePath||x.name).split('/').pop().toLowerCase()===base)||files.find(x=>(x.name||'').replace(/\.[^.]+$/,'').toLowerCase()===base.replace(/\.[^.]+$/,''))}if(!f)return '';if(f.url)return f.url;let k=f.webkitRelativePath||f.name;if(!urlCache.has(k))urlCache.set(k,URL.createObjectURL(f));return urlCache.get(k)}
+function fileURL(ref){
+  if(!ref)return '';
+  const path=String(ref).replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();
+  const norm=p=>String(p||'').replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();
+  let f=files.find(x=>{const n=norm(x.webkitRelativePath||x.name);return n===path||n.endsWith('/'+path)});
+  if(!f){
+    const base=path.split('/').pop().replace(/\.[^.]+$/,'');
+    f=files.find(x=>norm(x.webkitRelativePath||x.name).split('/').pop().replace(/\.[^.]+$/,'')===base);
+  }
+  if(!f)return '';
+  if(f.url)return f.url;
+  const k=f.webkitRelativePath||f.name;
+  if(!urlCache.has(k))urlCache.set(k,URL.createObjectURL(f));
+  return urlCache.get(k);
+}
 function node(){let key=route[position];return {key,data:STORY.script[chapter][key]||{}}}
 function stopAuto(){clearTimeout(autoTimer);autoTimer=null}
 function toast(msg){let e=$('toast');e.textContent=msg;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2000)}
@@ -113,7 +127,7 @@ function updateStartScreen(){
 function buildChapterTabs(){let n=$('chapters');n.innerHTML='';chapterTitles.forEach((t,i)=>{let b=document.createElement('button');b.className='chapter'+(storyStarted&&i===chapter?' active':'');b.innerHTML=`<small>CHAPTER 0${i+1}</small><span>${escapeHTML(t)}</span>`;b.onclick=()=>loadChapter(i);n.appendChild(b)})}
 const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天 · 我們',available:false},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
 function buildEpisodeList(){const box=$('episodeList');box.innerHTML='';EPISODE_OPTIONS.forEach(ep=>{const b=document.createElement('button');b.type='button';b.className='episode-option'+(ep.number===selectedEpisode?' active':'');b.disabled=!ep.available;b.innerHTML=`<span class="episode-number">EPISODE. ${ep.number}</span><span class="episode-name">${escapeHTML(ep.title)}</span>${ep.available?'':'<span class="episode-status">尚未開放</span>'}`;if(ep.available)b.onclick=()=>selectEpisode(ep.number);box.appendChild(b)})}
-function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='自動播放：關';buildEpisodeList();buildChapterTabs();updateStartScreen()}
+function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='自動播放：關';buildEpisodeList();buildChapterTabs();updateStartScreen()}
 // Chapter 1 is special: show nodes 1–18 first, then wait for exactly one choice.
 function initialRoute(){let keys=chapterKeys(0);let pivot=keys.indexOf('18');return keys.slice(0,pivot+1)}
 // Explicit graph: prefix -> selected 18-N-* branch -> mainline node 19 onward.
@@ -192,27 +206,58 @@ function loadAssets(list){for(let u of urlCache.values())URL.revokeObjectURL(u);
 $('assetsBtn').onclick=()=>openModal('assetsModal');$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('soundBtn').onclick=toggleSound;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('folderInput').onchange=e=>loadAssets(e.target.files);$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>closeModal(m.id));return}if(document.querySelector('.modal.open'))return;if(!storyStarted)return;if(e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft')previous();else if(e.key.toLowerCase()==='a')toggleAuto();else if(e.key.toLowerCase()==='s')skipChapter()});
 async function bootstrapRepository(){
-  const status=$('assetNote');
+  // Render the Episode menu immediately; it must not wait for the GitHub asset API.
+  buildEpisodeList();
+  initVolume();
+  updateStartScreen();
+  $('selectionHint').textContent='正在讀取 Episode 劇情資料…';
+
+  // Load the story independently of the optional asset index.
   try{
-    const storyResponse=await fetch('./script_frostflower1.txt',{cache:'no-store'});
-    if(!storyResponse.ok)throw new Error(`讀取 script_frostflower1.txt 失敗（HTTP ${storyResponse.status}）`);
-    const storyText=(await storyResponse.text()).replace(/^\uFEFF/,'');
-    STORY=JSON.parse(storyText);chapterTitles=String(STORY.chapter_title||'').split('@');
-    if(!Array.isArray(STORY.script)||!chapterTitles.length)throw new Error('TXT 格式不符合預期');
-    const treeResponse=await fetch('https://api.github.com/repos/UB-PARASITE/TR_Frost_Flower_Story_Player/git/trees/main?recursive=1',{cache:'no-store'});
-    if(!treeResponse.ok)throw new Error(`讀取 Repository 素材清單失敗（HTTP ${treeResponse.status}）`);
-    const tree=await treeResponse.json();
-    const allowed=/\.(png|jpe?g|webp|gif|ogg|wav|mp3|m4a|mp4)$/i;
-    files=(tree.tree||[]).filter(x=>x.type==='blob'&&allowed.test(x.path)).map(x=>({name:x.path,url:'https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flower_Story_Player/main/'+x.path}));
-    const imgs=files.filter(f=>/\\.(png|jpe?g|webp|gif)$/i.test(f.name)).length;
-    const auds=files.length-imgs;
-    $('loadStatus').textContent=`已自動掃描專案根目錄：${files.length} 個素材檔（圖片 ${imgs}、音訊／影片 ${auds}）。`;
-    $('assetNote').textContent=`已自動載入 Repository 素材索引 ${files.length} 個檔案；之後新增符合 TXT 路徑的圖片與音效即可自動匹配。`;
-    buildEpisodeList();initVolume();updateStartScreen();
+    const storyUrl=new URL('./script_frostflower1.txt',window.location.href);
+    const storyResponse=await fetch(storyUrl.href,{cache:'no-store'});
+    if(!storyResponse.ok)throw new Error(\`讀取 script_frostflower1.txt 失敗（HTTP \${storyResponse.status}）\`);
+    const storyText=(await storyResponse.text()).replace(/^\uFEFF/,'').trim();
+    const parsed=JSON.parse(storyText);
+    if(!Array.isArray(parsed.script)||!parsed.chapter_title)throw new Error('TXT 格式不符合預期');
+    STORY=parsed;
+    chapterTitles=String(STORY.chapter_title).split('@').filter(Boolean);
+    if(!chapterTitles.length)throw new Error('找不到 Chapter 名稱');
+    buildEpisodeList();
+    buildChapterTabs();
+    updateStartScreen();
+    $('selectionHint').textContent='從左側選擇 Episode. 1，再選擇 Chapter 開始閱讀。';
   }catch(e){
-    console.error(e);$('selectionHint').textContent='無法自動載入劇情或素材。請確認 GitHub Pages 已部署，且 Repository 中包含 script_frostflower1.txt。';
-    $('loadStatus').textContent=e.message;buildEpisodeList();initVolume();updateStartScreen();
+    console.error('Story TXT 載入失敗：',e);
+    $('selectionHint').textContent=\`劇情資料載入失敗：\${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。\`;
+    $('loadStatus').textContent=e.message;
+    return;
+  }
+
+  // Asset indexing is optional. A GitHub API/rate-limit error must never block Episode/Chapter selection.
+  try{
+    const treeUrl='https://api.github.com/repos/UB-PARASITE/TR_Frost_Flower_Story/git/trees/main?recursive=1';
+    const treeResponse=await fetch(treeUrl,{cache:'no-store'});
+    if(!treeResponse.ok)throw new Error(\`讀取素材清單失敗（HTTP \${treeResponse.status}）\`);
+    const tree=await treeResponse.json();
+    if(!Array.isArray(tree.tree))throw new Error('GitHub 回傳的素材清單格式不正確');
+    const allowed=/\.(png|jpe?g|webp|gif|ogg|wav|mp3|m4a|mp4)$/i;
+    files=tree.tree
+      .filter(x=>x.type==='blob'&&allowed.test(x.path))
+      .map(x=>({name:x.path,url:'https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flower_Story/main/'+x.path}));
+    const imgs=files.filter(f=>/\.(png|jpe?g|webp|gif)$/i.test(f.name)).length;
+    const auds=files.filter(f=>/\.(ogg|wav|mp3|m4a|mp4)$/i.test(f.name)).length;
+    $('loadStatus').textContent=\`已自動掃描專案：\${files.length} 個素材檔（圖片 \${imgs}、音訊／影片 \${auds}）。\`;
+    $('assetNote').textContent=\`已自動載入 TR_Frost_Flower_Story 素材索引 \${files.length} 個檔案；之後新增符合 TXT 路徑的圖片與音效，重新整理後即可配對。\`;
+    if(storyStarted)render();
+  }catch(e){
+    console.warn('素材索引載入失敗，但劇情仍可正常閱讀：',e);
+    $('loadStatus').textContent=\`劇情已載入；素材索引暫時不可用：\${e.message}\`;
+    $('assetNote').textContent='劇情已載入。自動素材索引暫時不可用，仍可閱讀文字；請稍後重新整理或使用本機素材匯入。';
   }
 }
+buildEpisodeList();
+initVolume();
+updateStartScreen();
 bootstrapRepository();
 </script></body></html>
