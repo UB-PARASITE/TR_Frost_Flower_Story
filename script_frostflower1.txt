@@ -3502,7 +3502,7 @@
     {
       "1": {
         "name": "BLANK",
-        "text": "우리 셀리아는.<br>잘 지내고 있니?",
+        "text": "我們的小賽莉亞。<BR>現在過得怎麼樣了？",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "bgm": "sound\\bgm\\wishstone_GoodOrEvil.ogg",
         "ImgList":{
@@ -3514,7 +3514,7 @@
       },
       "2": {
         "name": "BLANK",
-        "text": "보고 싶어졌다고, 안부 좀 전해주겠어?"
+        "text": "真的好久沒見了啊，能代我問候她嗎？"
       },
       "3": {
         "name": "賽莉亞",
@@ -3529,11 +3529,11 @@
       },
       "4": {
         "name": "賽莉亞",
-        "text": ".........그러니까, 네가 누군데 대체."
+        "text": ".........所以，那個人到底是誰。"
       },
       "5": {
         "name": "賽莉亞",
-        "text": "보고 싶으면 직접 내 앞에 나타나든가.",
+        "text": "如果想來見我，那就來吧。",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3544,7 +3544,7 @@
       },
       "6": {
         "name": "賽莉亞",
-        "text": "(...영상석을 복원하고,<br>그 얼굴을 아무리 들여다봐도 기억나지 않아.)",
+        "text": "(...雖然修復了映像石，<BR>但不管看著那張臉多少次，也無法想起。)",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"cut_005", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3554,7 +3554,7 @@
       },
       "7": {
         "name": "賽莉亞",
-        "text": "...........그렇지만, 저 로브....<br>설마...",
+        "text": "............但是，那件長袍...<BR>不會吧...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"cut_019", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3568,7 +3568,7 @@
       },
       "9": {
         "name": "賽莉亞",
-        "text": ".......윽... 머리가 깨질 것만 같군.",
+        "text": "......呃... 頭都快爆炸了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_damaged_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3578,15 +3578,15 @@
       },
       "10": {
         "name": "賽莉亞",
-        "text": "(홍엽도에 다녀온 뒤,<br>이 검은 로브에 대해서만 떠올리면 머리가 새하얘져.)"
+        "text": "(從紅葉島回來後，<BR>每次想起這件黑袍，腦海就一片空白。)"
       },
       "11": {
         "name": "賽莉亞",
-        "text": "(블랭크라는 자가 나타난 이후로 더 심해졌어.)"
+        "text": "(BLANK出現之後就變得更嚴重了。)"
       },
       "12": {
-        "name": "지지몬",
-        "text": "...빠... 빠아....",
+        "name": "晶晶怪",
+        "text": "...爸... 爸爸...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"zizimon", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3596,19 +3596,19 @@
       },
       "13": {
         "name": "賽莉亞",
-        "text": "(파세트 마법학교에서, 아직 블랭크의 그림자에<br>영향을 받고 있는 지지몬을 데려왔다.)"
+        "text": "(在巴薩特魔法學院，我捕捉到<BR>仍然受BLANK的陰暗之影所影響的晶晶怪。)"
       },
       "14": {
         "name": "賽莉亞",
-        "text": "(명령에 복종하는 것뿐이라면<br>세뇌라고 생각했을 거야.)"
+        "text": "(單純服從命令這一點，<BR>我會判斷為是洗腦。)"
       },
       "15": {
         "name": "賽莉亞",
-        "text": "(하지만 이 지지몬은...<br>블랭크가 사라진 뒤에도<br>그를 아빠로 여기며 찾고 있어.)"
+        "text": "(但這隻晶晶怪...<BR>就算BLANK消失了，<BR>還是會尋找並把他當成爸爸。)"
       },
       "16": {
         "name": "賽莉亞",
-        "text": "(두려워하는 것도, 억지로 따르는 것도 아니야.)",
+        "text": "(這不是出於恐懼，也沒有做出違心之事。)",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3618,11 +3618,11 @@
       },
       "17": {
         "name": "賽莉亞",
-        "text": "(마치... 블랭크가 없는 곳에선<br>살아갈 수 없다는 것처럼...)"
+        "text": "(就像是... 沒有BLANK<BR>就無法生存下去...)"
       },
       "18": {
         "name": "賽莉亞",
-        "text": "..........그래서, 알아낸 게 대체 뭐지?",
+        "text": ".........到底，我們找到了甚麼？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3632,11 +3632,11 @@
       },
       "19": {
         "name": "賽莉亞",
-        "text": "검은 씨앗도.... 어둠의 추종자도, 블랭크도...<br>여전히 실마리 하나 잡지 못했어."
+        "text": "黑暗種子... 黑暗追隨者、BLANK...<BR>至今還一無所獲。"
       },
       "20": {
         "name": "賽莉亞",
-        "text": "두 번 다시 같은 비극을 반복하지 않겠다고<br>모두의 앞에서 자신 있게 말했는데.",
+        "text": "我自信地當著所有人面前說，<BR>我不會讓同樣的悲劇再次發生。",
         "background": "gui3/2026_PreWinter/StoryContents/bg007.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3647,7 +3647,7 @@
       },
       "21": {
         "name": "賽莉亞",
-        "text": "강한 척, 아무렇지 않은 척.<br>그런데 정작 나는 중요한 기억조차 잊어버렸어.",
+        "text": "故作堅強，假裝甚麼都沒有發生。<BR>但是卻連一些重要的記憶都失去了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3657,17 +3657,17 @@
       },
       "22": {
         "name": "賽莉亞",
-        "text": "난 대체 뭘 할 수 있지?<br>이번엔 정말 누군가를 구할 수 있어?"
+        "text": "我能做到甚麼？<BR>我這次會成功嗎？"
       },
       "23": {
         "name": "賽莉亞",
-        "text": "──옛날 일을 반복하지 않을 자신,<br>있어?",
+        "text": "──不會重蹈覆轍的信心，<BR>我有嗎？",
         "background": "gui3/2026_PreWinter/StoryContents/bg008.png",
         "sound": "sound\\wishstone_past.wav"
       },
       "24": {
         "name": "賽莉亞",
-        "text": ".....핫...!!",
+        "text": "......啊...！！",
         "background": "gui3/2026_PreWinter/StoryContents/bg007.png",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
@@ -3679,7 +3679,7 @@
       },
       "25": {
         "name": "賽莉亞",
-        "text": "내가 지금....... 무슨.......",
+        "text": "我在想...... 甚麼......",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3689,7 +3689,7 @@
       },
       "26": {
         "name": "賽莉亞",
-        "text": "아니, 방금 그건....<br>정말 내 생각이었나?",
+        "text": "不對，剛才......<BR>是我的真實想法嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3699,7 +3699,7 @@
       },
       "27": {
         "name": "賽莉亞",
-        "text": "(....그림자를 보고 있으면,<br>생각이 자꾸 좋지 않은 쪽으로 흘러.)",
+        "text": "(......看著陰暗之影的時候，<BR>思緒總是向著消極的方向。)",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying3_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3709,11 +3709,11 @@
       },
       "28": {
         "name": "賽莉亞",
-        "text": "(두통 때문인 건가? 아니면...........)"
+        "text": "(是因為頭痛嗎？<BR>還是............)"
       },
       "29": {
         "name": "賽莉亞",
-        "text": "...지지몬은 돌려주도록 해야겠네.",
+        "text": "...得把晶晶怪放生了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3723,11 +3723,11 @@
       },
       "30": {
         "name": "賽莉亞",
-        "text": "실마리는... 이것만 있는 게 아니니까."
+        "text": "線索... 不是只有這個。"
       },
       "31": {
         "name": "微笑伊林斯",
-        "text": "내 개인적인 연구다만.<br>무브먼트에 대한 분석이 어느 정도 끝났어.",
+        "text": "雖然這只是我個人的研究。<BR>但對機芯的分析基本上已經完成。",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3738,11 +3738,11 @@
       },
       "32": {
         "name": "微笑伊林斯",
-        "text": "시간의 흐름을 건드릴 수 있는 아주 유용한 장치지.<br>그렇지만, 그 내부 구성 요소에 포함되어 있는 건..."
+        "text": "能夠操控時間的流逝，確實是非常便利的道具。<BR>不過，裡面的成分包括..."
       },
       "33": {
         "name": "微笑伊林斯",
-        "text": "'검은 씨앗'. '어둠'. 그리고 '그림자'.<br>크크크, 시꺼먼 것들이 아주 많이 검출되더군.",
+        "text": "「黑暗種子」。「黑暗」。還有「陰暗之影」。<BR>顆顆顆，觀測到很多黑漆漆的東西呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3752,7 +3752,7 @@
       },
       "34": {
         "name": "微笑伊林斯",
-        "text": "죄다 셀리아, 네 녀석이 관심 있어 하는 거 아닌가?<br>관련 자료는 보내줄 테니... 대충 훑어봐."
+        "text": "賽莉亞，你不是對這些有興趣嗎？<BR>待會把資料傳給你。快速瀏覽一下。"
       },
       "35": {
         "name": "賽莉亞",
@@ -3768,27 +3768,27 @@
       },
       "36": {
         "name": "賽莉亞",
-        "text": "....무브먼트......<br>...................."
+        "text": "...機芯......<BR>...................."
       },
       "37": {
-        "text": "쨘쨔쟈쟌!!!!!!",
+        "text": "鏘鏘鏘鏘！",
         "background": "gui3/2026_PreWinter/StoryContents/bg013.png",
         "sound": "sound\\wishstone_tada2.wav"
       },
       "38": {
         "name": "斯奧萊爾",
-        "text": "........배는?",
+        "text": "........飛空艇怎麼了？",
         "bgm": "sound\\bgm\\wishstone_Happy.ogg",
         "ImgList":{
-          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
-          "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_upset_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
           "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
         }
       },
       "39": {
         "name": "微笑伊林斯",
-        "text": "눈앞에 있잖습니까.",
+        "text": "在你眼前的就是。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3798,7 +3798,7 @@
       },
       "40": {
         "name": "斯奧萊爾",
-        "text": "...이 배, 예전에 썼던 배 아닌가?<br>감정의 제도에 처음 올 때도 탔던 것 같은데.",
+        "text": "...這飛空艇，不是你們之前坐的那艘嗎？<BR>第一次去情感群島的時候那艘。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3808,7 +3808,7 @@
       },
       "41": {
         "name": "微笑伊林斯",
-        "text": "기억력도 좋으셔라.<br>그 이후에 꽤 오래 방치되어 있어서, 많이 망가졌거든요.",
+        "text": "記性真好。<BR>只不過在那之後放置了很久，損壞得很嚴重。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3818,11 +3818,11 @@
       },
       "42": {
         "name": "微笑伊林斯",
-        "text": "이래 봬도 안전성 테스트는 몇 차례나 했으니까<br>침몰할 걱정은 마시고."
+        "text": "不管你信不信，它已經進行過多次安全測試，<BR>完全不用擔心會墜落。"
       },
       "43": {
         "name": "斯奧萊爾",
-        "text": "하. 가성비 좋은 여정이로군.",
+        "text": "哈。那真是物超所值。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3832,7 +3832,7 @@
       },
       "44": {
         "name": "席德",
-        "text": "내 생각보다 아주..... 아담하네.",
+        "text": "這比想像中... 小得多。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3842,7 +3842,7 @@
       },
       "45": {
         "name": "席德",
-        "text": "내가 보낸 금액이면 <br>배를 새로 사고도 남았을 텐데.",
+        "text": "我出的錢足夠造艘新的，<br>甚至還有剩下的呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3852,7 +3852,7 @@
       },
       "46": {
         "name": "微笑伊林斯",
-        "text": "호화 여객선을 타고 갈 건 아니잖습니까.<br>조용히 입항하기에 딱 좋은 사이즈라고 해두죠.",
+        "text": "不會是打算造艘豪華飛空艇吧。<br>現在的大小就很適合鬼鬼崇崇地入境。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3862,7 +3862,7 @@
       },
       "47": {
         "name": "斯奧萊爾",
-        "text": "남는 돈은.",
+        "text": "還有剩錢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3872,7 +3872,7 @@
       },
       "48": {
         "name": "微笑伊林斯",
-        "text": "기술자의 정당한 인건비입니다.",
+        "text": "那是技術人員的合理工錢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3882,7 +3882,7 @@
       },
       "49": {
         "name": "斯奧萊爾",
-        "text": "이 정도는 횡령인데.",
+        "text": "那是挪用公款。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3892,7 +3892,7 @@
       },
       "50": {
         "name": "微笑伊林斯",
-        "text": "투자금의 효율적 재분배입니다.",
+        "text": "那是合理的資金再分配。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3902,7 +3902,7 @@
       },
       "51": {
         "name": "席德",
-        "text": "후후, 난 마음에 드는데?<br>이런 소박한 배를 탄 여행, 꼭 한 번 해보고 싶었거든.",
+        "text": "呵呵，那倒是不錯啊？<BR>乘坐簡陋的小型飛空艇出航，我一直都想試試看呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3912,7 +3912,7 @@
       },
       "52": {
         "name": "斯奧萊爾",
-        "text": "이런 걸로 마음에 들어 하지 마.",
+        "text": "算了，別因為這種事生氣了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3922,7 +3922,7 @@
       },
       "53": {
         "name": "斯奧萊爾",
-        "text": "...그런데, 시그문드.<br>넌 왜 자연스럽게 이 배에 탑승할 것처럼 말하는 거지?",
+        "text": "...話說，席格蒙德。<BR>怎麼聽起來很理所當然地要登上飛空艇了？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3932,7 +3932,7 @@
       },
       "54": {
         "name": "席德",
-        "text": "? 탈 거니까.",
+        "text": "？我當然要坐。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3942,7 +3942,7 @@
       },
       "55": {
         "name": "斯奧萊爾",
-        "text": "누가 허락했지?",
+        "text": "誰批准的？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3952,7 +3952,7 @@
       },
       "56": {
         "name": "席德",
-        "text": "시오넬 왕자의 허락이 왜 필요해?<br>내 돈으로 수리한 배잖아?",
+        "text": "難道我還要得到斯奧萊爾王子的批准嗎？<BR>這艘飛空艇明明是我花錢修好的耶？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3962,11 +3962,11 @@
       },
       "57": {
         "name": "席德",
-        "text": "게다가 우회할 항로와 입항 수속은 내가 해준다고 했잖아.<br>나 없이 갈 수 있어?"
+        "text": "而且我說過會負責規劃繞道航線和辦理入境手續。<BR>你們自己能行嗎？"
       },
       "58": {
         "name": "席德",
-        "text": ".........투자처에 대한 현장실사도 필요하고.",
+        "text": ".........而且對投資項目進行實地考察也是必需的呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3976,7 +3976,7 @@
       },
       "59": {
         "name": "斯奧萊爾",
-        "text": "그게 목적이로군.",
+        "text": "這就是你的目的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3986,7 +3986,7 @@
       },
       "60": {
         "name": "微笑伊林斯",
-        "text": "뭐, 비즈니스 관계는 확실히 해 둬야 하니까요.",
+        "text": "，我們需要確保清晰的業務關係呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3996,7 +3996,7 @@
       },
       "61": {
         "name": "斯奧萊爾",
-        "text": "....알아서 해.<br>짐만 되지 않았으면 좋겠군.",
+        "text": "嘛......隨便你吧。<BR>只希望別拖我的後腿。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4006,7 +4006,7 @@
       },
       "62": {
         "name": "席德",
-        "text": "....잠깐. 그럼 우리 세 명만 가는 거야?",
+        "text": "...等下。所以我們只有三個人出發嗎？",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4017,7 +4017,7 @@
       },
       "63": {
         "name": "席德",
-        "text": "아하하, 생각 이상으로 하드코어 한 여행이네.",
+        "text": "啊哈哈，看來這趟旅程比想像中還要刺激呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4027,7 +4027,7 @@
       },
       "64": {
         "name": "斯奧萊爾",
-        "text": "뭐가 문제지? 더 필요한 게 있나?",
+        "text": "有問題嗎？還需要誰？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_laugh_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4037,7 +4037,7 @@
       },
       "65": {
         "name": "微笑伊林斯",
-        "text": "...문제야 많죠.",
+        "text": "...確實有很多問題。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4047,7 +4047,7 @@
       },
       "66": {
         "name": "微笑伊林斯",
-        "text": "그럴 일이 없는 게 가장 좋겠지만...<br>만약 교전 상황이 일어나면 어떡한답니까?",
+        "text": "雖然希望最好別發生...<BR>但萬一有敵人出沒，那該怎麼辦？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4057,7 +4057,7 @@
       },
       "67": {
         "name": "席德",
-        "text": "음... 난 일단 선두에서 싸우는 건 자신 없어.",
+        "text": "嗯... 我對衝鋒陷陣可沒甚麼信心呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4067,7 +4067,7 @@
       },
       "68": {
         "name": "微笑伊林斯",
-        "text": "저도 학자라 못 싸우는데요.",
+        "text": "那更別指望作為學者的我了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4077,7 +4077,7 @@
       },
       "69": {
         "name": "斯奧萊爾",
-        "text": "내가 있는데 뭐가 문제지?",
+        "text": "有我在，還怕甚麼？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4087,7 +4087,7 @@
       },
       "70": {
         "name": "微笑伊林斯",
-        "text": "....당신은 환자라고 했잖아.<br>심장 터져 죽고 싶습니까?",
+        "text": "...我說過了，你是病人。<BR>想讓心臟爆裂而死嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4097,7 +4097,7 @@
       },
       "71": {
         "name": "斯奧萊爾",
-        "text": ".................그럼 네가 싸우든가.",
+        "text": "..................那你就給我去戰鬥啊。",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4108,7 +4108,7 @@
       },
       "72": {
         "name": "微笑伊林斯",
-        "text": "그냥 죽으라고 고사를 지내십쇼.",
+        "text": "那會要了我的老命。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4118,7 +4118,7 @@
       },
       "73": {
         "name": "席德",
-        "text": "...? 둘이 싸웠어?",
+        "text": "...？你們吵架了嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_embarrassed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4128,7 +4128,7 @@
       },
       "74": {
         "name": "微笑伊林斯 & 斯奧萊爾",
-        "text": "아뇨?<br>아니.",
+        "text": "吵架？沒有。",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4139,7 +4139,7 @@
       },
       "75": {
         "name": "席德",
-        "text": "(.......출항 전부터 큰일이네...)",
+        "text": "(......還沒出航就有大麻煩...)",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4150,7 +4150,7 @@
       },
       "76": {
         "name": "???",
-        "text": "거기.<br>재미있어 보이는데. 나도 좀 끼워주겠어?",
+        "text": "那邊的。<BR>聽起來很有趣啊，我可以加入嗎？",
         "background": "gui3/2026_PreWinter/StoryContents/bg006.png",
         "bgm": "off",
         "ImgList":{
@@ -4162,7 +4162,7 @@
       },
       "77": {
         "name": "???",
-        "text": "너희들의 문제라면...<br>내가 해결해 줄 수 있을 것 같으니까 말이야."
+        "text": "需要戰鬥人員的話...<BR>我應該能解決這個問題。"
       },
       "78": {
         "name": "斯奧萊爾",
@@ -4176,7 +4176,7 @@
       },
       "79": {
         "name": "微笑伊林斯",
-        "text": "...? 이거....<br>교관 나으리 아니신가.",
+        "text": "...？哎呀。<BR>這可不是教官大人嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4186,7 +4186,7 @@
       },
       "80": {
         "name": "賽莉亞",
-        "text": "하하. 다들 내 존재를 잊은 거야?",
+        "text": "哈哈。大家都忘了我在嗎？",
         "bgm": "sound\\bgm\\dimension_lobby.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4197,11 +4197,11 @@
       },
       "81": {
         "name": "賽莉亞",
-        "text": "차원관리국에서의 훈련이 부족했나 봐?<br>전투라면 자신 있는데 말이지."
+        "text": "在次元管理局訓練的還不足夠應付嗎？<BR>那就由我的戰鬥能力補足吧。"
       },
       "82": {
         "name": "微笑伊林斯",
-        "text": "흐음? 그렇군.<br>제법 괜찮은 전투 요원이 있었구만.",
+        "text": "哼嗯。確實。<BR>這裡有個非常不錯的戰鬥人員。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4211,7 +4211,7 @@
       },
       "83": {
         "name": "席德",
-        "text": "셀리아라면 믿고 맡길 수 있지.",
+        "text": "賽莉亞的話應該就能信任。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4221,7 +4221,7 @@
       },
       "84": {
         "name": "賽莉亞",
-        "text": "물론, 내 디멘션 플래닛 스피어는 꽤 날카롭거든.",
+        "text": "沒錯，我的次元星球矛可是非常鋒利的哦。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4231,7 +4231,7 @@
       },
       "85": {
         "name": "賽莉亞",
-        "text": "뭐, 시오넬 왕자가 싫다면...<br>어쩔 수 없는 거지만.",
+        "text": "嘛，如果斯奧萊爾王子不喜歡的話...<BR>那就沒辦法了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4241,7 +4241,7 @@
       },
       "86": {
         "name": "微笑伊林斯",
-        "text": "왕자님이야 쌍수 들고 환영해야 하는 거 아닌가?<br>병약 왕자님에게 교관이 협력한다는데.",
+        "text": "王子不是應該會舉雙手贊成嗎？<BR>畢竟教官大人可是會好好照顧體弱多病的王子的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling2_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"el_mask_question", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4251,7 +4251,7 @@
       },
       "87": {
         "name": "賽莉亞",
-        "text": "음, 왕자님은 날 별로 마음에 들어 하지 않는 거 아니었어?<br>까칠하게 굴길래 그런 줄 알았는데.",
+        "text": "嗯，不過看起來我被王子討厭了。<BR>每次對著我的時候，看起來都很暴躁。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4261,7 +4261,7 @@
       },
       "88": {
         "name": "斯奧萊爾",
-        "text": "...? 딱히 그런 감정은 없다만.",
+        "text": "...？倒也沒有那麼討厭。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4271,7 +4271,7 @@
       },
       "89": {
         "name": "微笑伊林斯",
-        "text": "왕자는 그냥 모두에게 까칠한 거야.",
+        "text": "王子對所有人都很暴躁的呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"ce_crying_2_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4281,7 +4281,7 @@
       },
       "90": {
         "name": "席德",
-        "text": "참고로 나한테도 까칠했어.",
+        "text": "順帶一提，他對我也是一樣的喔。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"ce_crying_2_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4291,7 +4291,7 @@
       },
       "91": {
         "name": "賽莉亞",
-        "text": "아~ 원래 그런 성격?",
+        "text": "啊～是天生的嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"ce_smiling2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4311,7 +4311,7 @@
       },
       "93": {
         "name": "斯奧萊爾",
-        "text": "...내 성격에 대해 왈가왈부하는 건 그만두고.<br>묻지 않을 수가 없겠군.",
+        "text": "...別再吐槽我的性格了。<BR>我有問題要問。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_closed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4321,7 +4321,7 @@
       },
       "94": {
         "name": "斯奧萊爾",
-        "text": "...........셀리아.<br>동행의 목적은?",
+        "text": "............賽莉亞。<BR>你要參加遠征的原因是甚麼？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4341,7 +4341,7 @@
       },
       "96": {
         "name": "斯奧萊爾",
-        "text": "목적 없이 여정에 굳이 동행할 이유는 없다.",
+        "text": "參加這場遠征對你來說應該沒有意義。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4351,11 +4351,11 @@
       },
       "97": {
         "name": "斯奧萊爾",
-        "text": "위험이 따르는 전투 담당까지 자처해가면서 말이지."
+        "text": "還要自願負責危險的戰鬥任務。"
       },
       "98": {
         "name": "微笑伊林斯",
-        "text": "...........크크크.",
+        "text": "............顆顆顆。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4365,7 +4365,7 @@
       },
       "99": {
         "name": "賽莉亞",
-        "text": "......왕자님 눈은 못 속이겠네.",
+        "text": "......真是瞞不過王子的雙眼呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling5_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4375,7 +4375,7 @@
       },
       "100": {
         "name": "賽莉亞",
-        "text": "맞아. 내가 관심 있는 건.... '무브먼트'.",
+        "text": "沒錯。我真正有興趣的是... 「機芯」。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4385,7 +4385,7 @@
       },
       "101": {
         "name": "賽莉亞",
-        "text": "엘림스에게 전해 들었거든.<br>그 무브먼트에.... 검은 씨앗과 어둠, 그림자가<br>검출됐다면서?",
+        "text": "我是從伊林斯那裡聽說的。<BR>在機芯裡面... 是說觀測到<BR>黑暗種子、黑暗，還有陰暗之影對吧？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"cut_018", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4395,11 +4395,11 @@
       },
       "102": {
         "name": "賽莉亞",
-        "text": "어둠의 추종자들을 쫓고 있는 내가<br>그냥 지나칠 수는 없지."
+        "text": "作為黑暗追隨者的追擊者，<BR>我可不能袖手旁觀。"
       },
       "103": {
         "name": "微笑伊林斯",
-        "text": "우린 무브먼트를 기동시킬<br>동력원을 만나러 가는 것뿐이야.",
+        "text": "我們只是打算尋找動力源，<BR>發動那個機芯而已。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4409,11 +4409,11 @@
       },
       "104": {
         "name": "微笑伊林斯",
-        "text": "네 목적과는 어울리지 않을 수도 있어.<br>딱히 검은 씨앗이나, 어둠의 추종자를<br>조사하러 가는 게 아니라고."
+        "text": "那大概跟你的目的有些不同。<BR>畢竟我們不是要去那裡<BR>調查黑暗種子啊，黑暗追隨者啊之類的。"
       },
       "105": {
         "name": "微笑伊林斯",
-        "text": "요컨대..... 헛걸음해도, 난 몰라?",
+        "text": "總而言之......<BR>那大概會讓你白走一趟，後悔了我可不負責喔？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4423,7 +4423,7 @@
       },
       "106": {
         "name": "賽莉亞",
-        "text": "답지 않게 친절히 알려줘서 고맙지만,<br>감안하고 동행하는 거야.",
+        "text": "心地這麼好，真不像平常的你啊，<BR>但我出發的時候會牢記這一點的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_embarrassed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4433,7 +4433,7 @@
       },
       "107": {
         "name": "賽莉亞",
-        "text": "지금은 지푸라기라도 잡고 싶은 심정이거든.",
+        "text": "畢竟這就像是抓住了救命稻草一樣。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4443,7 +4443,7 @@
       },
       "108": {
         "name": "賽莉亞",
-        "text": "(.....이 그림자를 쫓다 보면,<br>블랭크에게 닿을 수 있을지도 모르고.)",
+        "text": "(...只要追擊陰暗之影，<BR>說不定就能接近BLANK了。)",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_crying3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4453,7 +4453,7 @@
       },
       "109": {
         "name": "席德",
-        "text": ".......난 찬성.",
+        "text": "......我同意了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4463,7 +4463,7 @@
       },
       "110": {
         "name": "斯奧萊爾",
-        "text": "네가 뭔데 찬성이지?",
+        "text": "你憑甚麼同意？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4473,7 +4473,7 @@
       },
       "111": {
         "name": "席德",
-        "text": "전투 담당이 없다기에, 개인 용병이라도 고용할까 했거든.<br>위험한 건 싫어서.",
+        "text": "你們說沒有戰鬥人員，我都打算雇傭兵了。<BR>我可不想客死異鄉呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4483,11 +4483,11 @@
       },
       "112": {
         "name": "席德",
-        "text": "이 작은 선박에 수십 명의 용병을 어떻게 태울까...<br>고민을 했는데..."
+        "text": "我在想要怎麼把幾十名傭兵塞進這艘小型飛空艇...<BR>但怎麼想都不像是塞得下..."
       },
       "113": {
         "name": "席德",
-        "text": "뭐, 수십 명의 용병보다 셀리아가 훨씬 든든하기도 하고.",
+        "text": "嘛，賽莉亞一個人就能抵幾十名傭兵了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4497,7 +4497,7 @@
       },
       "114": {
         "name": "賽莉亞",
-        "text": "후후, 과찬이네.",
+        "text": "呵呵，謝謝你的謬讚。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4507,7 +4507,7 @@
       },
       "115": {
         "name": "微笑伊林斯",
-        "text": "....나도 일단은 찬성이다.<br>교전 상황에 대한 위험이 있을 때를 대비해야 해.",
+        "text": "...目前我還是贊成的。<BR>畢竟必須做好戰鬥的準備。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4517,7 +4517,7 @@
       },
       "116": {
         "name": "微笑伊林斯",
-        "text": "무브먼트를 조사하게 해주는 대신<br>전투를 맡긴다면, 나쁠 것 없는 거래지.<br>아닙니까, 왕자님?",
+        "text": "用機芯的研究權來換取<BR>遭遇戰鬥時的安全，聽起來也挺划算。<BR>王子，你說是吧？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4527,7 +4527,7 @@
       },
       "117": {
         "name": "斯奧萊爾",
-        "text": "...그런 이유라면 나 역시 거절할 이유가 없다.<br>동행을 허락한다.",
+        "text": "...這樣的話，我也沒有拒絕的理由。<BR>我允許你同行。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4537,7 +4537,7 @@
       },
       "118": {
         "name": "斯奧萊爾",
-        "text": "..............그렇지만, 교전히 필요한 상황이라면<br>나도 싸우겠다. 병풍처럼 서있고 싶진 않아.",
+        "text": "...............話說在前頭，如果戰鬥不能避免的話，<BR>那我也會戰鬥。我可不打算當個花瓶。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4547,7 +4547,7 @@
       },
       "119": {
         "name": "微笑伊林斯",
-        "text": "하아... 또 각혈을 해봐야 정신을 차리지.",
+        "text": "哈啊... 要是再咳血就會一睡不起了呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4557,7 +4557,7 @@
       },
       "120": {
         "name": "賽莉亞",
-        "text": "뭐, 주치의도 동행하는데 괜찮겠지.",
+        "text": "嘛，主治醫生也在的話應該沒問題的吧。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry3_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4567,7 +4567,7 @@
       },
       "121": {
         "name": "賽莉亞",
-        "text": "나도 시오넬 왕자와 협력해서 싸워보고 싶었거든.",
+        "text": "我還很期待跟斯奧萊爾王子並肩作戰呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4577,7 +4577,7 @@
       },
       "122": {
         "name": "賽莉亞",
-        "text": "사관학교 출신이라 하지 않았어?<br>교관인 나랑 제법 합이 좋을 것 같은데.",
+        "text": "不是說是軍校出身的嗎？<BR>那應該跟我這個教官相性很好才對。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4597,7 +4597,7 @@
       },
       "124": {
         "name": "微笑伊林斯",
-        "text": "하아. 싸움꾼이 두 배로 늘었군.",
+        "text": "哈啊。戰鬥狂翻倍了呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4607,7 +4607,7 @@
       },
       "125": {
         "name": "賽莉亞",
-        "text": "넌 조용히 하고.",
+        "text": "閉嘴。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4617,7 +4617,7 @@
       },
       "126": {
         "name": "席德",
-        "text": "자, 자. 어느 정도 동행인은 정리된 것 같네.",
+        "text": "好了，好了。看來我們的旅行團滿人了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -4627,11 +4627,11 @@
       },
       "127": {
         "name": "席德",
-        "text": "그럼... 필요한 짐들만 적재하면 되겠어."
+        "text": "那麼... 接下來只要把必要的行李打包就行了。"
       },
       "128": {
         "name": "微笑伊林斯",
-        "text": "뭐, 더 이상 잴 것 없죠.<br>슬슬 준비해 볼까요?",
+        "text": "嘛，沒甚麼好取捨的。<BR>快點開始準備吧？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4641,7 +4641,7 @@
       },
       "129": {
         "name": "斯奧萊爾",
-        "text": "......짐 들어.",
+        "text": "......幫我搬行李。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4651,7 +4651,7 @@
       },
       "130": {
         "name": "微笑伊林斯",
-        "text": "네에, 네.",
+        "text": "是，是。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -4661,7 +4661,7 @@
       },
       "131": {
         "name": "賽莉亞",
-        "text": ".............후훗.",
+        "text": "............呵呵。",
         "bgm": "off",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4684,7 +4684,7 @@
       },
       "133": {
         "name": "賽莉亞",
-        "text": "............................윽..",
+        "text": "...........................啊...",
         "background": "gui3/2026_PreWinter/StoryContents/bg006.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"ce_damaged_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -4695,7 +4695,7 @@
       },
       "134": {
         "name": "賽莉亞",
-        "text": "(.......이번엔, 반드시 실마리를 찾아야 해.)"
+        "text": "(......這一次，必須抓住線索。)"
       }
     },
     {
