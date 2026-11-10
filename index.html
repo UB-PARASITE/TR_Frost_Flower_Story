@@ -225,7 +225,7 @@ async function bootstrapRepository(){
     buildEpisodeList();
     buildChapterTabs();
     updateStartScreen();
-    $('selectionHint').textContent='從左側選擇Episode. 1，再選擇其中一話來開始閱讀。';
+    $('selectionHint').textContent='從左側選擇已開放的章節，再選擇其中一話來開始閱讀。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
     $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
