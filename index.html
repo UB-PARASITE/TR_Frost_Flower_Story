@@ -216,7 +216,7 @@ async function bootstrapRepository(){
   try{
     const storyUrl=new URL('./script_frostflower1.txt',window.location.href);
     const storyResponse=await fetch(storyUrl.href,{cache:'no-store'});
-    if(!storyResponse.ok)throw new Error(\`讀取 script_frostflower1.txt 失敗（HTTP \${storyResponse.status}）\`);
+    if(!storyResponse.ok)throw new Error(`讀取 script_frostflower1.txt 失敗（HTTP ${storyResponse.status}）`);
     const storyText=(await storyResponse.text()).replace(/^\uFEFF/,'').trim();
     const parsed=JSON.parse(storyText);
     if(!Array.isArray(parsed.script)||!parsed.chapter_title)throw new Error('TXT 格式不符合預期');
@@ -229,7 +229,7 @@ async function bootstrapRepository(){
     $('selectionHint').textContent='從左側選擇 Episode. 1，再選擇 Chapter 開始閱讀。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
-    $('selectionHint').textContent=\`劇情資料載入失敗：\${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。\`;
+    $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
     $('loadStatus').textContent=e.message;
     return;
   }
@@ -238,7 +238,7 @@ async function bootstrapRepository(){
   try{
     const treeUrl='https://api.github.com/repos/UB-PARASITE/TR_Frost_Flower_Story/git/trees/main?recursive=1';
     const treeResponse=await fetch(treeUrl,{cache:'no-store'});
-    if(!treeResponse.ok)throw new Error(\`讀取素材清單失敗（HTTP \${treeResponse.status}）\`);
+    if(!treeResponse.ok)throw new Error(`讀取素材清單失敗（HTTP ${treeResponse.status}）`);
     const tree=await treeResponse.json();
     if(!Array.isArray(tree.tree))throw new Error('GitHub 回傳的素材清單格式不正確');
     const allowed=/\.(png|jpe?g|webp|gif|ogg|wav|mp3|m4a|mp4)$/i;
@@ -247,12 +247,12 @@ async function bootstrapRepository(){
       .map(x=>({name:x.path,url:'https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flower_Story/main/'+x.path}));
     const imgs=files.filter(f=>/\.(png|jpe?g|webp|gif)$/i.test(f.name)).length;
     const auds=files.filter(f=>/\.(ogg|wav|mp3|m4a|mp4)$/i.test(f.name)).length;
-    $('loadStatus').textContent=\`已自動掃描專案：\${files.length} 個素材檔（圖片 \${imgs}、音訊／影片 \${auds}）。\`;
-    $('assetNote').textContent=\`已自動載入 TR_Frost_Flower_Story 素材索引 \${files.length} 個檔案；之後新增符合 TXT 路徑的圖片與音效，重新整理後即可配對。\`;
+    $('loadStatus').textContent=`已自動掃描專案：${files.length} 個素材檔（圖片 ${imgs}、音訊／影片 ${auds}）。`;
+    $('assetNote').textContent=`已自動載入 TR_Frost_Flower_Story 素材索引 ${files.length} 個檔案；之後新增符合 TXT 路徑的圖片與音效，重新整理後即可配對。`;
     if(storyStarted)render();
   }catch(e){
     console.warn('素材索引載入失敗，但劇情仍可正常閱讀：',e);
-    $('loadStatus').textContent=\`劇情已載入；素材索引暫時不可用：\${e.message}\`;
+    $('loadStatus').textContent=`劇情已載入；素材索引暫時不可用：${e.message}`;
     $('assetNote').textContent='劇情已載入。自動素材索引暫時不可用，仍可閱讀文字；請稍後重新整理或使用本機素材匯入。';
   }
 }
