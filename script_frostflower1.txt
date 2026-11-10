@@ -2386,7 +2386,7 @@
     {
       "1": {
         "name": "斯奧萊爾",
-        "text": "(.....더워.)",
+        "text": "(......好熱。)",
         "background": "gui3/2026_PreWinter/StoryContents/bg004.png",
         "bgm": "sound\\bgm\\training_invitation_to_albarad.ogg",
         "ImgList":{
@@ -2398,11 +2398,11 @@
       },
       "2": {
         "name": "斯奧萊爾",
-        "text": "(....게다가 시끄러워.<br>적당히 끝내고 돌아가고 싶군.)"
+        "text": "(...而且好吵。儘快搞定就回去吧。)"
       },
       "3": {
         "name": "席德",
-        "text": "오, 시오넬 왕자!",
+        "text": "喔，斯奧萊爾王子！",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2412,7 +2412,7 @@
       },
       "4": {
         "name": "席德",
-        "text": "후후, 좀 놀랐어.<br>의외의 사람이 찾아온다고 해서.",
+        "text": "呵呵，真是稀客。<BR>居然有位意想不到的客人要來拜訪。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2422,7 +2422,7 @@
       },
       "5": {
         "name": "斯奧萊爾",
-        "text": "...시그문드 오시아스.",
+        "text": "...席格蒙德．奧西亞斯。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2432,11 +2432,11 @@
       },
       "6": {
         "name": "斯奧萊爾",
-        "text": "협력을 요청하러 왔습니다."
+        "text": "我今天是來談一筆交易的。"
       },
       "7": {
         "name": "席德",
-        "text": "...협력?",
+        "text": "...交易嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_question", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2446,7 +2446,7 @@
       },
       "8": {
         "name": "席德",
-        "text": "아. 불편하게 격식 차리지 말고.<br>말 편하게 해. 같은 왕자끼리.",
+        "text": "啊，不用那麼拘謹也可以喔。<BR>我們都是王子嘛，可以更輕鬆地說。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2456,7 +2456,7 @@
       },
       "9": {
         "name": "斯奧萊爾",
-        "text": "...........공적인 일로 요청하러 온 것이니,<br>굳이 편하게 굴고 싶진 않다만.",
+        "text": "............我這次來是不是為了私事，<br>所以不想太隨便。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2466,7 +2466,7 @@
       },
       "10": {
         "name": "斯奧萊爾",
-        "text": "시그문드 왕자, 당신이 동화나라의<br>후원자라고 하기에 찾아온 것입니다.",
+        "text": "席格蒙德王子，我這次前來<br>是聽說你是童話王國的金主。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2476,7 +2476,7 @@
       },
       "11": {
         "name": "斯奧萊爾",
-        "text": "(...귀족 놈들은 아직도 내 서찰을 무시하고 있다.<br>이대로 왕실의 답변만 기다렸다간<br>그 녀석을 만나기도 전에 시간만 허비하겠지.)",
+        "text": "(...那些混蛋貴族們還在對我的親筆信視而不見。<BR>就這樣慢慢等皇室的來信的話，<BR>見到那個人之前，時間就白白浪費了。)",
         "image": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_closed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2487,12 +2487,12 @@
       },
       "12": {
         "name": "斯奧萊爾",
-        "text": "(동화나라에서 공식 원정을 준비하면<br>그 움직임도 귀족 회의에 고스란히 알려진다.<br>또 같잖은 절차를 들이밀며 방해할 게 뻔해.)",
+        "text": "(如果以童話王國的名義發起遠征，<BR>動向就要完整地向貴族議會通報。<BR>很明顯那些混蛋又會用麻煩的程序來阻攔。)",
         "image": "keep"
       },
       "13": {
         "name": "斯奧萊爾",
-        "text": "(그렇다면 방법은 하나.<br>왕실과 무관한 배를 이용해 개인적으로 접근한다.)",
+        "text": "(那就剩下唯一一個辦法了。<BR>乘坐跟皇室無關的私人飛空艇出發。)",
         "image": "keep",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2503,7 +2503,7 @@
       },
       "14": {
         "name": "斯奧萊爾",
-        "text": "시그문드 오시아스.<br>감정의 제도까지 이동할 배 한 척이 필요합니다.",
+        "text": "席格蒙德．奧西亞斯。<BR>我需要一艘前往情感群島的飛空艇。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2513,7 +2513,7 @@
       },
       "15": {
         "name": "斯奧萊爾",
-        "text": "최대한 빠른 시일 내에,<br>곧바로 준비를.",
+        "text": "馬上開始準備，<BR>越快越好。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2534,7 +2534,7 @@
       },
       "17": {
         "name": "席德",
-        "text": ".......................싫은데?",
+        "text": "........................如果我說不要呢？",
         "sound": "sound\\wishstone_unrest.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2545,7 +2545,7 @@
       },
       "18": {
         "name": "斯奧萊爾",
-        "text": "......뭐?",
+        "text": "......啊？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2555,7 +2555,7 @@
       },
       "19": {
         "name": "席德",
-        "text": "아아. 뭐.. 도움이 필요한 건 알겠는데....",
+        "text": "啊啊。嗯... 我知道你想找幫手...",
         "bgm": "sound\\bgm\\training_invitation_to_albarad.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2566,7 +2566,7 @@
       },
       "20": {
         "name": "席德",
-        "text": "내가 그걸 왜 들어줘야 해?",
+        "text": "但為甚麼我非得幫忙不可？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2576,7 +2576,7 @@
       },
       "21": {
         "name": "斯奧萊爾",
-        "text": "...무슨 헛소리지?<br>분명 동화나라의 후원자라고 들었는데.",
+        "text": "...在說甚麼？<BR>我明明聽說你是童話王國的金主。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2586,7 +2586,7 @@
       },
       "22": {
         "name": "席德",
-        "text": "응. 맞아. 후원자야.",
+        "text": "嗯。是啊。我確實是金主。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2596,7 +2596,7 @@
       },
       "23": {
         "name": "席德",
-        "text": "근데 내가 후원하는 건 동화나라의 런너들이지...",
+        "text": "但我贊助的可是來自童話王國的跑者...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling3", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2606,7 +2606,7 @@
       },
       "24": {
         "name": "席德",
-        "text": "감정의 제도에서 가출한 왕자님이 아닌데?"
+        "text": "而不是情感群島的落難王子喔？"
       },
       "25": {
         "name": "斯奧萊爾",
@@ -2620,7 +2620,7 @@
       },
       "26": {
         "name": "斯奧萊爾",
-        "text": "어이.",
+        "text": "喂。",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling3_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2631,7 +2631,7 @@
       },
       "27": {
         "name": "席德",
-        "text": "푸훗. 이제야 원래 말투가 나오네.",
+        "text": "哈哈。終於能好好地說話了呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2641,7 +2641,7 @@
       },
       "28": {
         "name": "席德",
-        "text": "생각해 봐. 난 자선사업가가 아니라고.<br>다른 나라 왕자가 배를 달라고 해서 대령해 줄 이유는 없잖아.",
+        "text": "仔細想想。我可不是甚麼慈善家。<BR>沒理由只因為別國王子的要求而提供船隻喔。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2651,7 +2651,7 @@
       },
       "29": {
         "name": "斯奧萊爾",
-        "text": "...하. 그래서.<br>다른 나라 왕자의 면전에 무례를 범하는 건<br>옳은 일이라는 건가?",
+        "text": "...哈。所以。<BR>在別國王子的面前出言不遜<BR>就很正確了嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2661,7 +2661,7 @@
       },
       "30": {
         "name": "席德",
-        "text": "저런.. 왕자가 되기 싫어한다고 들었는데.",
+        "text": "這樣啊...<BR>我也明明聽說某人不想當王子呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2671,11 +2671,11 @@
       },
       "31": {
         "name": "席德",
-        "text": "왕자에게 주어지는 대접은 받고 싶나 봐?"
+        "text": "現在又突然想被當成是王子了嗎？"
       },
       "32": {
         "name": "斯奧萊爾",
-        "text": "..........말 가려서 해.",
+        "text": ".........給我注意你的言辭。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2685,7 +2685,7 @@
       },
       "33": {
         "name": "席德",
-        "text": "아하하, 농담이야. ",
+        "text": "啊哈哈，開個玩笑而已。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2695,7 +2695,7 @@
       },
       "34": {
         "name": "斯奧萊爾",
-        "text": "뭘 원하는 거지?",
+        "text": "你想要甚麼？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2705,7 +2705,7 @@
       },
       "35": {
         "name": "席德",
-        "text": "그건 시오넬 왕자가 제시해야지.",
+        "text": "那要看斯奧萊爾王子能給出甚麼了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2715,7 +2715,7 @@
       },
       "36": {
         "name": "席德",
-        "text": "나도 뭔가 구미가 당기는 게 있어야<br>거래가 성립되는 거니까."
+        "text": "我也需要一些能打動我的東西，<BR>這筆交易才能談下去呢。"
       },
       "37": {
         "name": "斯奧萊爾",
@@ -2740,7 +2740,7 @@
       },
       "39": {
         "name": "斯奧萊爾",
-        "text": "........헤엄쳐서 가겠다.",
+        "text": ".........我游泳過去算了。",
         "sound": "sound\\wishstone_effect2.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2750,7 +2750,7 @@
         }
       },
       "40": {
-        "text": "쾅!!!",
+        "text": "碰！！！",
         "sound": "sound\\wishstone_KickDoor.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2760,7 +2760,7 @@
         }
       },
       "41": {
-        "text": "시오넬은 오시아스 왕궁 문이 부서질 듯이<BR>세게 닫고 나가버렸다."
+        "text": "斯奧萊爾像是要破壞奧西亞斯王宮的大門一樣，<BR>然後憤怒地摔門而去。"
       },
       "42": {
         "name": "席德",
@@ -2774,7 +2774,7 @@
       },
       "43": {
         "name": "席德",
-        "text": "푸핫.... 아하하하하!!",
+        "text": "噗哈... 啊哈哈哈哈！！",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_laugh_3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2784,7 +2784,7 @@
       },
       "44": {
         "name": "席德",
-        "text": "뭐야. 진짜 웃긴 사람이네.",
+        "text": "甚麼啊。真是個有趣的男人。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2793,7 +2793,7 @@
         }
       },
       "45": {
-        "text": "잠시 후...",
+        "text": "稍後時間...",
         "image": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2804,7 +2804,7 @@
       },
       "46": {
         "name": "微笑伊林斯",
-        "text": "...........그래서.<br>아무것도 못 얻어내고, 빈손으로 오셨다 이겁니까?",
+        "text": "............所以。<BR>你甚麼都沒談成，氣呼呼地空手回來嗎？",
         "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
         "bgm": "sound\\bgm\\wishstone_Happy.ogg",
         "ImgList":{
@@ -2816,7 +2816,7 @@
       },
       "47": {
         "name": "斯奧萊爾",
-        "text": "그 자와는 협상의 가치가 없었다.",
+        "text": "跟那種傢伙交涉根本一點意義都沒有。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2826,7 +2826,7 @@
       },
       "48": {
         "name": "斯奧萊爾",
-        "text": "엘림스 스마일. <br>해로로 갈 수 있는 다른 방법을 고안해.",
+        "text": "微笑．伊林斯。<br>快給我想另一種渡海的方法。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2836,7 +2836,7 @@
       },
       "49": {
         "name": "微笑伊林斯",
-        "text": "아. 뭐. 수영복이라도 만들어드려요?",
+        "text": "哦。好啊。幫你做件比堅尼怎麼樣？",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2847,7 +2847,7 @@
       },
       "50": {
         "name": "斯奧萊爾",
-        "text": "하. 그러는 너는.",
+        "text": "哈。還有你這傢伙。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2857,11 +2857,11 @@
       },
       "51": {
         "name": "斯奧萊爾",
-        "text": "내 심장 출력을 제한할 거니 뭐니<br>헛소리를 지껄여놓고<br>무슨 낯으로 다시 돌아온 거지?"
+        "text": "之前不是還說甚麼<br>要限制我心輸出量之類的廢話，<br>怎麼還有臉回來？"
       },
       "52": {
         "name": "微笑伊林斯",
-        "text": "웃기는 소리 하지 마십쇼.<br>누가 사과하러 온 줄 아십니까?",
+        "text": "別笑死人了。<br>你以為我是來道歉的嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2871,7 +2871,7 @@
       },
       "53": {
         "name": "微笑伊林斯",
-        "text": "왕자님이 죽으면 장례라도 치러드리려고요.<br>...여차하면 진짜 출력 제한 시킬 거니까<br>그렇게 아시고.",
+        "text": "如果王子要駕崩的話，總要有人幫忙辦葬禮。<BR>...情況到那個地步之前我真的會嚴格控制心輸出量，<BR>給我記住這一點。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2881,7 +2881,7 @@
       },
       "54": {
         "name": "斯奧萊爾",
-        "text": "그렇게 말하면 고마워할 줄 아나?<br>나 혼자 알아서 할 수 있으니 꺼져.",
+        "text": "那我是不是應該要感激涕零？<BR>我自己想辦法，滾開。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2891,7 +2891,7 @@
       },
       "55": {
         "name": "微笑伊林斯",
-        "text": "퍽이나 알아서 하고 있군요.<br>기분이나 상해서 감정의 제도까지 헤엄쳐서 가시겠다는 분이.",
+        "text": "那你自己慢慢想吧。<BR>都不知道是誰腦子一熱就說自己要游到情感群島去呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -2901,7 +2901,7 @@
       },
       "56": {
         "name": "斯奧萊爾",
-        "text": "흥.",
+        "text": "哼。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2911,7 +2911,7 @@
       },
       "57": {
         "name": "微笑伊林斯",
-        "text": "하아. 들으세요, 왕자님.<br>제가 볼 때, 시그문드 왕자가 틀린 말 한 거 하나도 없습니다.",
+        "text": "哈啊。王子，給我聽好了。<BR>依我看，席格蒙德王子可沒說錯。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2921,7 +2921,7 @@
       },
       "58": {
         "name": "微笑伊林斯",
-        "text": "아시겠어요? 협상은 불도저가 아닙니다.<br>밀당이라고요.",
+        "text": "你知道嗎？談判不是要咄咄逼人。<BR>而是一場拉鋸戰。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2931,11 +2931,11 @@
       },
       "59": {
         "name": "微笑伊林斯",
-        "text": "시그문드 왕자랑 언제 봤다고<br>그렇게 막무가내로 떼를 쓰십니까?"
+        "text": "你有看過席格蒙德王子<BR>像你這樣固執己見，還亂發脾氣嗎？"
       },
       "60": {
         "name": "斯奧萊爾",
-        "text": "떼쓰지 않았다.",
+        "text": "我沒亂發脾氣。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_closed_3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2945,7 +2945,7 @@
       },
       "61": {
         "name": "微笑伊林斯",
-        "text": "다짜고짜 배 내놓으라고 하면 잘도 주겠군요.",
+        "text": "那我突然開口想要你的船，你也甚麼都不問就給我好了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2955,7 +2955,7 @@
       },
       "62": {
         "name": "微笑伊林斯",
-        "text": "...뭐, 이해는 합니다만.<br>전투광 왕자님께선 거래나 협상에<br>유독 약했으니까요.",
+        "text": "...嘛，也不是不能理解的。<BR>畢竟戰鬥狂王子可不擅長<BR>謀略和談判嘛。",
         "bgm": "off",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_closed2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -2966,7 +2966,7 @@
       },
       "63": {
         "name": "微笑伊林斯",
-        "text": "이건 제가 알아서 할 테니....<br>왕자님은 제~발 아무 말도 하지 말고<br>뒤에서 고개만 끄덕이시길.",
+        "text": "我還是親自走一趟吧...<BR>那就請王子一～句話都別說，<BR>在我身後點點頭就行了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2985,7 +2985,7 @@
         }
       },
       "65": {
-        "text": "다음 날, 오시아스.",
+        "text": "第二天，奧西亞斯。",
         "image": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2996,7 +2996,7 @@
       },
       "66": {
         "name": "席德",
-        "text": "오~ 다시 왔네?<br>이번엔 엘림스까지?",
+        "text": "唷～你又來啦？<br>這次連伊林斯也來了喔？",
         "background": "gui3/2026_PreWinter/StoryContents/bg004.png",
         "bgm": "sound\\bgm\\training_invitation_to_albarad.ogg",
         "ImgList":{
@@ -3008,7 +3008,7 @@
       },
       "67": {
         "name": "微笑伊林斯",
-        "text": "크크크, 오랜만이군요. 시그문드 왕자님.<br>지난번엔 시오넬 왕자님이 결례를 범했다고 들었는데요.",
+        "text": "顆顆顆。好久沒見了。席格蒙德王子。<BR>聽說斯奧萊爾王子上次似乎失言了呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3018,7 +3018,7 @@
       },
       "68": {
         "name": "斯奧萊爾",
-        "text": "...................하.",
+        "text": "..................哈。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3028,7 +3028,7 @@
       },
       "69": {
         "name": "席德",
-        "text": "아냐, 결례는 무슨.<br>식사 대접이라도 했어야 했는데,<br>그냥 가버려서 말이야.",
+        "text": "沒有啦，沒甚麼失禮的。<BR>倒是上次我本來想留他吃飯的，<BR>結果他卻匆匆離開了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3048,7 +3048,7 @@
       },
       "71": {
         "name": "微笑伊林斯",
-        "text": "뭐, 비즈니스 매너도 좋습니다만...<br>시드 왕자님이 궁금한 건 본론이겠죠?",
+        "text": "嘛，商務上的禮儀固然重要...<BR>席德王子，我想您真正想要的東西才是重點吧？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3058,7 +3058,7 @@
       },
       "72": {
         "name": "微笑伊林斯",
-        "text": "들으셨다시피, 저희는 감정의 제도까지 운항할 배가 필요합니다.<br>이왕이면 비밀스러운 경로로 말이죠.",
+        "text": "正如您所知道的，我們需要一艘前往情感群島的飛空艇。<BR>最好是經由一條秘密航線的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3068,7 +3068,7 @@
       },
       "73": {
         "name": "席德",
-        "text": "그래서?",
+        "text": "所以呢？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3078,7 +3078,7 @@
       },
       "74": {
         "name": "斯奧萊爾",
-        "text": "...돈이 필요한가? 얼마면 되지?",
+        "text": "...是要錢嗎？你要多少？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3088,7 +3088,7 @@
       },
       "75": {
         "name": "席德",
-        "text": "돈은 됐어. 나 돈 많아.",
+        "text": "我不要錢。錢我倒是有很多。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3098,7 +3098,7 @@
       },
       "76": {
         "name": "微笑伊林斯",
-        "text": "흐음. 돈은 많으시다.<br>그럼 이건 어떻습니까?",
+        "text": "哼嗯。是有錢人呢。<BR>那這個怎麼樣？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3108,11 +3108,11 @@
       },
       "77": {
         "name": "微笑伊林斯",
-        "text": "왕자님께선 오시아스의 모래뱀 상단주라 들었습니다만."
+        "text": "聽說王子是奧西亞斯沙蛇商會的會長。"
       },
       "78": {
         "name": "微笑伊林斯",
-        "text": "추후 이번 일이 정리되면,<br>기쁨의 왕국과 오시아스의 무역 항로를 열어주는 건?",
+        "text": "這件事解決之後，<BR>順便開拓喜悅王國和奧西亞斯之間的貿易路線怎麼樣？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3122,7 +3122,7 @@
       },
       "79": {
         "name": "斯奧萊爾",
-        "text": "뭣.....",
+        "text": "甚麼......",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3132,7 +3132,7 @@
       },
       "80": {
         "name": "席德",
-        "text": "...........흐응?",
+        "text": "...........嗯哼？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3142,7 +3142,7 @@
       },
       "81": {
         "name": "斯奧萊爾",
-        "text": "어이, 엘림스 스마일.<br>네가 뭔데.....",
+        "text": "喂，微笑．伊林斯。<BR>你以為你是誰...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3152,7 +3152,7 @@
       },
       "82": {
         "name": "微笑伊林斯",
-        "text": "가만히 있어 보세요, 좀.",
+        "text": "別說話，等等。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3162,7 +3162,7 @@
       },
       "83": {
         "name": "微笑伊林斯",
-        "text": "이 분은 기쁨의 왕국의 제1왕자님이시고....<br>여정의 목적은 기쁨의 왕국의 공주를 구하는 일입니다.",
+        "text": "這位可是喜悅王國的大王子...<BR>此行的目的是營救喜悅王國的公主。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3172,7 +3172,7 @@
       },
       "84": {
         "name": "微笑伊林斯",
-        "text": "오시아스에 아주 유리한 방향으로<br>무역계약이 성사될 수 있을 것 같은데.",
+        "text": "就這樣看，這個交易達成的話，<BR>對奧西亞斯來說可說是非常有利的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3182,7 +3182,7 @@
       },
       "85": {
         "name": "席德",
-        "text": "흐음~ 그건 제법...",
+        "text": "嗯哼～看起來...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3192,7 +3192,7 @@
       },
       "86": {
         "name": "斯奧萊爾",
-        "text": "...이봐. 그건 곤란하다.",
+        "text": "...喂。那就麻煩了。",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3203,7 +3203,7 @@
       },
       "87": {
         "name": "斯奧萊爾",
-        "text": "난.... 왕실의 일에 관여하고 있지 않아.<br>내 멋대로 계약하거나, 훗날의 일을 기약할 순 없어.",
+        "text": "我... 可不會參與王室事務。<BR>所以不能隨意簽訂合約，或者承諾未來會發生的事。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3213,7 +3213,7 @@
       },
       "88": {
         "name": "微笑伊林斯",
-        "text": "...이런. 곤란하게 됐네.",
+        "text": "...哎呀。那就麻煩了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3233,7 +3233,7 @@
       },
       "90": {
         "name": "席德",
-        "text": "....뭐, 상관없어. 그 조건, 난 마음에 드니까.",
+        "text": "...嘛，無所謂。這樣的條件，我也挺喜歡的。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling5", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3243,7 +3243,7 @@
       },
       "91": {
         "name": "斯奧萊爾",
-        "text": "어이. 내가 할 수 있는 일이 아니라고...",
+        "text": "喂。這可不是我能決定的...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3253,7 +3253,7 @@
       },
       "92": {
         "name": "席德",
-        "text": "...'지금은' 할 수 있는 일이 아니겠지.",
+        "text": "...是「現在」還不能決定呢。",
         "sound": "sound\\wishstone_unrest.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3264,7 +3264,7 @@
       },
       "93": {
         "name": "席德",
-        "text": "나는 미래에 투자하는 거야, 시오넬 왕자.",
+        "text": "斯奧萊爾王子，我是在為未來做投資喔。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3284,7 +3284,7 @@
       },
       "95": {
         "name": "席德",
-        "text": "어때? 생각 없어?<br>나야 뭐, 아쉬울 거 없지.",
+        "text": "怎麼了？不接受嗎？<BR>好吧，反正我又沒有甚麼損失。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling5_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3294,7 +3294,7 @@
       },
       "96": {
         "name": "微笑伊林斯",
-        "text": "알았다고 해요, 왕자님.",
+        "text": "答應吧，王子。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3304,7 +3304,7 @@
       },
       "97": {
         "name": "斯奧萊爾",
-        "text": ".......................크윽.",
+        "text": "......................切。",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3315,7 +3315,7 @@
       },
       "98": {
         "name": "席德",
-        "text": "아, 그럼. 계약서부터 써야지?<br>일단 이런 조건은 어때?",
+        "text": "啊，對了。我們先擬定合約吧？<BR>目前這些條件怎麼樣？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"cut_020", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3325,19 +3325,19 @@
       },
       "99": {
         "name": "微笑伊林斯",
-        "text": "오우. 계산도 빠르셔라.<br>어디 보자..."
+        "text": "哦？計算能力很強啊。<BR>我看看..."
       },
       "100": {
         "name": "斯奧萊爾",
-        "text": ".............! 어이. 이건 무슨 양심이...."
+        "text": "............！喂。良心到底哪去了..."
       },
       "101": {
         "name": "席德",
-        "text": "거래에 양심이 어딨어?<br>게다가 기약 없는 투자인데.<br>이 정도는 받아야지."
+        "text": "這筆交易可不用談良心喔？<BR>再說這可能是血本無歸的投資。<BR>這些都是我應得的。"
       },
       "102": {
         "name": "斯奧萊爾",
-        "text": "독점권과 무관세?<br>이 조항은 빼. 네게 유리해도 너무 유리하군.",
+        "text": "壟斷和免稅？<BR>刪掉。這太不平等了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3347,7 +3347,7 @@
       },
       "103": {
         "name": "席德",
-        "text": "이런. 발견해버렸네.<br>계약서는 꼼꼼하게 읽는 타입이야?",
+        "text": "壞了。被發現了嗎？<BR>你居然是會仔細看條款的人嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3357,7 +3357,7 @@
       },
       "104": {
         "name": "斯奧萊爾",
-        "text": "하아... 네 녀석 수작에 놀아나는 것과<br>내 나라를 팔아넘기는 건 다른 문제다.",
+        "text": "哈啊... 中了你的套路跟<BR>出賣自己的國家是不同的事。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3367,7 +3367,7 @@
       },
       "105": {
         "name": "席德",
-        "text": "흐응... 네 나라라.",
+        "text": "嗯哼... 你的國家。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3377,7 +3377,7 @@
       },
       "106": {
         "name": "斯奧萊爾",
-        "text": "말꼬리 잡지 마.",
+        "text": "別跟我玩文字遊戲。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3387,7 +3387,7 @@
       },
       "107": {
         "name": "席德",
-        "text": "후후. 좋아.<br>그 정도면... 투자할 만하네.",
+        "text": "呵呵。真不錯。<BR>到了這個地步... 這筆投資看來是值得的呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_upset_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3397,7 +3397,7 @@
       },
       "108": {
         "name": "微笑伊林斯",
-        "text": "흐음~ 그럼 일단. <br>바로 운항할 수 있는 배는 있습니까?",
+        "text": "哼嗯～那先這樣吧。<BR>你們有能立刻使用的飛空艇嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3407,7 +3407,7 @@
       },
       "109": {
         "name": "席德",
-        "text": "없는 건 아니지만....<br>지금 바로 움직일 수 있는 내 상단의 배는<br>전부 대형 선박인데다 오시아스 문양이 붙어있어.",
+        "text": "不是沒有飛空艇能用...<BR>但是目前能立刻出航的就剩下大型飛空艇，<BR>而且上面都刻有奧西亞斯的徽章。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3417,7 +3417,7 @@
       },
       "110": {
         "name": "席德",
-        "text": "비밀스럽게 간다고 하지 않았어?<br>내 배는 너무 눈에 띌 텐데.",
+        "text": "不是說要偷偷摸摸出航嗎？<BR>這樣的話就太張揚了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3427,7 +3427,7 @@
       },
       "111": {
         "name": "斯奧萊爾",
-        "text": "...그럼 이 협상에 무슨 의미가 있지?",
+        "text": "...所以剛才的交涉到底有甚麼意義？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3437,7 +3437,7 @@
       },
       "112": {
         "name": "席德",
-        "text": "배는 없어도 항로는 있으니까.<br>우회 항로와 입항 수속은 내가 맡을게.<br>눈에 띄지 않는 소형선만 있으면 돼.",
+        "text": "就算沒飛空艇能用也有辦法的。<BR>我們會負責規劃繞道航線和辦理入境手續。<BR>只需要艘小型而且不顯眼的飛空艇就行。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3447,7 +3447,7 @@
       },
       "113": {
         "name": "微笑伊林斯",
-        "text": "...소형선이라면, 하나 있긴 한데.<br>오래돼서 손을 좀 봐야 하지만 말이죠.",
+        "text": "...小型飛空艇，我確實是有。<BR>但是已經很舊了，需要維修。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3457,7 +3457,7 @@
       },
       "114": {
         "name": "席德",
-        "text": "아, 그래? 잘 됐네.<br>그럼 수리에 필요한 자재와 비용은 내가 댈게.<br>어때?",
+        "text": "哦，真的嗎？太好了。<BR>那麼我這邊提供負責維修的材料費和人事費用。<BR>怎麼樣？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"cut_020", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -3467,19 +3467,19 @@
       },
       "115": {
         "name": "微笑伊林斯",
-        "text": "호오라. 역시 혜안을 가지셨군요.<br>뭐, 제게 맡기시면 문제는 없습니다."
+        "text": "太好了。理解的真快。<BR>嘛，交給你們應該不會有問題。"
       },
       "116": {
         "name": "席德",
-        "text": "아. 좋아. 현금으로?"
+        "text": "啊。好吧。現金支付？"
       },
       "117": {
         "name": "微笑伊林斯",
-        "text": "크으~ 깔끔도 하셔라."
+        "text": "顆顆～真爽快。"
       },
       "118": {
         "name": "斯奧萊爾",
-        "text": "어이. 잠깐. 너희끼리 멋대로....",
+        "text": "喂。等下。你們怎麼那麼為所欲為...",
         "bgm": "off",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -3490,7 +3490,7 @@
       },
       "119": {
         "name": "斯奧萊爾",
-        "text": "........하아. 불안한데....",
+        "text": ".........哈啊。感覺真不好受...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
