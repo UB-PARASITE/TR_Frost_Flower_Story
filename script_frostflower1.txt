@@ -3986,7 +3986,7 @@
       },
       "60": {
         "name": "微笑伊林斯",
-        "text": "，我們需要確保清晰的業務關係呢。",
+        "text": "嘛，我們需要確保清晰的業務關係呢。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -3996,7 +3996,7 @@
       },
       "61": {
         "name": "斯奧萊爾",
-        "text": "嘛......隨便你吧。<BR>只希望別拖我的後腿。",
+        "text": "......隨便你吧。<BR>只希望別拖我的後腿。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
