@@ -266,7 +266,7 @@ async function bootstrapRepository(){
       const guideUrl=new URL('./storyguide_frostflower1.txt',window.location.href);
       const guideResponse=await fetch(guideUrl.href);
       if(!guideResponse.ok)throw new Error('讀取 storyguide_frostflower1.txt 失敗（HTTP '+guideResponse.status+'）');
-      const guideText=(await guideResponse.text()).replace(/^\\uFEFF/,'').trim();
+      const guideText=(await guideResponse.text()).replace(/^\uFEFF/,'').trim();
       const parsedGuide=JSON.parse(guideText);
       if(!Array.isArray(parsedGuide.guide))throw new Error('storyguide_frostflower1.txt 缺少 guide 陣列');
       storyGuide=parsedGuide.guide;
