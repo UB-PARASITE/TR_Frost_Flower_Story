@@ -69,18 +69,18 @@
     <input id="volumeSlider" type="range" min="0" max="100" step="1" value="100" aria-label="音效音量">
     <div class="volume-range"><span>靜音</span><span>最大</span></div>
   </div>
-  <p class="setting-hint">調整背景音樂與劇情音效的整體音量。</p>
+  <p class="setting-hint">調整整體音量。</p>
   <div class="setting-item" id="guideControl" hidden>
-    <div class="setting-title"><span>📖 本章劇情提要</span></div>
-    <button class="primary" id="storyGuideBtn" type="button" style="width:100%;margin-top:9px">閱讀本章提要</button>
-    <p class="setting-hint">查看目前 Chapter 的重點與相關故事。</p>
+    <div class="setting-title"><span>📖 本話摘要</span></div>
+    <button class="primary" id="storyGuideBtn" type="button" style="width:100%;margin-top:9px">閱讀</button>
+    <p class="setting-hint">查看本話重點與相關故事。</p>
   </div>
 </aside>
 </div>
 </div>
 
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
-<div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本章劇情提要</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
+<div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話摘要</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
 <div class="modal" id="finishModal"><div class="card"><div class="modalhead"><h2>本話閱讀完成</h2><button data-close="finishModal">✕</button></div><p id="finishText"></p><div class="controls"><button class="primary" id="nextChapterBtn">前往下一話 →</button><button id="replayBtn">重新閱讀這一話</button><button data-close="finishModal">返回</button></div></div></div>
 <div class="toast" id="toast"></div>
 <script>
