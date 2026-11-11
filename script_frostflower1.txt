@@ -5836,7 +5836,7 @@
       },
       "120": {
         "name": "納魯西斯",
-        "text": "而且需要美人計的話，我絕對派得上用上喔。",
+        "text": "而且需要美人計的話，我絕對派得上用場喔。",
         "sound": "sound\\wishstone_kirakira.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
