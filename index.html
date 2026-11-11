@@ -93,8 +93,7 @@ const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 function htmlText(s){return escapeHTML(s||'').replace(/&lt;br\s*\/?&gt;/gi,'<br>')}
 const RAW_ASSET_BASE='https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flower_Story/main/';
 const MISSING_ASSETS=new Set([
-  'gui3/2026_prewinter/storycontents/black.png',
-  'sound/bgm/park/bgm-horror_house_bgm.ogg'
+  'gui3/2026_prewinter/storycontents/black.png'
 ]);
 function fileURL(ref){
   if(!ref)return '';
