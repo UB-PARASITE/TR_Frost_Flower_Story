@@ -133,7 +133,7 @@ function showStoryGuide(){
     toast('目前 Chapter 沒有可讀取的劇情提要');
     return;
   }
-  $('guideModalTitle').textContent=`Chapter ${chapter+1} · ${chapterTitles[chapter]||''}｜劇情提要`;
+  $('guideModalTitle').textContent=`Chapter ${chapter+1} · ${chapterTitles[chapter]||''}｜劇情導覽`;
   $('guideContent').innerHTML=htmlText(item.ment);
   openModal('guideModal');
 }
