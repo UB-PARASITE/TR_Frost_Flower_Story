@@ -117,6 +117,8 @@
 let STORY;
 let chapterTitles=[];
 let preloadRunning=false;
+let preloadedAssetURLs=new Map();
+let currentBGMRef='',currentSFXRef='';
 let storyGuide=[];
 const FALLBACK_CHARACTERS=[{"id":"1","name":"[隊長] 斯奧萊爾","bio":"目的地是霜花冰島。<BR>這次遠征可不是鬧著玩的。重點是冷靜判斷和迅速行動。<BR>所以大家都要聽我的指揮。<BR>...無論如何，都要找到他。再等一會，莎賓娜。","image":"gui3/2026_prewinter/storycontents/npcimg/xn_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg002.png"},{"id":"2","name":"[醫生兼工藝師] 微笑伊林斯","bio":"計畫作戰。出航。還要照顧體弱多病的王子...<BR>哈。沒有我的話根本甚麼都做不了，對吧。<BR>有著天才工藝師的工具！！！！的話...<BR>嘛，應該沒人會客死異鄉吧。顆顆顆顆。","image":"gui3/2026_prewinter/storycontents/npcimg/el_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg005.png"},{"id":"3","name":"[資金擔當] 席德","bio":"遠征需要充足的食物、物資和資金。<BR>告訴我需要些甚麼吧。我不會對投資項目有所吝惜的。<BR>至於為甚麼我會同行？嗯... 呵呵。暫時是...<BR>商業機密，該這樣說嗎？","image":"gui3/2026_prewinter/storycontents/npcimg/sd_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg004.png"},{"id":"4","name":"[戰鬥與訓練擔當] 賽莉亞","bio":"遠征很危險？哈哈！大家都忘了有我賽莉亞在嗎？<BR>戰鬥就交給我吧。我在這方面很有信心。<BR>順便趁這個機會看看其他人會成長到甚麼程度吧～<BR>...而且，關於「陰暗之影」的蹤跡... 搞不好還可以追擊。","image":"gui3/2026_prewinter/storycontents/npcimg/ce_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg007.png"},{"id":"5","name":"[能量擔當] 納魯西斯","bio":"探險隊有帥哥美女... 那怎麼能少了我納魯西斯呢!!!!!!!<BR>有我的MiMo，就算有多艱辛也能發光發亮。哈哈哈哈!!!<BR>不只是掌管能量，也有著意想不到的才能...<BR>敬請期待我納魯西斯的活躍！哈哈哈哈哈哈!!!!! (wink)","image":"gui3/2026_prewinter/storycontents/npcimg/ns_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg003.png"}];
 let characterList=FALLBACK_CHARACTERS.slice(),currentCharacterIndex=0;
@@ -138,7 +140,7 @@ const RAW_ASSET_BASE='https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flo
 const MISSING_ASSETS=new Set([
   'gui3/2026_prewinter/storycontents/black.png'
 ]);
-function fileURL(ref){
+function resolveAssetURL(ref){
   if(!ref)return '';
   const value=String(ref).trim();
   if(/^data:/i.test(value)||/^https?:\/\//i.test(value))return value;
@@ -153,6 +155,10 @@ function fileURL(ref){
   // Legacy index is used only if customimage.txt could not be loaded or an unmapped name is encountered.
   const f=files.find(x=>String(x.name||'').replace(/\\/g,'/').toLowerCase().split('/').pop().replace(/\.[^.]+$/,'')===base);
   return f?.url||'';
+}
+function fileURL(ref){
+  const url=resolveAssetURL(ref);
+  return url?(preloadedAssetURLs.get(url)||url):'';
 }
 function node(){let key=route[position];return {key,data:STORY.script[chapter][key]||{}}}
 function stopAuto(){clearTimeout(autoTimer);autoTimer=null}
@@ -270,7 +276,7 @@ function updateStartScreen(){
 function buildChapterTabs(){let n=$('chapters');n.innerHTML='';chapterTitles.forEach((t,i)=>{let b=document.createElement('button');b.className='chapter'+(storyStarted&&i===chapter?' active':'');b.innerHTML=`<small>CHAPTER. ${i+1}</small><span>${escapeHTML(t)}</span>`;b.onclick=()=>loadChapter(i);n.appendChild(b)})}
 const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天．我們',available:false},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
 function buildEpisodeList(){const box=$('episodeList');box.innerHTML='';EPISODE_OPTIONS.forEach(ep=>{const b=document.createElement('button');b.type='button';b.className='episode-option'+(ep.number===selectedEpisode?' active':'');b.disabled=!ep.available||!STORY;b.innerHTML=`<span class="episode-number">EPISODE. ${ep.number}</span><span class="episode-name">${escapeHTML(ep.title)}</span>${!ep.available?'<span class="episode-status">尚未開放</span>':(!STORY?'<span class="episode-status">讀取中…</span>':'')}`;if(ep.available)b.onclick=()=>selectEpisode(ep.number);box.appendChild(b)})}
-function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='關閉';buildEpisodeList();buildChapterTabs();updateStartScreen()}
+function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();currentBGMRef='';currentSFXRef='';$('autoBtn').textContent='關閉';buildEpisodeList();buildChapterTabs();updateStartScreen()}
 // Chapter 1 is special: show nodes 1–18 first, then wait for exactly one choice.
 function initialRoute(){let keys=chapterKeys(0);let pivot=keys.indexOf('18');return keys.slice(0,pivot+1)}
 // Explicit graph: prefix -> selected 18-N-* branch -> mainline node 19 onward.
@@ -285,7 +291,7 @@ function buildBranchRoute(choice){
   if(!branch.length)throw new Error(`找不到分支 ${choice}`);
   return [...prefix,...branch,...mainline];
 }
-function loadChapter(i){if(selectedEpisode===null){toast('請先選擇章節');return}stopAuto();auto=false;storyStarted=true;chapter=Math.max(0,Math.min(STORY.script.length-1,i));position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='關閉';route=chapter===0?initialRoute():chapterKeys(chapter);setSceneBG(FALLBACK);buildChapterTabs();buildEpisodeList();updateStartScreen();render()}
+function loadChapter(i){if(selectedEpisode===null){toast('請先選擇章節');return}stopAuto();auto=false;storyStarted=true;chapter=Math.max(0,Math.min(STORY.script.length-1,i));position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();currentBGMRef='';currentSFXRef='';$('autoBtn').textContent='關閉';route=chapter===0?initialRoute():chapterKeys(chapter);setSceneBG(FALLBACK);buildChapterTabs();buildEpisodeList();updateStartScreen();render()}
 function setSceneBG(ref){
   const u=ref?fileURL(ref):'';
   const stage=$('stage');
@@ -320,8 +326,29 @@ function visualStateAtCurrentNode(){
   }
   return {ImgList:hasImgList?inheritedImgList:{},background:temporaryImage||persistentBG||'',activeImage:temporaryImage};
 }
-function setBGM(ref){if(ref==='off'){bgm.pause();return}if(!ref||ref==='keep')return;let u=fileURL(ref);if(u&&soundOn&&bgm.src!==u){bgm.src=u;bgm.play().catch(()=>{})}}
-function playSound(ref){if(!ref||!soundOn)return;let u=fileURL(ref);if(u){sfx.pause();sfx.src=u;sfx.currentTime=0;sfx.play().catch(()=>{})}}
+function setBGM(ref){if(ref==='off'){currentBGMRef='';bgm.pause();return}if(!ref||ref==='keep')return;currentBGMRef=ref;let u=fileURL(ref);if(u&&soundOn&&bgm.src!==u){bgm.src=u;bgm.play().catch(()=>{})}}
+function playSound(ref){if(!ref||!soundOn)return;currentSFXRef=ref;let u=fileURL(ref);if(u){sfx.pause();sfx.src=u;sfx.currentTime=0;sfx.play().catch(()=>{})}}
+function switchMediaToPreloaded(media,ref){
+  if(!media||!ref)return;
+  const cachedURL=fileURL(ref);
+  if(!cachedURL||media.src===cachedURL)return;
+  const wasPlaying=!media.paused;
+  const previousTime=Number.isFinite(media.currentTime)?media.currentTime:0;
+  media.src=cachedURL;
+  media.addEventListener('loadedmetadata',()=>{
+    try{if(previousTime>0&&Number.isFinite(media.duration))media.currentTime=Math.min(previousTime,media.duration)}catch(e){}
+    if(wasPlaying&&soundOn)media.play().catch(()=>{});
+  },{once:true});
+}
+function refreshCurrentPreloadedAssets(){
+  if(!storyStarted||!STORY)return;
+  const visual=visualStateAtCurrentNode();
+  setSceneBG(visual.background||FALLBACK);
+  renderSprites(visual.ImgList);
+  if(currentBGMRef)switchMediaToPreloaded(bgm,currentBGMRef);
+  if(currentSFXRef)switchMediaToPreloaded(sfx,currentSFXRef);
+  if($('charactersModal').classList.contains('open'))renderCharacter();
+}
 // TXT NPCImg rect uses a 1280x960 reference canvas: x/y are the top-left position; x1/y1 are the target width/height (not the bottom-right corner). Percent positioning keeps the layout proportional as the 4:3 stage resizes.
 const STAGE_REF_WIDTH=1280, STAGE_REF_HEIGHT=960;
 function renderSprites(imgList){
@@ -369,7 +396,7 @@ function collectStoryAssetRefs(){
   };
   visit(STORY);
   (characterList.length?characterList:FALLBACK_CHARACTERS).forEach(item=>{if(item.image)refs.add(item.image);if(item.background)refs.add(item.background)});
-  return [...refs].map(fileURL).filter(Boolean).filter(url=>/\.(?:png|jpe?g|webp|gif|ogg|wav|mp3|m4a)(?:[?#]|$)/i.test(url));
+  return [...refs].map(resolveAssetURL).filter(Boolean).filter(url=>/\.(?:png|jpe?g|webp|gif|ogg|wav|mp3|m4a)(?:[?#]|$)/i.test(url));
 }
 async function preloadStoryAssets(){
   if(preloadRunning)return;
@@ -386,22 +413,30 @@ async function preloadStoryAssets(){
     if(assetIndexTimer)clearTimeout(assetIndexTimer);
     if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的素材…';
     const urls=[...new Set(collectStoryAssetRefs())];
-    let completed=0,failed=0,nextIndex=0;
+    let completed=0,failed=0,newlyCached=0,nextIndex=0;
+    const cachedBefore=urls.filter(url=>preloadedAssetURLs.has(url)).length;
     $('preloadStatus').textContent=`共找到 ${urls.length} 個素材，開始預載入…`;
     const worker=async()=>{
       while(nextIndex<urls.length){
         const url=urls[nextIndex++];
         try{
-          const response=await fetch(url,{cache:'force-cache'});
-          if(!response.ok)throw new Error('HTTP '+response.status);
-          await response.arrayBuffer();
+          if(!preloadedAssetURLs.has(url)){
+            const response=await fetch(url,{cache:'force-cache'});
+            if(!response.ok)throw new Error('HTTP '+response.status);
+            const blob=await response.blob();
+            if(!blob.size)throw new Error('素材內容為空');
+            const objectURL=URL.createObjectURL(blob);
+            preloadedAssetURLs.set(url,objectURL);
+            newlyCached++;
+          }
         }catch(error){failed++;console.warn('素材預載入失敗：',url,error)}
         completed++;
-        $('preloadStatus').textContent=`已完成 ${completed} / ${urls.length}${failed?'（失敗 '+failed+' 個）':''}`;
+        $('preloadStatus').textContent=`已完成 ${completed} / ${urls.length}（已使用快取 ${cachedBefore} 個，新增 ${newlyCached} 個）${failed?'；失敗 '+failed+' 個':''}`;
       }
     };
     await Promise.all(Array.from({length:Math.min(6,urls.length)},worker));
-    $('preloadStatus').textContent=failed?`預載入完成；成功 ${completed-failed} 個，失敗 ${failed} 個。`:'所有素材已載入完成。';
+    if(storyStarted)refreshCurrentPreloadedAssets();
+    $('preloadStatus').textContent=failed?`預載入完成；本次新增 ${newlyCached} 個，原有快取 ${cachedBefore} 個，失敗 ${failed} 個。`:`所有素材已就緒；本次新增 ${newlyCached} 個，原有快取 ${cachedBefore} 個。`;
     await new Promise(resolve=>setTimeout(resolve,650));
     closeModal('preloadModal');
     toast(failed?`素材預載入完成，另有 ${failed} 個檔案載入失敗`:'所有劇情素材已預載入');
