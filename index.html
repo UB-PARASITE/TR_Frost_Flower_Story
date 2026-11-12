@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%84%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#101522"><title>情感群島：霜花冰島的故事</title>
 <style>
 :root{color-scheme:dark;--gold:#e8d09a;--muted:#aab6ca;--panel:rgba(7,11,22,.91);--line:rgba(232,208,154,.4)}
@@ -19,7 +20,7 @@
 .character-details{min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:18px;padding:6px 2px 2px}
 .character-name{margin:0;color:#f0dcae;font-size:clamp(18px,2.4vw,26px);line-height:1.5;overflow-wrap:anywhere}
 .character-bio{margin-top:0;max-height:768px;overflow:auto;padding-right:8px;color:#d8e0ec;font-size:14px;line-height:2;overflow-wrap:anywhere;scrollbar-width:thin}
-.character-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding-top:12px;border-top:1px solid #ffffff20;color:#aeb9cc;font-size:11px}
+.character-nav{flex:0 0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid #ffffff20;color:#aeb9cc;font-size:11px}
 .character-nav-buttons{display:flex;gap:7px}
 .character-nav button{font-size:11px;padding:8px 11px}
 
@@ -59,7 +60,7 @@
 @media(max-width:700px){.character-card{height:min(760px,92vh);max-height:92vh;padding:14px}.character-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(150px,42%) minmax(0,1fr);gap:12px}.character-details{gap:8px;padding:2px}.character-name{font-size:18px}.character-bio{max-height:none;font-size:12px;line-height:1.75;text-align:top;}.character-nav{margin-top:2px;padding-top:8px}.character-nav button{padding:7px 9px}}
 </style></head>
 <body><div class="shell">
-<header class="header"><div class="brand"><div class="logo">✧</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="preloadBtn" type="button">預載入素材</button><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
+<header class="header"><div class="brand"><div class="logo">❄️</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="preloadBtn" type="button">預載入素材</button><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
 <div class="workspace">
 <aside class="episode-panel" aria-label="Episode 選擇">
   <div class="panel-kicker">STORY SELECT</div><h2>Episode</h2>
@@ -108,7 +109,7 @@
 </div>
 
 <div class="modal" id="preloadModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="preloadTitle"><div class="modalhead"><h2 id="preloadTitle">預載入素材</h2></div><p style="margin:16px 0 8px;color:#f0e4c8;font-size:16px">正在載入相關素材，請稍等。</p><p style="margin:0;color:#aeb9cc;font-size:12px;line-height:1.8">載入速度可能會因為網絡環境而有所變化。<br>使用行動網絡時，請注意流動數據的消耗量。<br>下載的素材只會儲存在瀏覽器快取中，重新整理或關閉網頁後就會刪除，屆時可以選擇重新進行預載入。</p><div class="status" id="preloadStatus" style="margin-top:15px">正在整理素材清單…</div></div></div>
-<div class="modal" id="charactersModal"><div class="card character-card" role="dialog" aria-modal="true" aria-labelledby="characterModalTitle"><div class="modalhead character-modalhead"><h2 id="characterModalTitle">角色介紹</h2><button data-close="charactersModal" aria-label="關閉">✕</button></div><div class="character-layout"><div class="character-portrait"><img id="characterPortrait" alt="角色立繪"><div class="portrait-fallback" id="characterPortraitFallback" hidden>正在讀取立繪…</div></div><div class="character-details"><h3 class="character-name" id="characterName"></h3><div class="character-bio" id="characterBio"></div><div class="character-nav"><span id="characterCounter"></span><div class="character-nav-buttons"><button id="characterPrevBtn" type="button">上一位</button><button id="characterNextBtn" type="button">下一位</button></div></div></div></div></div></div>
+<div class="modal" id="charactersModal"><div class="card character-card" role="dialog" aria-modal="true" aria-labelledby="characterModalTitle"><div class="modalhead character-modalhead"><h2 id="characterModalTitle">角色介紹</h2><button data-close="charactersModal" aria-label="關閉">✕</button></div><div class="character-layout"><div class="character-portrait"><img id="characterPortrait" alt="角色立繪"><div class="portrait-fallback" id="characterPortraitFallback" hidden>正在讀取立繪…</div></div><div class="character-details"><h3 class="character-name" id="characterName"></h3><div class="character-bio" id="characterBio"></div></div></div><div class="character-nav"><span id="characterCounter"></span><div class="character-nav-buttons"><button id="characterPrevBtn" type="button">上一位</button><button id="characterNextBtn" type="button">下一位</button></div></div></div></div>
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
 <div class="modal" id="finishModal"><div class="card"><div class="modalhead"><h2>本話閱讀完成</h2><button data-close="finishModal">✕</button></div><p id="finishText"></p><div class="controls"><button class="primary" id="nextChapterBtn">前往下一話 →</button><button id="replayBtn">重新閱讀這一話</button><button data-close="finishModal">返回</button></div></div></div>
