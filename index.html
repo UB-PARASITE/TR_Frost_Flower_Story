@@ -179,12 +179,12 @@ async function loadCharacterSchedule(){
     const scheduleUrl=new URL('./prewinter2026_schedule.data',window.location.href);
     const response=await fetch(scheduleUrl.href,{cache:'no-store'});
     if(!response.ok)throw new Error('讀取 prewinter2026_schedule.data 失敗（HTTP '+response.status+'）');
-    const scheduleText=(await response.text()).replace(/^\\uFEFF/,'').trim();
+    const scheduleText=(await response.text()).replace(/^\uFEFF/,'').trim();
     // The supplied .data file has a trailing comma after its final entry; normalize it before JSON parsing.
-    const parsed=JSON.parse(scheduleText.replace(/,\\s*([}\\]])/g,'$1'));
+    const parsed=JSON.parse(scheduleText.replace(/,\s*([}\]])/g,'$1'));
     const table=parsed.string_table;
     if(!table||typeof table!=='object'||Array.isArray(table))throw new Error('角色資料缺少 string_table');
-    const ids=[...new Set(Object.keys(table).map(key=>key.match(/^NPC(\\d+)_Ment1$/)?.[1]).filter(Boolean))].sort((a,b)=>Number(a)-Number(b));
+    const ids=[...new Set(Object.keys(table).map(key=>key.match(/^NPC(\d+)_Ment1$/)?.[1]).filter(Boolean))].sort((a,b)=>Number(a)-Number(b));
     const loaded=ids.map(id=>({
       id,
       name:table[`NPC${id}_Ment1`],
