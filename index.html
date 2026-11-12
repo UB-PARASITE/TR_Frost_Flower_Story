@@ -71,7 +71,7 @@
 <section class="selection-screen" id="selectionScreen" aria-live="polite">
   <div class="selection-kicker">霜花冰島．章節選擇</div>
   <h1 id="selectionTitle">請先選擇章節</h1>
-  <p id="selectionHint">請從左側選擇章節。建議先進行「預載入素材」。</p>
+  <p id="selectionHint">請從左側選擇章節。<br>建議先進行「預載入素材」。</p>
   <div class="selection-mark">✧</div>
 </section>
 <section class="stage" id="stage" hidden><img class="scene-clear" id="sceneClear" alt="" aria-hidden="true"><div class="art" id="art"></div><div class="sprites" id="sprites"></div><div class="tags" id="tags"></div><div class="choices" id="choices" hidden></div><div class="dialogue" id="dialoguePanel" role="button" tabindex="0"><div class="speaker" id="speaker"></div><div class="line" id="line"></div><div class="dialogue-foot"><span id="count"></span><span class="hint" id="hint">SPACE / 點擊對話框　下一段 ▾</span></div></div></section>
@@ -108,7 +108,7 @@
 </div>
 </div>
 
-<div class="modal" id="preloadModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="preloadTitle"><div class="modalhead"><h2 id="preloadTitle">預載入素材</h2></div><p style="margin:16px 0 8px;color:#f0e4c8;font-size:16px">正在載入相關素材，請稍等。</p><p style="margin:0;color:#aeb9cc;font-size:12px;line-height:1.8">載入速度可能會因為網絡環境而有所變化。<br>使用行動網絡時，請注意流動數據的消耗量。<br>下載的素材只會儲存在瀏覽器快取中，重新整理或關閉網頁後就會刪除，屆時可以選擇重新進行預載入。</p><div class="status" id="preloadStatus" style="margin-top:15px">正在整理素材清單…</div></div></div>
+<div class="modal" id="preloadModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="preloadTitle"><div class="modalhead"><h2 id="preloadTitle">預載入素材</h2></div><p style="margin:16px 0 8px;color:#f0e4c8;font-size:16px">正在載入相關素材，請稍等。</p><p style="margin:0;color:#aeb9cc;font-size:12px;line-height:1.8">載入速度可能會因為網絡環境而有所變化。<br>使用行動網絡時，請注意流動數據的消耗量。<br>下載的素材只會儲存在瀏覽器快取中，重新整理或關閉網頁後就會刪除，<br>屆時可以選擇重新進行預載入。</p><div class="status" id="preloadStatus" style="margin-top:15px">正在整理素材清單…</div></div></div>
 <div class="modal" id="charactersModal"><div class="card character-card" role="dialog" aria-modal="true" aria-labelledby="characterModalTitle"><div class="modalhead character-modalhead"><h2 id="characterModalTitle">角色介紹</h2><button data-close="charactersModal" aria-label="關閉">✕</button></div><div class="character-layout"><div class="character-portrait"><img id="characterPortrait" alt="角色立繪"><div class="portrait-fallback" id="characterPortraitFallback" hidden>正在讀取立繪…</div></div><div class="character-details"><h3 class="character-name" id="characterName"></h3><div class="character-bio" id="characterBio"></div></div></div><div class="character-nav"><span id="characterCounter"></span><div class="character-nav-buttons"><button id="characterPrevBtn" type="button">上一位</button><button id="characterNextBtn" type="button">下一位</button></div></div></div></div>
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
