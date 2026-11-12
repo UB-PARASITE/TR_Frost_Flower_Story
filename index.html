@@ -489,6 +489,7 @@ async function bootstrapRepository(){
       files=tree.tree.filter(x=>x.type==='blob'&&allowed.test(x.path))
         .map(x=>({name:x.path,url:RAW_ASSET_BASE+x.path.split('/').map(encodeURIComponent).join('/')}));
       $('assetNote').textContent='customimage.txt 無法使用；已改用 GitHub 素材索引（'+files.length+' 個檔案）。';
+      $('preloadBtn').disabled=false;
       if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
     }catch(indexError){
       console.warn('GitHub 素材索引也無法載入：',indexError);
