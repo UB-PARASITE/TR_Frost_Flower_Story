@@ -70,7 +70,7 @@
 <section class="selection-screen" id="selectionScreen" aria-live="polite">
   <div class="selection-kicker">霜花冰島．章節選擇</div>
   <h1 id="selectionTitle">請先選擇章節</h1>
-  <p id="selectionHint">從左側選擇已開放的章節，然後選擇其中一話來開始閱讀。</p>
+  <p id="selectionHint">請從左側選擇章節。建議先進行「預載入素材」。</p>
   <div class="selection-mark">✧</div>
 </section>
 <section class="stage" id="stage" hidden><img class="scene-clear" id="sceneClear" alt="" aria-hidden="true"><div class="art" id="art"></div><div class="sprites" id="sprites"></div><div class="tags" id="tags"></div><div class="choices" id="choices" hidden></div><div class="dialogue" id="dialoguePanel" role="button" tabindex="0"><div class="speaker" id="speaker"></div><div class="line" id="line"></div><div class="dialogue-foot"><span id="count"></span><span class="hint" id="hint">SPACE / 點擊對話框　下一段 ▾</span></div></div></section>
@@ -245,7 +245,7 @@ function updateGuideButton(){
 function showStoryGuide(){
   const item=storyGuide[chapter];
   if(selectedEpisode!==1||!storyStarted||typeof item?.ment!=='string'||!item.ment.trim()){
-    toast('目前 Chapter 沒有可讀取的劇情提要');
+    toast('目前 Chapter 沒有可讀取的劇情導覽');
     return;
   }
   $('guideModalTitle').textContent=`Chapter ${chapter+1} · ${chapterTitles[chapter]||''}｜劇情導覽`;
@@ -264,7 +264,7 @@ function updateStartScreen(){
   updateGuideButton();
   if(!storyStarted){
     $('selectionTitle').textContent=hasEpisode?`Episode. ${String(selectedEpisode).padStart(2,'0')} · ${EPISODE_OPTIONS.find(x=>x.number===selectedEpisode)?.title||''}`:'請先選擇章節';
-    $('selectionHint').textContent=hasEpisode?'請從上方選擇其中一話；選擇後才會開始播放劇情。':'從左側選擇已開放的章節，然後選擇其中一話來開始閱讀。';
+    $('selectionHint').textContent=hasEpisode?'請從上方選擇其中一話':'請從左側選擇章節。建議先進行「預載入素材」。';
   }
 }
 function buildChapterTabs(){let n=$('chapters');n.innerHTML='';chapterTitles.forEach((t,i)=>{let b=document.createElement('button');b.className='chapter'+(storyStarted&&i===chapter?' active':'');b.innerHTML=`<small>CHAPTER. ${i+1}</small><span>${escapeHTML(t)}</span>`;b.onclick=()=>loadChapter(i);n.appendChild(b)})}
@@ -439,7 +439,7 @@ async function bootstrapRepository(){
     buildEpisodeList();
     buildChapterTabs();
     updateStartScreen();
-    $('selectionHint').textContent='從左側選擇已開放的章節，再選擇其中一話來開始閱讀。';
+    $('selectionHint').textContent='請從左側選擇章節。建議先進行「預載入素材」。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
     $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
@@ -458,7 +458,7 @@ async function bootstrapRepository(){
       storyGuide=parsedGuide.guide;
       updateGuideButton();
     }catch(e){
-      console.warn('Chapter 劇情提要載入失敗：',e);
+      console.warn('Chapter 劇情導覽載入失敗：',e);
       storyGuide=[];
       updateGuideButton();
     }
