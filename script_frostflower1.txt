@@ -1892,7 +1892,7 @@
       },
       "63": {
         "text": "(碰！！！)",
-        "image": "gui3/2026_PreWinter/StoryContents/black.png",
+        "image": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "sound": "sound\\wishstone_KickDoor.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
