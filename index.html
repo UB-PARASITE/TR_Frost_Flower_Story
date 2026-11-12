@@ -81,7 +81,7 @@
   <div class="panel-kicker">FUNCTION</div><h2>功能</h2>
   <div class="setting-item">
     <div class="setting-title"><span>▶ 自動播放</span></div>
-    <button id="autoBtn" type="button" style="width:100%;margin-top:9px">自動播放：關</button>
+    <button id="autoBtn" class="primary" type="button" style="width:100%;margin-top:9px">關閉</button>
     <p class="setting-hint">自動播放目前劇情對話。</p>
   </div>
   <div class="setting-item">
@@ -267,7 +267,7 @@ function updateStartScreen(){
 function buildChapterTabs(){let n=$('chapters');n.innerHTML='';chapterTitles.forEach((t,i)=>{let b=document.createElement('button');b.className='chapter'+(storyStarted&&i===chapter?' active':'');b.innerHTML=`<small>CHAPTER. ${i+1}</small><span>${escapeHTML(t)}</span>`;b.onclick=()=>loadChapter(i);n.appendChild(b)})}
 const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天．我們',available:false},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
 function buildEpisodeList(){const box=$('episodeList');box.innerHTML='';EPISODE_OPTIONS.forEach(ep=>{const b=document.createElement('button');b.type='button';b.className='episode-option'+(ep.number===selectedEpisode?' active':'');b.disabled=!ep.available||!STORY;b.innerHTML=`<span class="episode-number">EPISODE. ${ep.number}</span><span class="episode-name">${escapeHTML(ep.title)}</span>${!ep.available?'<span class="episode-status">尚未開放</span>':(!STORY?'<span class="episode-status">讀取中…</span>':'')}`;if(ep.available)b.onclick=()=>selectEpisode(ep.number);box.appendChild(b)})}
-function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='自動播放：關';buildEpisodeList();buildChapterTabs();updateStartScreen()}
+function selectEpisode(number){const ep=EPISODE_OPTIONS.find(x=>x.number===number);if(!ep||!ep.available)return;if(!STORY||!Array.isArray(STORY.script)||!chapterTitles.length){toast('劇情資料尚未載入完成，請稍後再試');return}stopAuto();auto=false;selectedEpisode=number;storyStarted=false;route=[];position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='關閉';buildEpisodeList();buildChapterTabs();updateStartScreen()}
 // Chapter 1 is special: show nodes 1–18 first, then wait for exactly one choice.
 function initialRoute(){let keys=chapterKeys(0);let pivot=keys.indexOf('18');return keys.slice(0,pivot+1)}
 // Explicit graph: prefix -> selected 18-N-* branch -> mainline node 19 onward.
@@ -282,7 +282,7 @@ function buildBranchRoute(choice){
   if(!branch.length)throw new Error(`找不到分支 ${choice}`);
   return [...prefix,...branch,...mainline];
 }
-function loadChapter(i){if(selectedEpisode===null){toast('請先選擇章節');return}stopAuto();auto=false;storyStarted=true;chapter=Math.max(0,Math.min(STORY.script.length-1,i));position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='自動播放：關';route=chapter===0?initialRoute():chapterKeys(chapter);setSceneBG(FALLBACK);buildChapterTabs();buildEpisodeList();updateStartScreen();render()}
+function loadChapter(i){if(selectedEpisode===null){toast('請先選擇章節');return}stopAuto();auto=false;storyStarted=true;chapter=Math.max(0,Math.min(STORY.script.length-1,i));position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();$('autoBtn').textContent='關閉';route=chapter===0?initialRoute():chapterKeys(chapter);setSceneBG(FALLBACK);buildChapterTabs();buildEpisodeList();updateStartScreen();render()}
 function setSceneBG(ref){
   const u=ref?fileURL(ref):'';
   const stage=$('stage');
@@ -348,11 +348,11 @@ function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList
 function renderChoices(d){let box=$('choices');box.innerHTML='';let selection=d.selection;if(!selection){box.hidden=true;return}box.hidden=false;Object.entries(selection).forEach(([id,label])=>{let b=document.createElement('button');b.className='choice';b.textContent=label;b.onclick=e=>{e.stopPropagation();chooseBranch(id)};box.appendChild(b)})}
 function render(){let {key,data:d}=node();const visual=visualStateAtCurrentNode();setSceneBG(visual.background||FALLBACK);if(d.bgm)setBGM(d.bgm);if(d.sound)playSound(d.sound);$('speaker').textContent=d.name||'';$('line').innerHTML=htmlText(d.text);$('count').textContent=`${position+1} / ${route.length}`;$('progressName').textContent=`CHAPTER. ${chapter+1} · ${chapterTitles[chapter]}`;let pct=Math.round((position+1)/route.length*100);$('percent').textContent=pct+'%';$('fill').style.width=pct+'%';$('prevBtn').disabled=position===0;$('nextBtn').textContent=position===route.length-1?'完成本話 ✓':'下一段 →';$('hint').textContent=d.selection?'請選擇一條劇情路線':'SPACE / 點擊對話框　下一段 ▾';renderChoices(d);renderSprites(visual.ImgList);$('art').innerHTML='';$('art').classList.remove('show');if(!historyEntries.length||historyEntries.at(-1).key!==key){historyEntries.push({key,chapter,name:d.name||'',text:d.text||''})}scheduleAuto()}
 function scheduleAuto(){stopAuto();if(!auto)return;let d=node().data;if(d.selection)return;let delay=Math.min(7000,2200+String(d.text||'').length*35);autoTimer=setTimeout(next,delay)}
-function next(){stopAuto();let d=node().data;if(d.selection){toast('請先選擇一條劇情路線');return}if(position<route.length-1){position++;render()}else{auto=false;$('autoBtn').textContent='自動播放：關';$('finishText').textContent=`「${chapterTitles[chapter]}」已閱讀完成。`;$('nextChapterBtn').style.display=chapter<STORY.script.length-1?'':'none';openModal('finishModal')}}
+function next(){stopAuto();let d=node().data;if(d.selection){toast('請先選擇一條劇情路線');return}if(position<route.length-1){position++;render()}else{auto=false;$('autoBtn').textContent='關閉';$('finishText').textContent=`「${chapterTitles[chapter]}」已閱讀完成。`;$('nextChapterBtn').style.display=chapter<STORY.script.length-1?'':'none';openModal('finishModal')}}
 function previous(){stopAuto();if(position>0){position--;render()}}
-function chooseBranch(id){stopAuto();if(chapter!==0||node().key!=='18'){toast('分支選項只在第一章 Node 18 出現');return}try{let newRoute=buildBranchRoute(id);route=newRoute;position=route.indexOf(`18-${id}-1`);auto=false;$('autoBtn').textContent='自動播放：關';render();toast(`已選擇路線 ${id}`)}catch(e){toast(e.message)}}
+function chooseBranch(id){stopAuto();if(chapter!==0||node().key!=='18'){toast('分支選項只在第一章 Node 18 出現');return}try{let newRoute=buildBranchRoute(id);route=newRoute;position=route.indexOf(`18-${id}-1`);auto=false;$('autoBtn').textContent='關閉';render();toast(`已選擇路線 ${id}`)}catch(e){toast(e.message)}}
 function skipChapter(){stopAuto();if(chapter===0){let keys=chapterKeys(0);route=[...keys.slice(0,keys.indexOf('18')),...keys.slice(keys.indexOf('19'))]}else route=chapterKeys(chapter);position=route.length-1;render();next()}
-function toggleAuto(){auto=!auto;$('autoBtn').textContent=`自動播放：${auto?'開':'關'}`;if(auto)scheduleAuto();else stopAuto()}
+function toggleAuto(){auto=!auto;$('autoBtn').textContent=`${auto?'開啟':'關閉'}`;if(auto)scheduleAuto();else stopAuto()}
 
 function collectStoryAssetRefs(){
   const refs=new Set();
