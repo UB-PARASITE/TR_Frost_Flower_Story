@@ -6,7 +6,7 @@
 <style>
 :root{color-scheme:dark;--gold:#e8d09a;--muted:#aab6ca;--panel:rgba(7,11,22,.91);--line:rgba(232,208,154,.4)}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:18px;background:radial-gradient(ellipse at 50% 0,#29334a 0,#111827 52%,#080b12 100%);color:#f0f3fa;font-family:system-ui,"Noto Sans TC","Noto Sans KR",sans-serif}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #ffffff26;background:#1b2438d9;border-radius:10px;padding:9px 13px;transition:.16s}button:hover{border-color:var(--gold);background:#303b53}button:disabled{opacity:.36;cursor:not-allowed}.shell{max-width:1280px;margin:auto}.header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 auto 14px;max-width:1520px}.brand{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f1dfb2,#997c4c);color:#1b2030;font-size:22px}.brand b{letter-spacing:.12em}.brand small{display:block;color:#aeb9cc;font-size:10px;letter-spacing:.13em;margin-top:3px}.head-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.head-actions button{font-size:12px}.chapters{display:flex;gap:7px;overflow:auto;max-width:100%;margin:0 auto 12px;padding:2px 1px 8px}.chapter{min-width:112px;text-align:left;flex:1 0 auto;background:#172137d9;border-color:#ffffff19}.chapter small{display:block;color:var(--gold);font-size:10px;letter-spacing:.15em;margin-bottom:3px}.chapter span{font-size:12px;white-space:nowrap}.chapter.active{border-color:#d8bd82;background:linear-gradient(130deg,#77644577,#202c45)}
-.stage{position:relative;isolation:isolate;width:min(100%,1024px,calc((100vh - 245px)*1.333));max-width:1024px;aspect-ratio:4/3;margin:auto;border:1px solid #ddcfaa66;border-radius:17px;overflow:hidden;background-color:transparent;background-image:none;box-shadow:0 24px 65px #0009}.stage:before{content:"";position:absolute;inset:-20px;z-index:0;pointer-events:none;background-image:var(--scene-image,none);background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(18px) brightness(.58) saturate(.85);transform:scale(1.04)}.scene-clear{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none;-webkit-user-drag:none}.stage:after{z-index:1}.stage:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,#070b161c,transparent 24%,transparent 76%,#070b1629)}.stage-tools{position:absolute;z-index:8;top:13px;right:14px;display:flex;gap:6px}.stage-tools button{font-size:11px;padding:7px 10px;background:#070d1bbd;border-radius:22px}.art{position:absolute;z-index:3;top:9%;left:50%;transform:translateX(-50%);width:52%;height:43%;display:none;align-items:center;justify-content:center;pointer-events:none}.art.show{display:flex}.art img{max-height:100%;max-width:100%;object-fit:contain;border:1px solid #e8d09a66;border-radius:10px;box-shadow:0 16px 40px #0009}.art .missing{background:#0a1020dd;border:1px solid #e8d09a55;border-radius:10px;padding:17px 20px;text-align:center;max-width:90%;font-size:11px;color:#c5cede}.art .missing b{display:block;color:#f2dfb6;margin-bottom:6px}.sprites{position:absolute;z-index:2;inset:0;pointer-events:none;overflow:hidden}.sprite{position:absolute;display:block;left:0;top:0;width:0;height:0;max-width:none;max-height:none;object-fit:fill;object-position:top left;transform-origin:top left;filter:drop-shadow(0 12px 13px #0009);user-select:none;-webkit-user-drag:none}.tags{position:absolute;z-index:4;bottom:32%;left:18px;display:flex;flex-wrap:wrap;gap:5px;max-width:48%;pointer-events:none}.tag{font-size:9px;padding:5px 8px;border-radius:20px;border:1px solid #e8d09a44;background:#0b1020b8;color:#e8e1d1;backdrop-filter:blur(5px)}
+.stage{position:relative;isolation:isolate;width:min(100%,1024px,calc((100vh - 245px)*1.333));max-width:1024px;aspect-ratio:4/3;margin:auto;border:1px solid #ddcfaa66;border-radius:17px;overflow:hidden;background-color:transparent;background-image:none;box-shadow:0 24px 65px #0009}.stage:before{content:"";position:absolute;inset:-20px;z-index:0;pointer-events:none;background-image:var(--scene-image,none);background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(18px) brightness(.58) saturate(.85);transform:scale(1.04)}.scene-clear{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none;-webkit-user-drag:none}.stage:after{z-index:1}.stage:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,#070b161c,transparent 24%,transparent 76%,#070b1629)}.art{position:absolute;z-index:3;top:9%;left:50%;transform:translateX(-50%);width:52%;height:43%;display:none;align-items:center;justify-content:center;pointer-events:none}.art.show{display:flex}.art img{max-height:100%;max-width:100%;object-fit:contain;border:1px solid #e8d09a66;border-radius:10px;box-shadow:0 16px 40px #0009}.art .missing{background:#0a1020dd;border:1px solid #e8d09a55;border-radius:10px;padding:17px 20px;text-align:center;max-width:90%;font-size:11px;color:#c5cede}.art .missing b{display:block;color:#f2dfb6;margin-bottom:6px}.sprites{position:absolute;z-index:2;inset:0;pointer-events:none;overflow:hidden}.sprite{position:absolute;display:block;left:0;top:0;width:0;height:0;max-width:none;max-height:none;object-fit:fill;object-position:top left;transform-origin:top left;filter:drop-shadow(0 12px 13px #0009);user-select:none;-webkit-user-drag:none}.tags{position:absolute;z-index:4;bottom:32%;left:18px;display:flex;flex-wrap:wrap;gap:5px;max-width:48%;pointer-events:none}.tag{font-size:9px;padding:5px 8px;border-radius:20px;border:1px solid #e8d09a44;background:#0b1020b8;color:#e8e1d1;backdrop-filter:blur(5px)}
 .dialogue{position:absolute;z-index:6;left:0;right:0;bottom:0;height:30%;min-height:30%;max-height:30%;padding:19px clamp(18px,3.3vw,40px) 15px;background:linear-gradient(180deg,#070b1650,#070b16ee 30%,#060914f7);border-top:1px solid #e8d09a50;display:flex;flex-direction:column;cursor:pointer;overflow:hidden}.speaker{display:flex;align-items:center;gap:9px;margin-bottom:8px;color:#f0dcae;font-size:16px;font-weight:800;letter-spacing:.08em;flex:0 0 auto}.speaker:before{content:"";height:1px;width:25px;background:var(--gold)}.line{font-size:14px;line-height:1.3;text-shadow:0 2px 8px #000;height:91px;min-height:91px;max-height:91px;overflow-y:auto;flex:0 0 91px;scrollbar-width:thin}.dialogue-foot{margin-top:auto;display:flex;justify-content:space-between;gap:10px;color:#aeb9cc;font-size:10px}.hint{color:#dce3ef}.choices{position:absolute;z-index:9;left:50%;top:38%;transform:translate(-50%,-50%);width:min(58%,620px);display:flex;flex-direction:column;gap:9px}.choices[hidden]{display:none}.choice{border:1px solid #d7d9e5a8;background:linear-gradient(100deg,#111e3bf5,#333956f2);box-shadow:0 6px 18px #0008;text-align:center;padding:12px 14px;font-size:clamp(12px,1.2vw,15px)}.choice:hover{background:linear-gradient(100deg,#63543bf5,#3e465cf5);border-color:#f2dfb6}
 .under{max-width:1160px;margin:12px auto 0;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.progress{flex:1;min-width:200px}.progress-label{display:flex;justify-content:space-between;color:#b1bdd0;font-size:10px;margin-bottom:6px}.bar{height:4px;background:#303b50;border-radius:10px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#9e804d,#f2dfb6);transition:width .2s}.controls{display:flex;gap:7px;flex-wrap:wrap}.controls button{font-size:12px}.primary{background:linear-gradient(135deg,#efdfb4,#b3945e);color:#1a2030;border-color:#f5e4bc;font-weight:800}.note{max-width:1160px;margin:10px auto 0;color:#8e9bb0;font-size:10px;line-height:1.7}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#cda75f;margin-right:7px}.modal{position:fixed;z-index:20;inset:0;background:#03060dcc;backdrop-filter:blur(8px);display:none;place-items:center;padding:16px}.modal.open{display:grid}.card{width:min(620px,100%);max-height:86vh;overflow:auto;background:linear-gradient(145deg,#1c263b,#0d1322);border:1px solid #e8d09a55;border-radius:17px;padding:21px;box-shadow:0 30px 90px #000b}.modalhead{display:flex;justify-content:space-between;align-items:center;gap:12px}.modalhead h2{font-size:18px;margin:0}.card p,.card li{font-size:13px;line-height:1.75;color:#c0cada}.file{display:block;width:100%;padding:13px;background:#0a1120;border:1px dashed #e8d09a66;border-radius:11px;margin:15px 0;color:#cdd6e5}.status{padding:10px 12px;border-radius:9px;background:#070d1b80;color:#b8c4d6;font-size:11px;line-height:1.6}.guide-text{margin-top:14px;max-height:68vh;overflow:auto;font-size:13px;line-height:1.9;color:#d8e0ec;overflow-wrap:anywhere}.history{display:flex;flex-direction:column;gap:9px;max-height:58vh;overflow:auto;margin-top:14px}.entry{padding:10px 12px;background:#ffffff08;border-left:2px solid #d4b779;border-radius:0 9px 9px 0}.entry b{font-size:11px;color:#f0dcae}.entry div{font-size:12px;line-height:1.6;margin-top:5px;color:#d8e0ec}.toast{position:fixed;z-index:30;left:50%;bottom:20px;transform:translate(-50%,15px);opacity:0;pointer-events:none;padding:10px 15px;border-radius:20px;background:#1d2a43;border:1px solid #e8d09a66;color:#f0e4c8;font-size:12px;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
 
@@ -55,11 +55,11 @@
 @media(max-width:1250px){.workspace{grid-template-columns:150px minmax(0,1fr);grid-template-areas:"episodes main" "episodes settings";max-width:1200px}.episode-panel{grid-area:episodes}.story-column{grid-area:main}.settings-panel{grid-area:settings;position:static}.episode-panel{position:sticky;top:16px}}
 @media(max-width:820px){.workspace{grid-template-columns:minmax(0,1fr);grid-template-areas:"episodes" "settings" "main";gap:10px}.episode-panel,.settings-panel{position:static;padding:12px}.episode-panel h2,.settings-panel h2{margin-bottom:9px}.episode-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.episode-option{padding:7px 8px;min-height:62px}.episode-option .episode-name{font-size:10px}.settings-panel{display:block}.setting-item{display:grid;grid-template-columns:1fr;gap:2px}.story-column{width:100%}.header{align-items:flex-start}.head-actions{max-width:55%}}
 
-@media(max-width:700px){body{padding:9px 7px 18px}.brand small{display:none}.logo{width:36px;height:36px}.brand b{font-size:13px}.head-actions button{font-size:10px;padding:7px 8px}.chapter{min-width:100px}.chapter span{font-size:11px}.stage{width:calc(100vw - 14px);border-radius:12px}.stage-tools{top:9px;right:8px}.stage-tools button{font-size:10px;padding:6px 8px}.dialogue{height:30%;min-height:30%;max-height:30%;padding:13px 14px 10px}.line{font-size:14px;line-height:1.3;height:91px;min-height:91px;max-height:91px;flex:0 0 91px}.speaker{font-size:16px}.choices{width:84%;top:38%;gap:7px}.choice{padding:10px 8px;font-size:11px}.tags{left:10px;bottom:34%;max-width:75%}.controls button{font-size:10px;padding:8px 9px}.under{gap:9px}.note{font-size:9px}}
+@media(max-width:700px){body{padding:9px 7px 18px}.brand small{display:none}.logo{width:36px;height:36px}.brand b{font-size:13px}.head-actions button{font-size:10px;padding:7px 8px}.chapter{min-width:100px}.chapter span{font-size:11px}.stage{width:calc(100vw - 14px);border-radius:12px}.dialogue{height:30%;min-height:30%;max-height:30%;padding:13px 14px 10px}.line{font-size:14px;line-height:1.3;height:91px;min-height:91px;max-height:91px;flex:0 0 91px}.speaker{font-size:16px}.choices{width:84%;top:38%;gap:7px}.choice{padding:10px 8px;font-size:11px}.tags{left:10px;bottom:34%;max-width:75%}.controls button{font-size:10px;padding:8px 9px}.under{gap:9px}.note{font-size:9px}}
 @media(max-width:700px){.character-card{height:min(760px,92vh);max-height:92vh;padding:14px}.character-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(150px,42%) minmax(0,1fr);gap:12px}.character-details{gap:8px;padding:2px}.character-name{font-size:18px}.character-bio{max-height:none;font-size:12px;line-height:1.75;text-align:top;}.character-nav{margin-top:2px;padding-top:8px}.character-nav button{padding:7px 9px}}
 </style></head>
 <body><div class="shell">
-<header class="header"><div class="brand"><div class="logo">✧</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
+<header class="header"><div class="brand"><div class="logo">✧</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="preloadBtn" type="button" disabled>預載入素材</button><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
 <div class="workspace">
 <aside class="episode-panel" aria-label="Episode 選擇">
   <div class="panel-kicker">STORY SELECT</div><h2>Episode</h2>
@@ -73,12 +73,17 @@
   <p id="selectionHint">從左側選擇已開放的章節，然後選擇其中一話來開始閱讀。</p>
   <div class="selection-mark">✧</div>
 </section>
-<section class="stage" id="stage" hidden><img class="scene-clear" id="sceneClear" alt="" aria-hidden="true"><div class="stage-tools"><button id="soundBtn">♫ 音效開</button></div><div class="art" id="art"></div><div class="sprites" id="sprites"></div><div class="tags" id="tags"></div><div class="choices" id="choices" hidden></div><div class="dialogue" id="dialoguePanel" role="button" tabindex="0"><div class="speaker" id="speaker"></div><div class="line" id="line"></div><div class="dialogue-foot"><span id="count"></span><span class="hint" id="hint">SPACE / 點擊對話框　下一段 ▾</span></div></div></section>
-<div class="under" id="under" hidden><div class="progress"><div class="progress-label"><span id="progressName"></span><span id="percent"></span></div><div class="bar"><div class="fill" id="fill"></div></div></div><div class="controls"><button id="prevBtn">← 上一段</button><button id="autoBtn">自動播放：關</button><button class="primary" id="nextBtn">下一段 →</button><button class="primary" id="skipBtn">跳至本話結尾</button></div></div>
+<section class="stage" id="stage" hidden><img class="scene-clear" id="sceneClear" alt="" aria-hidden="true"><div class="art" id="art"></div><div class="sprites" id="sprites"></div><div class="tags" id="tags"></div><div class="choices" id="choices" hidden></div><div class="dialogue" id="dialoguePanel" role="button" tabindex="0"><div class="speaker" id="speaker"></div><div class="line" id="line"></div><div class="dialogue-foot"><span id="count"></span><span class="hint" id="hint">SPACE / 點擊對話框　下一段 ▾</span></div></div></section>
+<div class="under" id="under" hidden><div class="progress"><div class="progress-label"><span id="progressName"></span><span id="percent"></span></div><div class="bar"><div class="fill" id="fill"></div></div></div><div class="controls"><button id="prevBtn">← 上一段</button><button class="primary" id="nextBtn">下一段 →</button><button class="primary" id="skipBtn">跳至本話結尾</button></div></div>
 <div class="note" id="note" hidden>ⓒ RHAON Entertainment. All Rights Reserved. Blomics. All Rights Reserved.<br>Create by ChatGPT. Modify, localize & translate (Traditional Chinese) by UB.</div>
 </main>
 <aside class="settings-panel" aria-label="功能">
   <div class="panel-kicker">FUNCTION</div><h2>功能</h2>
+  <div class="setting-item">
+    <div class="setting-title"><span>▶ 自動播放</span></div>
+    <button id="autoBtn" type="button" style="width:100%;margin-top:9px">自動播放：關</button>
+    <p class="setting-hint">自動播放目前劇情對話。</p>
+  </div>
   <div class="setting-item">
     <div class="setting-title"><span>♫ 音量</span><b id="volumeValue">100%</b></div>
     <input id="volumeSlider" type="range" min="0" max="100" step="1" value="100" aria-label="音量">
@@ -102,6 +107,7 @@
 </div>
 </div>
 
+<div class="modal" id="preloadModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="preloadTitle"><div class="modalhead"><h2 id="preloadTitle">預載入素材</h2></div><p style="margin:16px 0 8px;color:#f0e4c8;font-size:14px">正在載入相關素材，請稍等。</p><p style="margin:0;color:#aeb9cc;font-size:11px;line-height:1.8">載入速度可能會因為網絡環境而有所變化。<br>使用行動網絡時，請注意流動數據的消耗量。</p><div class="status" id="preloadStatus" style="margin-top:15px">正在整理素材清單…</div></div></div>
 <div class="modal" id="charactersModal"><div class="card character-card" role="dialog" aria-modal="true" aria-labelledby="characterModalTitle"><div class="modalhead character-modalhead"><h2 id="characterModalTitle">角色介紹</h2><button data-close="charactersModal" aria-label="關閉">✕</button></div><div class="character-layout"><div class="character-portrait"><img id="characterPortrait" alt="角色立繪"><div class="portrait-fallback" id="characterPortraitFallback" hidden>正在讀取立繪…</div></div><div class="character-details"><h3 class="character-name" id="characterName"></h3><div class="character-bio" id="characterBio"></div><div class="character-nav"><span id="characterCounter"></span><div class="character-nav-buttons"><button id="characterPrevBtn" type="button">上一位</button><button id="characterNextBtn" type="button">下一位</button></div></div></div></div></div></div>
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
@@ -110,6 +116,7 @@
 <script>
 let STORY;
 let chapterTitles=[];
+let preloadRunning=false;
 let storyGuide=[];
 const FALLBACK_CHARACTERS=[{"id":"1","name":"[隊長] 斯奧萊爾","bio":"目的地是霜花冰島。<BR>這次遠征可不是鬧著玩的。重點是冷靜判斷和迅速行動。<BR>所以大家都要聽我的指揮。<BR>...無論如何，都要找到他。再等一會，莎賓娜。","image":"gui3/2026_prewinter/storycontents/npcimg/xn_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg002.png"},{"id":"2","name":"[醫生兼工藝師] 微笑伊林斯","bio":"計畫作戰。出航。還要照顧體弱多病的王子...<BR>哈。沒有我的話根本甚麼都做不了，對吧。<BR>有著天才工藝師的工具！！！！的話...<BR>嘛，應該沒人會客死異鄉吧。顆顆顆顆。","image":"gui3/2026_prewinter/storycontents/npcimg/el_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg005.png"},{"id":"3","name":"[資金擔當] 席德","bio":"遠征需要充足的食物、物資和資金。<BR>告訴我需要些甚麼吧。我不會對投資項目有所吝惜的。<BR>至於為甚麼我會同行？嗯... 呵呵。暫時是...<BR>商業機密，該這樣說嗎？","image":"gui3/2026_prewinter/storycontents/npcimg/sd_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg004.png"},{"id":"4","name":"[戰鬥與訓練擔當] 賽莉亞","bio":"遠征很危險？哈哈！大家都忘了有我賽莉亞在嗎？<BR>戰鬥就交給我吧。我在這方面很有信心。<BR>順便趁這個機會看看其他人會成長到甚麼程度吧～<BR>...而且，關於「陰暗之影」的蹤跡... 搞不好還可以追擊。","image":"gui3/2026_prewinter/storycontents/npcimg/ce_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg007.png"},{"id":"5","name":"[能量擔當] 納魯西斯","bio":"探險隊有帥哥美女... 那怎麼能少了我納魯西斯呢!!!!!!!<BR>有我的MiMo，就算有多艱辛也能發光發亮。哈哈哈哈!!!<BR>不只是掌管能量，也有著意想不到的才能...<BR>敬請期待我納魯西斯的活躍！哈哈哈哈哈哈!!!!! (wink)","image":"gui3/2026_prewinter/storycontents/npcimg/ns_normal.png","rect":{"x1":583,"y1":651},"background":"gui3/2026_prewinter/storycontents/bg003.png"}];
 let characterList=FALLBACK_CHARACTERS.slice(),currentCharacterIndex=0;
@@ -346,9 +353,62 @@ function previous(){stopAuto();if(position>0){position--;render()}}
 function chooseBranch(id){stopAuto();if(chapter!==0||node().key!=='18'){toast('分支選項只在第一章 Node 18 出現');return}try{let newRoute=buildBranchRoute(id);route=newRoute;position=route.indexOf(`18-${id}-1`);auto=false;$('autoBtn').textContent='自動播放：關';render();toast(`已選擇路線 ${id}`)}catch(e){toast(e.message)}}
 function skipChapter(){stopAuto();if(chapter===0){let keys=chapterKeys(0);route=[...keys.slice(0,keys.indexOf('18')),...keys.slice(keys.indexOf('19'))]}else route=chapterKeys(chapter);position=route.length-1;render();next()}
 function toggleAuto(){auto=!auto;$('autoBtn').textContent=`自動播放：${auto?'開':'關'}`;if(auto)scheduleAuto();else stopAuto()}
-function toggleSound(){soundOn=!soundOn;$('soundBtn').textContent=soundOn?'♫ 音效開':'♫ 音效關';if(!soundOn)bgm.pause();else{let d=node().data;if(d.bgm&&d.bgm!=='off')setBGM(d.bgm)}}
+
+function collectStoryAssetRefs(){
+  const refs=new Set();
+  const visit=(value,key='')=>{
+    if(typeof value==='string'){
+      if(['background','image','bgm','sound','CustomImage_Name'].includes(key)&&value&&value!=='keep'&&value!=='off')refs.add(value);
+      return;
+    }
+    if(Array.isArray(value)){value.forEach(item=>visit(item,key));return;}
+    if(value&&typeof value==='object')Object.entries(value).forEach(([childKey,child])=>visit(child,childKey));
+  };
+  visit(STORY);
+  (characterList.length?characterList:FALLBACK_CHARACTERS).forEach(item=>{if(item.image)refs.add(item.image);if(item.background)refs.add(item.background)});
+  return [...refs].map(fileURL).filter(Boolean).filter(url=>/\.(?:png|jpe?g|webp|gif|ogg|wav|mp3|m4a)(?:[?#]|$)/i.test(url));
+}
+async function preloadStoryAssets(){
+  if(preloadRunning)return;
+  if(!STORY){toast('劇情資料尚未載入完成，請稍後再試');return}
+  preloadRunning=true;
+  const button=$('preloadBtn');
+  button.disabled=true;
+  $('preloadStatus').textContent='正在整理素材清單…';
+  openModal('preloadModal');
+  try{
+    const urls=[...new Set(collectStoryAssetRefs())];
+    let completed=0,failed=0,nextIndex=0;
+    $('preloadStatus').textContent=`共找到 ${urls.length} 個素材，開始預載入…`;
+    const worker=async()=>{
+      while(nextIndex<urls.length){
+        const url=urls[nextIndex++];
+        try{
+          const response=await fetch(url,{cache:'force-cache'});
+          if(!response.ok)throw new Error('HTTP '+response.status);
+          await response.arrayBuffer();
+        }catch(error){failed++;console.warn('素材預載入失敗：',url,error)}
+        completed++;
+        $('preloadStatus').textContent=`已完成 ${completed} / ${urls.length}${failed?'（失敗 '+failed+' 個）':''}`;
+      }
+    };
+    await Promise.all(Array.from({length:Math.min(6,urls.length)},worker));
+    $('preloadStatus').textContent=failed?`預載入完成；成功 ${completed-failed} 個，失敗 ${failed} 個。`:'所有素材已載入完成。';
+    await new Promise(resolve=>setTimeout(resolve,650));
+    closeModal('preloadModal');
+    toast(failed?`素材預載入完成，另有 ${failed} 個檔案載入失敗`:'所有劇情素材已預載入');
+  }catch(error){
+    console.error('素材預載入失敗：',error);
+    $('preloadStatus').textContent='預載入時發生錯誤，請稍後再試。';
+    await new Promise(resolve=>setTimeout(resolve,1200));
+    closeModal('preloadModal');
+  }finally{
+    preloadRunning=false;
+    button.disabled=false;
+  }
+}
 function showHistory(){let box=$('history');box.innerHTML='';historyEntries.forEach(h=>{let e=document.createElement('div');e.className='entry';e.innerHTML=`<b>CHAPTER. ${h.chapter+1} · ${escapeHTML(h.name)} · ${escapeHTML(h.key)}</b><div>${htmlText(h.text)}</div>`;box.appendChild(e)});openModal('historyModal');box.scrollTop=box.scrollHeight}
-$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('soundBtn').onclick=toggleSound;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
+$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>closeModal(m.id));return}if($('charactersModal').classList.contains('open')){if(e.key==='ArrowRight')changeCharacter(1);else if(e.key==='ArrowLeft')changeCharacter(-1);return}if(document.querySelector('.modal.open'))return;if(!storyStarted)return;if(e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft')previous();else if(e.key.toLowerCase()==='a')toggleAuto();else if(e.key.toLowerCase()==='s')skipChapter()});
 async function bootstrapRepository(){
   // Render the Episode menu immediately; it must not wait for the GitHub asset API.
@@ -414,6 +474,7 @@ async function bootstrapRepository(){
     const imageMapCount=Object.keys(customImagePaths).length;
     if(!imageMapCount)throw new Error('customimage.txt 沒有可用的圖片路徑');
     $('assetNote').textContent='已連接 customimage.txt（'+imageMapCount+' 筆圖片路徑）；場景與音效依劇情 TXT 路徑直接載入。';
+    $('preloadBtn').disabled=false;
     if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
   }catch(e){
     console.warn('customimage.txt 載入失敗，改用 GitHub 素材索引：',e);
@@ -432,6 +493,7 @@ async function bootstrapRepository(){
     }catch(indexError){
       console.warn('GitHub 素材索引也無法載入：',indexError);
       $('assetNote').textContent='圖片對照表與備援素材索引均無法載入；劇情文字仍可閱讀，圖片或音效可能無法顯示。';
+      $('preloadBtn').disabled=false;
     }
   }
 }
