@@ -59,7 +59,7 @@
 @media(max-width:700px){.character-card{height:min(760px,92vh);max-height:92vh;padding:14px}.character-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(150px,42%) minmax(0,1fr);gap:12px}.character-details{gap:8px;padding:2px}.character-name{font-size:18px}.character-bio{max-height:none;font-size:12px;line-height:1.75;text-align:top;}.character-nav{margin-top:2px;padding-top:8px}.character-nav button{padding:7px 9px}}
 </style></head>
 <body><div class="shell">
-<header class="header"><div class="brand"><div class="logo">✧</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="preloadBtn" type="button" disabled>預載入素材</button><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
+<header class="header"><div class="brand"><div class="logo">✧</div><div><b>情感群島：霜花冰島的故事</b><small>非官方劇情播放器</small></div></div><div class="head-actions"><button id="preloadBtn" type="button">預載入素材</button><button id="charactersBtn" type="button" aria-label="開啟角色介紹">角色介紹</button></div></header>
 <div class="workspace">
 <aside class="episode-panel" aria-label="Episode 選擇">
   <div class="panel-kicker">STORY SELECT</div><h2>Episode</h2>
@@ -126,6 +126,9 @@ function chapterKeys(index){return ORDERED_KEYS[index].slice()}
 const FALLBACK='';
 /* chapterTitles are assigned only after script_frostflower1.txt has loaded. */
 let chapter=0,route=[],position=0,auto=false,autoTimer=null,historyEntries=[],files=[],customImagePaths=Object.create(null),soundOn=true,masterVolume=1,selectedEpisode=null,storyStarted=false;
+let assetIndexSettled=false,resolveAssetIndexReady;
+const assetIndexReady=new Promise(resolve=>{resolveAssetIndexReady=resolve});
+function markAssetIndexReady(){if(assetIndexSettled)return;assetIndexSettled=true;resolveAssetIndexReady()}
 const $=id=>document.getElementById(id);const bgm=new Audio();bgm.loop=true;bgm.volume=.4;const sfx=new Audio();sfx.volume=.6;
 function applyMasterVolume(value,save=true){const n=Math.max(0,Math.min(100,Number(value)||0));masterVolume=n/100;bgm.volume=.4*masterVolume;sfx.volume=.6*masterVolume;if($('volumeSlider'))$('volumeSlider').value=String(n);if($('volumeValue'))$('volumeValue').textContent=`${n}%`;if(save){try{localStorage.setItem('frostflower1-volume',String(n))}catch(e){}}}
 function initVolume(){let saved=100;try{const v=localStorage.getItem('frostflower1-volume');if(v!==null&&Number.isFinite(Number(v)))saved=Math.max(0,Math.min(100,Number(v)))}catch(e){}applyMasterVolume(saved,false)}
@@ -376,7 +379,12 @@ async function preloadStoryAssets(){
   button.disabled=true;
   $('preloadStatus').textContent='正在整理素材清單…';
   openModal('preloadModal');
+  let assetIndexTimer;
   try{
+    $('preloadStatus').textContent='正在等待素材索引…';
+    await Promise.race([assetIndexReady,new Promise(resolve=>{assetIndexTimer=setTimeout(resolve,8000)})]);
+    if(assetIndexTimer)clearTimeout(assetIndexTimer);
+    if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的素材…';
     const urls=[...new Set(collectStoryAssetRefs())];
     let completed=0,failed=0,nextIndex=0;
     $('preloadStatus').textContent=`共找到 ${urls.length} 個素材，開始預載入…`;
@@ -474,6 +482,7 @@ async function bootstrapRepository(){
     const imageMapCount=Object.keys(customImagePaths).length;
     if(!imageMapCount)throw new Error('customimage.txt 沒有可用的圖片路徑');
     $('assetNote').textContent='已連接 customimage.txt（'+imageMapCount+' 筆圖片路徑）；場景與音效依劇情 TXT 路徑直接載入。';
+    markAssetIndexReady();
     $('preloadBtn').disabled=false;
     if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
   }catch(e){
@@ -489,11 +498,13 @@ async function bootstrapRepository(){
       files=tree.tree.filter(x=>x.type==='blob'&&allowed.test(x.path))
         .map(x=>({name:x.path,url:RAW_ASSET_BASE+x.path.split('/').map(encodeURIComponent).join('/')}));
       $('assetNote').textContent='customimage.txt 無法使用；已改用 GitHub 素材索引（'+files.length+' 個檔案）。';
+      markAssetIndexReady();
       $('preloadBtn').disabled=false;
       if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
     }catch(indexError){
       console.warn('GitHub 素材索引也無法載入：',indexError);
       $('assetNote').textContent='圖片對照表與備援素材索引均無法載入；劇情文字仍可閱讀，圖片或音效可能無法顯示。';
+      markAssetIndexReady();
       $('preloadBtn').disabled=false;
     }
   }
