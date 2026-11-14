@@ -475,10 +475,10 @@ async function bootstrapRepository(){
     buildEpisodeList();
     buildChapterTabs();
     updateStartScreen();
-    $('selectionHint').innerHTML='請從左側選擇章節。<br>建議先進行「預載入素材」。';
+    $('selectionHint').innerHTML='請從左側選擇章節。<br>建議先在右上角進行「預載入素材」。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
-    $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
+    $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。<br>請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
     return;
   }
 
