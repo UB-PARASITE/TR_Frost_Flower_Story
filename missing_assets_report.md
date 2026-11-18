@@ -1,51 +1,36 @@
-# Episode 1 / Episode 2 素材缺漏盤點
+# Episode 1 / Episode 2 素材缺漏複查報告
 
-盤點日期：2026-11-18  
+複查日期：2026-11-18  
 分支：`main`
 
-## 盤點範圍與結論
+## 複查結果摘要
 
-本報告比對以下檔案，並以 GitHub Repository 的完整遞迴檔案清單（380 個檔案，API 回傳未截斷）檢查實際存在的檔案：
+本次重新檢查：
 
-- `script_frostflower1.txt`、`script_frostflower2.txt`
-- `storyguide_frostflower1.txt`、`storyguide_frostflower2.txt`
+- `script_frostflower1.txt`（6 Chapters、672 個節點）
+- `script_frostflower2.txt`（3 Chapters、370 個節點）
+- `storyguide_frostflower1.txt`
+- `storyguide_frostflower2.txt`
 - `customimage.txt`（340 筆圖片名稱對照）
-- Repository `main` 分支內的所有檔案路徑
+- Repository `main` 分支完整檔案樹（444 個檔案，API 回傳未截斷）
 
 | 項目 | Episode 1 | Episode 2 |
 |---|---:|---:|
-| Chapter | 6 | 3 |
-| 劇情節點 | 672 | 370 |
-| 缺少圖片 | 0 | 32 |
-| 缺少 BGM | 0 | 9 |
-| 缺少音效 | 0 | 14 |
+| 缺少背景圖片 | 0 | 0 |
+| 缺少劇情插圖 | 0 | 5 |
+| 缺少角色立繪 | 0 | 16 |
+| 缺少 BGM | 0 | 0 |
+| 缺少音效 SFX | 0 | 0 |
+| **目前劇情必需素材缺漏** | **0** | **21 張圖片** |
 
-**目前需要補齊 55 個實體素材檔案：32 張圖片、9 首 BGM、14 個音效。**  
-Episode 1 的劇情引用均可找到對應檔案；目前缺漏集中在 Episode 2。
-
-路徑大小寫以播放器的實際處理方式為準：`fileURL()` 會將路徑轉成小寫，因此下列「應放置路徑」均列出小寫形式。請使用完整相對路徑上傳，避免只上傳同名但位於不同資料夾的檔案。
+**與上次盤點相比，原先缺少的 11 張背景圖片、9 首 BGM 及 14 個 SFX 均已找到對應檔案。**  
+目前共確認補齊了上次清單中的 34 個必需素材；剩餘 21 個缺漏全部是 Episode 2 圖片。
 
 ---
 
-## A. 缺少圖片（32 個）
+## A. 目前仍缺少的 21 張圖片
 
-### A1. 場景背景（11 個）
-
-| 應放置路徑 | Episode 2 使用位置 |
-|---|---|
-| `gui3/2026_prewinter/storycontents/bg015.png` | Ch1 Node 101；Ch3 Node 28 |
-| `gui3/2026_prewinter/storycontents/bg016.png` | Ch1 Node 119 |
-| `gui3/2026_prewinter/storycontents/bg017.png` | Ch2 Node 92、100、106、116 |
-| `gui3/2026_prewinter/storycontents/bg018.png` | Ch2 Node 126 |
-| `gui3/2026_prewinter/storycontents/bg019.png` | Ch2 Node 150、154、155、159 |
-| `gui3/2026_prewinter/storycontents/bg020.png` | Ch2 Node 103 |
-| `gui3/2026_prewinter/storycontents/bg021.png` | Ch2 Node 169 |
-| `gui3/2026_prewinter/storycontents/bg022.png` | Ch3 Node 1、29 |
-| `gui3/2026_prewinter/storycontents/bg023.png` | Ch3 Node 51 |
-| `gui3/2026_prewinter/storycontents/bg024.png` | Ch3 Node 56、69 |
-| `gui3/2026_prewinter/storycontents/bg025.png` | Ch2 Node 2 |
-
-### A2. 劇情插圖（5 個）
+### A1. 劇情插圖（5 個）
 
 | 應放置路徑 | Episode 2 使用位置 |
 |---|---|
@@ -55,9 +40,9 @@ Episode 1 的劇情引用均可找到對應檔案；目前缺漏集中在 Episod
 | `gui3/2026_prewinter/storycontents/cut_029.png` | Ch2 Node 153 |
 | `gui3/2026_prewinter/storycontents/cut_030.png` | Ch3 Node 29 |
 
-### A3. 角色立繪（16 個）
+### A2. 角色立繪（16 個）
 
-這些名稱已存在於 `customimage.txt`，但對照表指定的圖片檔案在 Repository 中找不到。
+以下名稱已存在於 `customimage.txt`，但對照表指定的檔案仍未出現在 Repository。
 
 | 素材名稱 | 應放置路徑 | Episode 2 使用位置 |
 |---|---|---|
@@ -80,50 +65,22 @@ Episode 1 的劇情引用均可找到對應檔案；目前缺漏集中在 Episod
 
 ---
 
-## B. 缺少音效（23 個）
+## B. 音效及背景音樂複查
 
-### B1. 背景音樂 BGM（9 個）
+| 類別 | 上次缺少 | 本次仍缺少 | 狀態 |
+|---|---:|---:|---|
+| BGM | 9 | 0 | <已補齊> |
+| SFX | 14 | 0 | <已補齊> |
 
-| 應放置路徑 | Episode 2 使用位置 |
-|---|---|
-| `sound/bgm/training_bownavi_slide.ogg` | Ch1 Node 1 |
-| `sound/bgm/wishstone_upbeatguitar.ogg` | Ch1 Node 43 |
-| `sound/bgm/wishstone_love.ogg` | Ch1 Node 57 |
-| `sound/bgm/item_training_emotion_island.ogg` | Ch1 Node 101 |
-| `sound/bgm/wishstone_beyondstars.ogg` | Ch2 Node 1 |
-| `sound/bgm/park/bgm-horror-park-.ogg` | Ch2 Node 14 |
-| `sound/bgm/wishstone_rain.ogg` | Ch2 Node 92、126 |
-| `sound/bgm/wishstone_pianoversion.ogg` | Ch2 Node 106 |
-| `sound/bgm/wishstone_strangematter.ogg` | Ch3 Node 2、17 |
+本次檢查沒有發現 Episode 1 或 Episode 2 仍引用不存在的音訊檔案。
 
-### B2. 劇情音效 SFX（14 個）
-
-| 應放置路徑 | Episode 2 使用位置 |
-|---|---|
-| `sound/wishstone_shining.wav` | Ch1 Node 6、95 |
-| `sound/wishstone_effect4.wav` | Ch1 Node 7、26；Ch2 Node 82 |
-| `sound/wishstone_brokenglass.wav` | Ch2 Node 7、150 |
-| `sound/wishstone_falldown2.wav` | Ch2 Node 11 |
-| `sound/wishstone_sword.wav` | Ch2 Node 22 |
-| `sound/wishstone_magic.wav` | Ch2 Node 32 |
-| `sound/wishstone_effect13.wav` | Ch2 Node 81 |
-| `sound/wishstone_wind.wav` | Ch2 Node 90 |
-| `sound/wishstone_seaside.wav` | Ch2 Node 103、169 |
-| `sound/wishstone_bush.wav` | Ch2 Node 119、124 |
-| `sound/wishstone_cave.wav` | Ch3 Node 50 |
-| `sound/wishstone_magictwinkle.wav` | Ch3 Node 55 |
-| `sound/wishstone_jaildoor.wav` | Ch3 Node 57 |
-| `sound/wishstone_jaildoor2.wav` | Ch3 Node 64 |
-
-### B3. 特殊標記（不列入缺少音效）
-
-Episode 2 另有 3 處將 `sound` 設為 `sound\\off`：Ch1 Node 49、Ch2 Node 92、106。這看起來是停止／關閉音效的控制標記，不是應上傳的音檔，因此沒有列入 14 個 SFX。
+Episode 2 中 3 處 `sound\\off`（Ch1 Node 49、Ch2 Node 92、106）屬於控制標記，不是實際音檔，沒有列入音效缺漏。
 
 ---
 
-## C. customimage.txt 中另外 8 個尚未被 Episode 1／2 引用的缺檔映射
+## C. customimage.txt 另外 8 個未被 Episode 1／2 使用的失效映射
 
-以下映射也指向不存在的圖片，但在本次兩份劇情檔的 `ImgList` 中沒有找到引用。若將來劇情使用這些名稱，仍需補檔：
+以下 8 筆對照路徑仍然沒有實體檔案，但在 Episode 1、Episode 2 的劇情節點中都沒有引用。它們不計入上述 21 張「目前劇情必需素材」：
 
 - `blank_back_dark` → `gui3/2026_prewinter/storycontents/npcimg/blank_back_dark.png`
 - `blank_normal2_dark` → `gui3/2026_prewinter/storycontents/npcimg/blank_normal2_dark.png`
@@ -134,12 +91,20 @@ Episode 2 另有 3 處將 `sound` 設為 `sound\\off`：Ch1 Node 49、Ch2 Node 9
 - `la_laugh_dark` → `gui3/2026_prewinter/storycontents/npcimg/la_laugh_dark.png`
 - `xn_laugh2_2_dark` → `gui3/2026_prewinter/storycontents/npcimg/xn_laugh2_2_dark.png`
 
+目前 `customimage.txt` 共 340 筆映射，其中 29 筆路徑未找到實體檔案：21 筆被 Episode 2 使用，另 8 筆未被這兩話使用。
+
 ---
 
-## D. 補檔優先順序建議
+## D. 結論
 
-1. **先補 A1 背景與 A2 劇情插圖**：缺少時會直接影響場景和關鍵劇情畫面。
-2. **再補 A3 角色立繪**：缺少時對應角色可能無法顯示。
-3. **最後補 B1／B2 音訊**：缺少時相應節點不會有預期音樂或音效。
+- Episode 1：劇情引用的圖片與音訊均已齊全。
+- Episode 2：背景、BGM、SFX 均已齊全；仍缺 5 張劇情插圖及 16 張角色立繪。
+- 若目標是讓目前 Episode 1、Episode 2 的所有劇情素材都能正常顯示，只需再補上 A 節列出的 21 張圖片。
+- 本次只更新盤點報告，沒有修改劇情 TXT、`customimage.txt` 或播放器程式碼。
 
-補檔後再次執行相同路徑檢查，預期 A、B 的缺漏數應降為 0。這份盤點沒有修改任何劇情內容、素材路徑或播放器程式碼。
+## E. 本次盤點版本識別
+
+- `script_frostflower1.txt` SHA：`395d7cd5f6a815ca80ef6a3e018128e263ba58e6`
+- `script_frostflower2.txt` SHA：`653a60fa2731830b354e7a498bb49a9d7bb8e7ff`
+- `customimage.txt` SHA：`d0c4a586666c9ed8e9b0f17a80ef98744a311596`
+- Repository tree SHA：`0cbb4ebe41cd277a540f74371966c4a9c181d561`
