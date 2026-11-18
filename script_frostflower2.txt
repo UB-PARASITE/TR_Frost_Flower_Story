@@ -1,0 +1,2605 @@
+﻿{
+  "name": "FrostFlower2",
+  "episode": "Episode.2",
+  "episode_image": { "image":"gui3/2026_PreWinter/StoryContents/StoryContents_EpImg01.png", "rect":{"x":355, "y":0, "x1":335, "y1":401} },
+  "episode_title": "那天．我們",
+  "chapter_title": "重返你身邊的理由@[番外] 實驗的副產物@PANOPTICON",
+  "CustomImage_CtrlNameList": ["NPCImg1","NPCImg2","NPCImg3","NPCImg4"],
+  "script": [
+    {
+      "1": {
+        "name": "셀리아",
+        "text": "오케이. 그럼~ 어느 정도 짐은 다 실은 것 같고.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg013.png",
+        "bgm": "sound\\bgm\\training_bownavi_slide.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ce_smiling2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "2": {
+        "name": "셀리아",
+        "text": "운전은. 엘림스, 네가 하는 거지?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ce_smiling2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "3": {
+        "name": "엘림스 스마일",
+        "text": "뭐, 오랜만에 운항하는 거긴 한데.<br>이것 또한 '아티팩트'니까.<br>내가 다루는 게 맞지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ce_smiling2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "4": {
+        "name": "셀리아",
+        "text": "그럼 조타는 맡길게.<br>난 망루원 역할이라도 해야겠네.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_question_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_normal2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "5": {
+        "name": "나르시스",
+        "text": "난 돛을 좀 봐주도록 할까~?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_laugh2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "6": {
+        "name": "나르시스",
+        "text": "하얀 천이랑 바람만 있으면...<br>어디든 갈 수 있으니까...",
+        "sound": "sound\\wishstone_shining.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_closed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "7": {
+        "name": "셀리아",
+        "text": "....잘못 들었나? 하하!!",
+        "sound": "sound\\wishstone_effect4.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ce_embarrassed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "8": {
+        "name": "시드",
+        "text": "그래서... 우리의 행선지는.<br>시오넬 선장님의 지시를 따르면 되는 건가?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "9": {
+        "name": "시오넬",
+        "text": ".......흥.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "10": {
+        "name": "시오넬",
+        "text": "엘림스 스마일. 감정의 제도로 간다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "11": {
+        "name": "시오넬",
+        "text": "그렇지만.... <br>기쁨의 왕국이 있는 왕성으로 가진 않을 거야.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "12": {
+        "name": "시오넬",
+        "text": "다시 한번 목적을 분명히 하겠다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_closed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "13": {
+        "name": "시오넬",
+        "text": "우리는 '무브먼트'의 동력원을 찾는 것이 목표다.<br>그리고 나는 그 동력 에너지를 제공해 줄 만한<br>지인을 알고 있지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "14": {
+        "name": "엘림스 스마일",
+        "text": "그가.... '서리꽃 빙도'에 머물고 있다고 했습니까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "15": {
+        "name": "시오넬",
+        "text": "...그래.<br>서리꽃 빙도는 감정의 제도에서도 가장 극동에 위치한 섬이다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "16": {
+        "name": "시오넬",
+        "text": "온난한 기쁨의 왕국 본섬과는 다르게...<br>눈과 얼음으로 뒤덮인 도시지."
+      },
+      "17": {
+        "name": "셀리아",
+        "text": "호오... 그래서 빙도인 건가?<br>극동의 섬이라니. 여정이 기대되는데?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_normal_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"sd_normal_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"ce_smiling4", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "18": {
+        "name": "시드",
+        "text": "아무래도 사막에선<br>눈 구경하기 어려우니까 말이야.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_normal_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"sd_smiling2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"ce_smiling4_dark", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "19": {
+        "name": "나르시스",
+        "text": "서리꽃 빙도라....<br>이 꽃 같은 나르시스에게 어울리는 목적지로군.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_closed", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"sd_smiling2_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"ce_smiling4_dark", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "20": {
+        "name": "엘림스 스마일",
+        "text": "그런데...<br>그 '지인'이란 사람은... 뭐 하는 사람이죠?",
+        "bgm": "off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "21": {
+        "name": "엘림스 스마일",
+        "text": "그 사람만 믿고 이렇게 다짜고짜 출발해도<br>문제 없는 겁니까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "22": {
+        "name": "시오넬",
+        "text": ".............<br>그는 기쁨의 왕국 소속 군인이고.....",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "23": {
+        "name": "시오넬",
+        "text": "나의 사관학교 동기기도 하다.",
+        "sound": "sound\\wishstone_unrest.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "24": {
+        "name": "셀리아",
+        "text": "사관학교... 동기?!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_embarrassed_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_surprised", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "25": {
+        "name": "엘림스 스마일",
+        "text": "왕자님....<br>친구도 있었습니까...?!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_embarrassed", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ce_surprised_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "26": {
+        "name": "셀리아",
+        "text": "...놀란 포인트가 거기냐?",
+        "sound": "sound\\wishstone_effect4.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_embarrassed_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "27": {
+        "name": "시오넬",
+        "text": "흥. 친구도 뭣도 아냐.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "28": {
+        "name": "시오넬",
+        "text": "사관학교에서 차·수석을 다투던 관계라 안면이 있을 뿐이다."
+      },
+      "29": {
+        "name": "시오넬",
+        "text": "녀석은 사관학교 졸업 후, 서리꽃 빙도에 근무지를 배정받았지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "30": {
+        "name": "시오넬",
+        "text": "...특수재난구호대?<br>네 성적이면 1기사단 지원도 문제 없을 텐데.",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "bgm": "sound\\bgm\\wishstone_Chill.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "31": {
+        "name": "시오넬",
+        "text": "굳이 제3기사단으로 가는 이유가 뭐지?<br>네놈의 성적이 아깝군."
+      },
+      "32": {
+        "name": "???",
+        "text": "아하하... 물론, 왕실 친위대가 되면<br>클라우스랑 자주 볼 수 있겠지만...."
+      },
+      "33": {
+        "name": "???",
+        "text": "...하고 싶은 일이었으니까."
+      },
+      "34": {
+        "name": "???",
+        "text": "그래도, 언제든 부르면 달려갈게.<br>연락도 자주 해서 클라우스를 귀찮게 할 거니 걱정 마."
+      },
+      "35": {
+        "name": "???",
+        "text": "...알았지?"
+      },
+      "36": {
+        "name": "시오넬",
+        "text": "(...흥. 자주는 무슨.<br>코빼기도 보이지 않던데.)",
+        "background": "gui3/2026_PreWinter/StoryContents/bg013.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "37": {
+        "name": "시오넬",
+        "text": "(......그렇지만, 이 녀석이 내 연락을 받고도<br>무시할 리가 없다.)",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "38": {
+        "name": "시오넬",
+        "text": "(분명 무슨 일이 있는 게 틀림없어.)"
+      },
+      "39": {
+        "name": "시오넬",
+        "text": "...아무튼, 사관학교를 다니면서 여러 번 겨뤄봤으니 알 수 있다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_closed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "40": {
+        "name": "시오넬",
+        "text": "이깟 시계 조각 정도는 100번이고 가동할 수 있을 녀석이야."
+      },
+      "41": {
+        "name": "엘림스 스마일",
+        "text": "...뭐, 그러시죠.<br>왕자님이 보증하셨으니,<br>책임도 왕자님이 지는 겁니다? 크크크.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "42": {
+        "name": "시드",
+        "text": "좋아. 그럼 목적지도 확실해졌으니...<br>슬슬 출발해 볼까?",
+        "bgm": "off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "43": {
+        "name": "나르시스",
+        "text": "오우, 좋았어!!<br>이제 나르시스가 활약할 차례로군!!",
+        "bgm": "sound\\bgm\\wishstone_upbeatguitar.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ns_provoke_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "44": {
+        "name": "나르시스",
+        "text": "모두 닻을 올려라!!<br>서리꽃 빙도로 여정 START!!!!",
+        "sound": "sound\\wishstone_tada1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ns_angry2_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "45": {
+        "name": "엘림스 스마일",
+        "text": "이봐. 키를 잡은 건 나다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ns_angry2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "46": {
+        "name": "나르시스",
+        "text": "그래? 그럼 엘림스 스마일이 닻을 올려라!!",
+        "sound": "sound\\wishstone_tada2.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ns_laugh2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "47": {
+        "name": "엘림스 스마일",
+        "text": "......역시 바다에 빠뜨릴까.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ns_laugh2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "48": {
+        "name": "라라",
+        "text": "잠깐만... 잠깐만요!!!!",
+        "bgm": "off",
+        "sound": "sound\\wishstone_run1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "49": {
+        "name": "라라",
+        "text": "출발하기 전에, 잠깐만 멈춰주세요!!!!",
+        "sound": "sound\\off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "50": {
+        "name": "셀리아",
+        "text": "응? 라라 공주님...?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_surprised", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "51": {
+        "name": "엘림스 스마일",
+        "text": "공주는 또 무슨 일이지?<br>더 탑승할 공간은 없는데.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ce_surprised_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "52": {
+        "name": "라라",
+        "text": "아니에요.<br>저는... 어마마마의 곁을 지키기로 했으니까요.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_embarrassed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "53": {
+        "name": "라라",
+        "text": "같이 배에 타려는 게 아니라......<br>................"
+      },
+      "54": {
+        "name": "라라",
+        "text": ".....삼촌께 어마마마의 편지를 전해드리려 왔어요.",
+        "sound": "sound\\wishstone_unrest.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_laugh", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "55": {
+        "name": "시오넬",
+        "text": "......! 사브리나가?",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "56": {
+        "text": "부스럭-",
+        "sound": "sound\\wishstone_papper.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "57": {
+        "name": "사브리나",
+        "text": "사랑하는 오라버니께.",
+        "bgm": "sound\\bgm\\wishstone_Love.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_026", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "58": {
+        "name": "사브리나",
+        "text": "오라버니가 원정을 가신다는 소식을<br>뒤늦게 알게 되었어요."
+      },
+      "59": {
+        "name": "사브리나",
+        "text": "항상 바보같이 걱정만 시키는 동생이라 미안해요."
+      },
+      "60": {
+        "name": "사브리나",
+        "text": "이 정도 병은 금방 이겨낼 수 있다고...<br>저는 지금의 삶도 충분히 행복하다고 말하고 싶지만"
+      },
+      "61": {
+        "name": "사브리나",
+        "text": "오라버니께선 제 말을 듣지 않으실 거 알아요.<br>계속, 보이지 않는 곳에서도 <br>제 젊음을 되돌릴 수 있는 방법을 찾았잖아요."
+      },
+      "62": {
+        "name": "사브리나",
+        "text": "...오라버니. 저는 괜찮으니 꼭 몸조심하세요.<br>가장 중요한 건 첫째도, 둘째도 오라버니의 안전이에요."
+      },
+      "63": {
+        "name": "사브리나",
+        "text": "오라버니 없이 젊음을 되돌려봤자...<br>저는 한 개도 행복하지 않으니까.<br>아시겠죠?"
+      },
+      "64": {
+        "name": "사브리나",
+        "text": "사랑을 담아.<br>사브리나 클라우스 드 앙리."
+      },
+      "65": {
+        "name": "시오넬",
+        "text": "................<br>.......사브리나..."
+      },
+      "66": {
+        "name": "라라",
+        "text": "...아, 그리고...<br>어마마마께서 이 목걸이도 같이 전해달라고 하셨어요."
+      },
+      "67": {
+        "name": "엘림스 스마일",
+        "text": "이건...<br>기쁨의 왕실 문장이군요.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "68": {
+        "name": "시오넬",
+        "text": "...왕가를 증명하는 장신구다.<br>직계 혈통에게 주어지는 것으로, 대대로 왕가의 마력을 품어왔지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "69": {
+        "name": "엘림스 스마일",
+        "text": "그럼 왕자님에게도 있는 거 아닙니까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "70": {
+        "name": "시오넬",
+        "text": "난 왕위 계승하기 싫어서 바다에 버렸다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "71": {
+        "name": "엘림스 스마일",
+        "text": "...그럼 그렇지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "72": {
+        "name": "라라",
+        "text": "어마마마께선 이 목걸이가 삼촌을 지켜줄 거라고 말씀하셨어요.<br>언제나 곁에 있음을 기억해달라고...",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_normal", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "73": {
+        "name": "시오넬",
+        "text": "...........",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "74": {
+        "name": "라라",
+        "text": "....삼촌. 여정이....<br>많이 위험한 건가요...?<br>단순히 친구분을 찾으러 가는 게 아닌 건가요....?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_crying2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "75": {
+        "name": "셀리아",
+        "text": "하하, 너무 걱정하지 마, 공주님.<br>시오넬 왕자 혼자 가는 것도 아니니ㄲ....",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ce_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "76": {
+        "name": "시오넬",
+        "text": "위험한지 아닌지는 알 수 없다.<br>단순히 연락이 안 되는 건지, 어떤 사건이 일어난 건지는 가봐야 아니까.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "77": {
+        "name": "시오넬",
+        "text": "내가 무사할 거란 약속도 할 수 없다.<br>동료가 위험한 상태라면, 교전을 피할 수 없겠지.<br>지키지 못할지도 모르는 약속은 함부로 할 순 없어."
+      },
+      "78": {
+        "name": "셀리아",
+        "text": "..................",
+        "sound": "sound\\wishstone_effect3.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_provoke_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_smiling2_sweat", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "79": {
+        "name": "시드",
+        "text": "조카를 안심시켜줄 수는 있을 텐데~<br>시오넬 왕자에겐 어림도 없네.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_provoke_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ce_smiling2_sweat_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "80": {
+        "name": "라라",
+        "text": "..................삼촌....",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "81": {
+        "name": "시오넬",
+        "text": "그렇지만, 걱정하지 마.",
+        "bgm": "off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_crying_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "82": {
+        "name": "라라",
+        "text": "........!",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_surprised", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "83": {
+        "text": "시오넬은 부드럽게 라라의 머리 위에 손을 올렸다.",
+        "sound": "sound\\wishstone_clothes.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_surprised", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "84": {
+        "name": "시오넬",
+        "text": "나는 시오넬 클라우스다.",
+        "bgm": "sound\\bgm\\boss_teamwork_kingdom_of_sadness.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_surprised_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_smiling2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "85": {
+        "name": "시오넬",
+        "text": "...너와 사브리나를... 슬프게 만들 생각은 없어.<br>그것만은 약속하지."
+      },
+      "86": {
+        "name": "라라",
+        "text": ".....삼촌...!!",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_crying", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_smiling2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "87": {
+        "name": "시오넬",
+        "text": "...그러니 네게는 사브리나를 맡기겠다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_crying_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_smiling", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "88": {
+        "name": "시오넬",
+        "text": "사브리나가 아프지 않게. 외롭지 않게...<br>네가 곁에서 잘 챙겨 줘."
+      },
+      "89": {
+        "name": "라라",
+        "text": "..........네!! 맡겨만 주세요!!!<br>삼촌이 돌아올 때까지, 어마마마를 지키고 있을 게요!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"la_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_smiling_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "90": {
+        "name": "엘림스 스마일",
+        "text": "뭐, 왕자님 다운 약속이군.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ns_crying2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "91": {
+        "name": "나르시스",
+        "text": "이럴 수가...! 멋있는 멘트...!!!!<br>적어놨다가 나중에 써먹을 테다..!",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ns_crying2_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "92": {
+        "name": "엘림스 스마일",
+        "text": "감동의 배웅도 끝났으면... 이제 슬슬 가시죠?<br>해가 지면 항해가 어려우니까 말입니다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_question", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ns_crying2_2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "93": {
+        "name": "셀리아",
+        "text": "공주님. 너무 걱정하지 말라고.<br>알잖아? 우리들, 꽤 강한 거.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_smiling4_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"ce_smiling3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "94": {
+        "name": "시드",
+        "text": "후후. 시오넬 왕자 혼자 무리하지 못하게<br>우리가 잘 감시하고 있을게.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"sd_smiling4", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"ce_smiling3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "95": {
+        "name": "나르시스",
+        "text": "훗훗. 그럼, 그럼.<br>이미 나는 시오넬과 절친♥이니까 말이지.",
+        "sound": "sound\\wishstone_shining.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_wink_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "96": {
+        "name": "시오넬",
+        "text": "어이, 누가 내 친구라고...!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_wink_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "97": {
+        "name": "라라",
+        "text": "우와, 삼촌!! 나르시스 님!!<br>두 분 친한 사이셨군요!!!",
+        "sound": "sound\\wishstone_kirakira.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_wink_2_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"la_surprised", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"xn_embarrassed_2_dark", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "98": {
+        "name": "시오넬",
+        "text": "아니, 친하지 않....!!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_wink_2_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"la_surprised_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"xn_angry2_2", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "99": {
+        "name": "시오넬",
+        "text": "...하아. 아니, 됐다.",
+        "sound": "sound\\wishstone_effect3.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_wink_2_dark", "rect":{"x":57, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"la_surprised_dark", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"xn_closed_2", "rect":{"x":640, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "100": {
+        "name": "나르시스",
+        "text": "자아, 그럼! 모두 준비가 된 것 같으니....",
+        "bgm": "off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"ns_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "101": {
+        "name": "나르시스",
+        "text": "다시!! 닻을 올려볼까?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg015.png",
+        "bgm": "sound\\bgm\\item_training_emotion_island.ogg",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "102": {
+        "name": "나르시스",
+        "text": "이 나르시스가 배의 등대가 되어주지!!!"
+      },
+      "103": {
+        "name": "셀리아",
+        "text": "좋아. <br>서리꽃 빙도까지 단숨에 날아가 보자고."
+      },
+      "104": {
+        "name": "엘림스 스마일",
+        "text": "이봐, 갑판 끝에 멋대로 올라타지 마.<br>진짜 떨어져도 모른다고."
+      },
+      "105": {
+        "name": "시드",
+        "text": "하하하. 괜찮아.<br>혹시 몰라서 구명조끼에 낙하산까지 챙겨놨거든."
+      },
+      "106": {
+        "name": "엘림스 스마일",
+        "text": "...짐이 왜 이다지도 많았는지 알 것도 같군."
+      },
+      "107": {
+        "name": "시드",
+        "text": "뭐, 이왕이면 잘 준비해 가는 게 좋으니까.<br>왕자. 아까 못 마신 사과주스 마실래?"
+      },
+      "108": {
+        "name": "시오넬",
+        "text": ".......됐어."
+      },
+      "109": {
+        "name": "라라",
+        "text": "삼초온!!!!! 여러분드을!!!!<br>무사히 다녀오셔야 해요!!!!!",
+        "background": "gui3/2026_PreWinter/StoryContents/bg013.png"
+      },
+      "110": {
+        "name": "시오넬",
+        "text": ".....................",
+        "background": "gui3/2026_PreWinter/StoryContents/bg014.png"
+      },
+      "111": {
+        "name": "엘림스 스마일",
+        "text": ".........",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_027", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "112": {
+        "name": "엘림스 스마일",
+        "text": ".....크크크크크.<br>답지 않게 걱정스러운 얼굴을 하시는군요."
+      },
+      "113": {
+        "name": "엘림스 스마일",
+        "text": "....신경쓰입니까? 여동생이?"
+      },
+      "114": {
+        "name": "시오넬",
+        "text": ".......항해사가 말이 많군."
+      },
+      "115": {
+        "name": "시오넬",
+        "text": "이미 배는 출항했어.<br>병사는 전장에 나간 순간,<br>이미 목숨을 걸 각오는 끝낸 거다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "116": {
+        "name": "시오넬",
+        "text": "남은 건, 승리와 쟁취뿐.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "117": {
+        "name": "엘림스 스마일",
+        "text": "네에, 네. 이래야 전쟁광 왕자님이죠.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "118": {
+        "name": "엘림스 스마일",
+        "text": "그럼, 조금 더 속도를 높이는 걸로.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "119": {
+        "text": "그렇게, 누구도 계획하지 않았던 다섯 명의 원정대가 모였고...",
+        "background": "gui3/2026_PreWinter/StoryContents/bg016.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "120": {
+        "text": "한 치 앞도 모르는 여정은<br>이제 막 시작되려 하고 있었다."
+      },
+      "121": {
+        "text": "우리가 도달할 목적지, 그곳은 바로─"
+      },
+      "122": {
+        "text": "「감정의 제도 : 서리꽃 빙도」"
+      }
+    },
+    {
+      "1": {
+        "text": "감정의 제도는 나의 훌륭한 실험체였다.",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "bgm": "sound\\bgm\\wishstone_BeyondStars.ogg"
+      },
+      "2": {
+        "text": "내 감정의 균형 이론을 완성시키기 위해<br>구국을 명분으로, 한 나라의 멸망과 내 개인의 이익을 저울질했다.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg025.png"
+      },
+      "3": {
+        "text": "...사실 이 나라가 망하든 말든 상관없었다.<br>나는 실험만 성공시키면 그만이었고<br>그것으로 나는..."
+      },
+      "4": {
+        "text": "「내 과거의 실수를 만회한다.」<br>오직 그것만이 나의 목적이었으니까."
+      },
+      "5": {
+        "text": "그 후, 한 나라를 상대로 한 감정 이론의 검증은 성공했고<br>나라를 구한 영웅이 되어 꽤 짭짤한 보수를 받았다."
+      },
+      "6": {
+        "text": "모든 건 계획대로였다.<br>그 망할 남매를 만나기 전까진.",
+        "bgm": "off"
+      },
+      "7": {
+        "text": "쨍그랑!",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "sound": "sound\\wishstone_BrokenGlass.wav"
+      },
+      "8": {
+        "name": "시오넬",
+        "text": "........꺼져.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "9": {
+        "name": "전 주치의",
+        "text": "왕자님!!<br>아, 안정을 취하셔야 합니다!!!"
+      },
+      "10": {
+        "name": "전 주치의",
+        "text": "그렇지 않으면 정말 목숨이 위험할 수도...."
+      },
+      "11": {
+        "text": "와장창!!!!",
+        "sound": "sound\\wishstone_Falldown2.wav"
+      },
+      "12": {
+        "name": "전 주치의",
+        "text": "으허어억!!"
+      },
+      "13": {
+        "name": "시오넬",
+        "text": "목숨? 아아, 그래. 내 목숨 말인가.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_smiling4_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "14": {
+        "name": "시오넬",
+        "text": "하루하루 내 숨통을 조여대는 걸로 모자라서,<br>이젠 고작 기계 덩어리에게 목숨을 의존한다?",
+        "bgm": "sound\\bgm\\park\\bgm-horror-park-.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_smiling4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "15": {
+        "name": "시오넬",
+        "text": "크크, 아주 날벌레만도 못한 나약함이로군!!<br>내일 죽어도 모를 목숨이지 않느냐.",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_laugh2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "16": {
+        "name": "시오넬",
+        "text": "그래. 이 파리 목숨을 살려낸 구국의 영웅은 누구지?"
+      },
+      "17": {
+        "name": "시오넬",
+        "text": "내 눈앞에 당장 데려놔.<br>내 친히 감사의 인사를 해야 할 것 같으니."
+      },
+      "18": {
+        "name": "엘림스 스마일",
+        "text": "접니다만?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "19": {
+        "name": "시오넬",
+        "text": "뭐지, 이 가면은?<br>하. 나라에 인재가 없어서 이젠 수상쩍은 외부인에게 목숨을 구걸하나?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "20": {
+        "name": "시오넬",
+        "text": "네 녀석은 어째서 날 살린 것이지?<br>왜? 죽어가는 내가 가여웠나?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "21": {
+        "name": "시오넬",
+        "text": "아니면 대신들이 날 무력한 인형으로 만들라고 사주라도 했나?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "22": {
+        "text": "시오넬은 침대 옆에 세워둔 검을 빼들었다.",
+        "sound": "sound\\wishstone_Sword.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "23": {
+        "name": "전 주치의",
+        "text": "와, 왕자님!!! 그 몸으로 움직이시면.....!!"
+      },
+      "24": {
+        "name": "엘림스 스마일",
+        "text": "...................",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "25": {
+        "name": "시오넬",
+        "text": "네 진료는 받지 않겠다.<br>나약하게 살아갈 바에 순순히 죽음을 받아들이는 게.....",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "26": {
+        "name": "시오넬",
+        "text": "........크윽... 쿨럭... 쿨럭!!!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_damaged2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "27": {
+        "name": "엘림스 스마일",
+        "text": "...............하아. 이것 참.<br>기껏 치료해 놨더니 또 각혈을 하시네.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "28": {
+        "name": "엘림스 스마일",
+        "text": "...거기 의사 양반? 잠시 나가주시겠습니까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "29": {
+        "name": "엘림스 스마일",
+        "text": "제가 왕자님과 오붓~하게.<br>의료 상담을 좀 해야 할 것 같아서요."
+      },
+      "30": {
+        "name": "전 주치의",
+        "text": "힉!!! 아.. 아, 알겠습니다!!!<br>전 목숨만 살려주십쇼!!!!!"
+      },
+      "31": {
+        "name": "엘림스 스마일",
+        "text": "......................",
+        "bgm": "off",
+        "sound": "sound\\wishstone_door.wav"
+      },
+      "32": {
+        "name": "엘림스 스마일",
+        "text": ".....시오넬 클라우스 왕자.",
+        "sound": "sound\\wishstone_Magic.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_damaged_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "33": {
+        "name": "시오넬",
+        "text": "............손대지 마.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_damaged", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "34": {
+        "name": "엘림스 스마일",
+        "text": "그럼 계속 피 토하고 계시든가.",
+        "bgm": "sound\\bgm\\hide_n_seek_shadowland_ghost.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_damaged_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "35": {
+        "name": "엘림스 스마일",
+        "text": "하아... 가여워? 대신들이 사주해?<br>무슨 헛소릴 하는지 모르겠는데...",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_damaged_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "36": {
+        "name": "엘림스 스마일",
+        "text": "내가 딱히 당신을 가여워할 것도 없고.<br>별로 가여워 보이지도 않고."
+      },
+      "37": {
+        "name": "시오넬",
+        "text": "......................",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "38": {
+        "name": "엘림스 스마일",
+        "text": "치료가 끝나면 가지 말라고 바짓가랑이 붙들어도 떠날 거니까,<br>그렇게 아시길.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "39": {
+        "name": "엘림스 스마일",
+        "text": "....아직 아픕니까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "40": {
+        "name": "시오넬",
+        "text": "...............!",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_embarrassed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "41": {
+        "name": "시오넬",
+        "text": "(........고통이... 사라졌군.)"
+      },
+      "42": {
+        "name": "엘림스 스마일",
+        "text": "감정 에너지를 안정화시켰습니다.<br>멍청한 짓 하지 말고. 얌전히 있어주면 좋겠는데.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "43": {
+        "name": "엘림스 스마일",
+        "text": "어쨌든 당신 몸속에 내 아티팩트가 박힌 이상,<br>적어도 정상적으로 작동할 때까진 책임지고 싶거든.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "44": {
+        "name": "엘림스 스마일",
+        "text": "난 당신을 '불량품'으로 만들고 싶지 않으니까.",
+        "bgm": "off",
+        "sound": "sound\\wishstone_unrest.wav"
+      },
+      "45": {
+        "name": "시오넬",
+        "text": ".................불량품?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "46": {
+        "name": "엘림스 스마일",
+        "text": ".......................아.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "47": {
+        "name": "엘림스 스마일",
+        "text": "(조금 흥분해서 실언했나.<br>......그렇지만......)"
+      },
+      "48": {
+        "name": "엘림스 스마일",
+        "text": ".....................<br>.....................<br>..............................",
+        "sound": "sound\\wishstone_past.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_028", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "49": {
+        "name": "엘림스 스마일",
+        "text": "....아니. 아닙니다.<br>그저... 아주 속물적이고도 단순한 이유입니다.<br>뭐, 개인적인 연구 과제가 좀 남아 있는데...",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "50": {
+        "name": "엘림스 스마일",
+        "text": "왕자님의 주치의가 되어주는 대가로,<br>이곳의 왕께서 연구 설비 지원을 해주기로 했거든."
+      },
+      "51": {
+        "name": "엘림스 스마일",
+        "text": "길어 봤자 몇 개월입니다.<br>...대충 살아갈 수는 있게 책임지고 관리할 테니, 조금만 참으십쇼.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "52": {
+        "text": "........솔직히, 저 폭군에게 총알이라도 한 대 박히나 싶었는데.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "53": {
+        "name": "시오넬",
+        "text": "..............그래.<br>나가 봐.",
+        "bgm": "sound\\bgm\\wishstone_Chill.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "54": {
+        "name": "엘림스 스마일",
+        "text": ".....?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "55": {
+        "text": "왕자는 의외로 더는 나를 쫓아내지 않았다.",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "56": {
+        "text": "처음엔 변덕인 줄 알았다.<br>그러나 진료를 거듭하며, 나는 조금씩 그 이유를 알게 됐다."
+      },
+      "57": {
+        "text": "나는 이 나라의 왕위에도, 귀족들의 속셈에도 관심이 없었다.<br>왕자에게 충성을 맹세하지도, 신임을 얻으려 들지도 않았다."
+      },
+      "58": {
+        "text": "연구에 필요한 것을 받고, 치료가 끝나면 떠날 사람."
+      },
+      "59": {
+        "text": "왕자는 나의 그런 점에 안도하고 있었다.<br>내가 자신에게 무엇을 바라고 접근하는지, 굳이 의심할 필요 없었으니까."
+      },
+      "60": {
+        "text": "물론 상을 뒤엎고, 윽박을 지르고,<br>아프면 온갖 성질을 내는 버릇은 여전했지만."
+      },
+      "61": {
+        "name": "엘림스 스마일",
+        "text": "크크크, 오늘도 밥상 엎으시게요?<br>힘들지도 않나.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "62": {
+        "name": "시오넬",
+        "text": "...됐어. 오늘은 귀찮아.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "63": {
+        "name": "엘림스 스마일",
+        "text": "......흐음?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "64": {
+        "text": "그렇게 서로에게 익숙해지는 날들이 생겼다.<br>내가 왕자 취급을 해주지 않는 만큼, 그의 비위를 맞추지 않는 만큼.<br>아주 조금씩, 천천히.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "65": {
+        "text": "......길고양이도 아니고. 성가시긴."
+      },
+      "66": {
+        "text": "그 정도면 충분했다.<br>그와 내가 환자와 주치의로 지내는 데는."
+      },
+      "67": {
+        "text": "그 무렵, 그 사이에 아무렇지도 않게 끼어든 것이<br>어느 철부지 공주님이었다.",
+        "bgm": "off"
+      },
+      "68": {
+        "text": "어쩌면 이 불필요한 부산물 같은 감정의 원흉일지도 모르는....<br>기쁨이 가득했던, 그 소녀."
+      },
+      "69": {
+        "text": "털썩-",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "sound": "sound\\wishstone_Falldown.wav"
+      },
+      "70": {
+        "name": "엘림스 스마일",
+        "text": "...........윽... 뭐지?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "71": {
+        "name": "???",
+        "text": "아야야.... 아파...."
+      },
+      "72": {
+        "name": "???",
+        "text": "....그런데... 누구?"
+      },
+      "73": {
+        "name": "시오넬",
+        "text": "사브리나. 또 복도에서 뛰어다닌 건가.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "74": {
+        "name": "엘림스 스마일",
+        "text": "......사브리나?",
+        "bgm": "sound\\bgm\\wishstone_Chill.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_normal", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "75": {
+        "text": "그러고 보니, 얼핏 들은 적이 있다.<br>이 왕국에... 왕위 계승 후보자가 한 명 더 있다고 했던가.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "76": {
+        "name": "사브리나",
+        "text": "아아, 겨우 면회도 허락받았는데 만나자마자 잔소리!<br>그런데...... 이 사람은 누구야?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "77": {
+        "name": "시오넬",
+        "text": "...신경 쓸 것 없어. 그냥... 내 주치의다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_smiling2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "78": {
+        "name": "엘림스 스마일",
+        "text": "엘림스 스마일입니다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_smiling2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_closed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "79": {
+        "name": "사브리나",
+        "text": ".................<br>............................",
+        "bgm": "off",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "80": {
+        "name": "사브리나",
+        "text": "..........잘생겼어.",
+        "sound": "sound\\wishstone_unrest.wav"
+      },
+      "81": {
+        "name": "엘림스 스마일",
+        "text": "...예?",
+        "sound": "sound\\wishstone_effect13.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "82": {
+        "name": "시오넬",
+        "text": "......허?",
+        "sound": "sound\\wishstone_effect4.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_upset_3", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "83": {
+        "name": "사브리나",
+        "text": "오빠!! 이렇게 잘생긴 주치의라곤 말 안 했잖아!!!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_upset_3_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "84": {
+        "name": "시오넬",
+        "text": "...그러고 보니 가면이 떨어졌군.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "85": {
+        "name": "엘림스 스마일",
+        "text": "....과찬이십니다만, 이제 슬슬 가면을 써도 될까요?<br>가면이 없으면 조금 불편해서 말입니다.",
+        "sound": "sound\\wishstone_effect3.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "86": {
+        "name": "사브리나",
+        "text": "안 돼!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_smiling_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "87": {
+        "name": "엘림스 스마일",
+        "text": ".......예?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "88": {
+        "name": "사브리나",
+        "text": "오빠, 나..... 결심했어.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "89": {
+        "name": "사브리나",
+        "text": "나.......... 엘림스랑 결혼할래!!!",
+        "sound": "sound\\wishstone_unrest.wav"
+      },
+      "90": {
+        "name": "엘림스&시오넬",
+        "text": ".................................",
+        "sound": "sound\\wishstone_Wind.wav"
+      },
+      "91": {
+        "name": "엘림스 스마일",
+        "text": "...........결..... 혼......?"
+      },
+      "92": {
+        "name": "사브리나",
+        "text": "아하하!! 응!<br>오빠 말고, 이렇게 잘 생긴 사람은 처음인걸!<br>오빠도 당연히 허락해 줄 거지?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg017.png",
+        "bgm": "sound\\bgm\\wishstone_Rain.ogg",
+        "sound": "sound\\off"
+      },
+      "93": {
+        "name": "시오넬",
+        "text": ".............................................<br>아. 그렇군. 네 녀석도 혼기가 되었던가."
+      },
+      "94": {
+        "name": "시오넬",
+        "text": "엘림스 스마일. 무기를 들어라.<br>나는 나보다 나약한 매부를 들일 생각 없으니.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "95": {
+        "name": "엘림스 스마일",
+        "text": "왕자님? 총 내려놓으시죠?<br>제 의견은? 제 의견은요?",
+        "sound": "sound\\wishstone_effect3.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "96": {
+        "name": "시오넬",
+        "text": "감히 왕녀의 청혼을 거절하는 건가.<br>사죄는 목숨으로 받지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "97": {
+        "name": "엘림스 스마일",
+        "text": "저기요?!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "98": {
+        "name": "시오넬",
+        "text": "잘 들어.<br>사브리나가 차인 게 아니라, 네가 차인 거다.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "99": {
+        "name": "엘림스 스마일",
+        "text": "지금 그게 중요합니까?!",
+        "sound": "sound\\wishstone_effect1.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_upset2_2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"xn_gun_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "100": {
+        "name": "사브리나",
+        "text": "아하핫, 아하하하!!<br>오빠, 걱정했는데 건강해서 다행이네!",
+        "background": "gui3/2026_PreWinter/StoryContents/bg017.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "101": {
+        "name": "사브리나",
+        "text": "후후, 아무튼! 이 잘생긴 아저씨가 오빠의 주치의라는 거지?"
+      },
+      "102": {
+        "name": "사브리나",
+        "text": "오빠를 살려줘서 고마워, 엘림스.<br>앞으로 잘 부탁해!"
+      },
+      "103": {
+        "text": "...그렇게 난생처음 엉망진창의 청혼을 받았고<br>그것을 시작으로 '사브리나 클라우스'는 주치의와 환자 사이에 자연스럽게 녹아들었다.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg020.png",
+        "bgm": "off",
+        "sound": "sound\\wishstone_Seaside.wav"
+      },
+      "104": {
+        "text": "매일 오전 11시, 나는 진료 차트 옆에 찻잔 세 개를 준비하게 되었고<br>일주일에 한 번, 해변을 거닐 땐 세 명의 발자국이 찍혔다."
+      },
+      "105": {
+        "text": "아주 천천히. 계절이 바뀌는 동안,<br>그렇게 반복된 일상은 내 계산에 없던 부산물을 남기고 있었다."
+      },
+      "106": {
+        "name": "사브리나",
+        "text": "오빠가 의식을 잃었을 땐 정말 어떻게 되는 줄 알았어.<br>아파서 면회까지 금지되었을 땐 정말 매일매일 울었는데...",
+        "background": "gui3/2026_PreWinter/StoryContents/bg017.png",
+        "bgm": "sound\\bgm\\wishstone_PianoVersion.ogg",
+        "sound": "sound\\off"
+      },
+      "107": {
+        "name": "사브리나",
+        "text": "후훗, 엘림스 덕분인지 금방 기운 내고,<br>이젠 매일매일 만날 수 있다니 너무 기쁜 거 있지."
+      },
+      "108": {
+        "name": "시오넬",
+        "text": "울어? 울긴 뭐 하러 울지?<br>내 초상이나 치르고 난 뒤에 울어도 충분하지 않나."
+      },
+      "109": {
+        "name": "사브리나",
+        "text": "아하하, 또 못된 말!<br>나 우는 거 싫어서 그러는 거지?"
+      },
+      "110": {
+        "name": "사브리나",
+        "text": "그럼 주치의 말 잘 들어야 할 거야!"
+      },
+      "111": {
+        "name": "시오넬",
+        "text": "흥. 그런 말 하지 마라.<br>저기서 아티팩트인지 뭔지나 만지는 저 주치의 녀석,<br>아닌 척해도 다 듣고 있을 테니까.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_crying2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "112": {
+        "name": "엘림스 스마일",
+        "text": "(........시오넬 왕자.<br>사브리나 공주와 있을 땐.. 기쁨 게이지가 올라가네.)",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_normal", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "113": {
+        "name": "엘림스 스마일",
+        "text": "........풋.<br>크크... 크크크크크크.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_closed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "114": {
+        "name": "시오넬",
+        "text": "...하. 역시나 우쭐해졌군.<br>뭐가 재밌다고 웃고 있는 거지?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "115": {
+        "name": "엘림스 스마일",
+        "text": "크크크, 아뇨. 아무것도. 크크크크크.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"el_closed2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "116": {
+        "name": "사브리나",
+        "text": "흐흥, 역시 엘림스 스마일~<br>웃으니까 보기 좋네!!",
+        "background": "gui3/2026_PreWinter/StoryContents/bg017.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "117": {
+        "name": "사브리나",
+        "text": "내가 그런 엘림스를 위해 특별히 준비한 게 있는데.",
+        "bgm": "off"
+      },
+      "118": {
+        "name": "엘림스 스마일",
+        "text": "네? 저를 위해? 또 뭡니까?"
+      },
+      "119": {
+        "name": "사브리나",
+        "text": "잠깐 이리 와 봐.",
+        "sound": "sound\\wishstone_bush.wav"
+      },
+      "120": {
+        "name": "엘림스 스마일",
+        "text": "....허어? 아니, 무슨....<br>너무 가깝습니다만? 저, 왕자님께 총 맞기 싫습니다?",
+        "background": "gui3/2026_PreWinter/StoryContents/bgwhite.png"
+      },
+      "121": {
+        "name": "사브리나",
+        "text": "아니~! 그런 거 아니야!<br>잠깐만 있어 봐!!!"
+      },
+      "122": {
+        "name": "시오넬",
+        "text": "....하. 뭘 하는 거지, 사브리나."
+      },
+      "123": {
+        "name": "시오넬",
+        "text": "외간 남자에게 그렇게 함부로 손을...."
+      },
+      "124": {
+        "name": "사브리나",
+        "text": "오빠도 이리 와!!",
+        "sound": "sound\\wishstone_bush.wav"
+      },
+      "125": {
+        "name": "시오넬",
+        "text": "윽....?!"
+      },
+      "126": {
+        "name": "사브리나",
+        "text": "됐다!!! 아하하, 어때?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg018.png",
+        "bgm": "sound\\bgm\\wishstone_Rain.ogg"
+      },
+      "127": {
+        "name": "엘림스 스마일",
+        "text": "....뭡니까, 이건?"
+      },
+      "128": {
+        "name": "시오넬",
+        "text": "...................하."
+      },
+      "129": {
+        "name": "사브리나",
+        "text": "엘림스! 오늘... 생일이지?<br>내가 조촐하지만 파티를 준비했거든."
+      },
+      "130": {
+        "name": "엘림스 스마일",
+        "text": "아. 그렇습니까? 제 생일이었군요.<br>그런데 제 생일과 이 리본이 무슨 상관인지...?"
+      },
+      "131": {
+        "name": "사브리나",
+        "text": "원래 생일인 사람은 예쁘게 하고 있는 거야~"
+      },
+      "132": {
+        "name": "시오넬",
+        "text": ".........난 생일도 아닌데 왜."
+      },
+      "133": {
+        "name": "사브리나",
+        "text": "오빠는 잘생겼으니까~"
+      },
+      "134": {
+        "name": "엘림스 스마일",
+        "text": ".......풉. 크핫!! 크하하핫!!!<br>저는 그렇다 치고, 왕자님. 리본이 꽤 잘 어울리십니다?<br>평소에도 그렇게 다니는 게 어떠신지."
+      },
+      "135": {
+        "name": "시오넬",
+        "text": "거울이 없어서 네 녀석의 꼴을 모르나 보군."
+      },
+      "136": {
+        "name": "시오넬",
+        "text": "멀대같이 큰 녀석이 리본을 달고 있는 꼴이 더 우습다."
+      },
+      "137": {
+        "name": "사브리나",
+        "text": "왜애! 둘 다 잘 어울리는데! 아하하!!"
+      },
+      "138": {
+        "name": "엘림스 스마일",
+        "text": "그러는 공주님은...<br>제 케이크라도 준비하셨나 봅니다?"
+      },
+      "139": {
+        "name": "사브리나",
+        "text": "응?! 그걸 어떻게 알았어?"
+      },
+      "140": {
+        "name": "엘림스 스마일",
+        "text": "드레스 자락에 케이크 크림을 다 묻히고 있는데.<br>모를 수가 없지요. 크핫! 황송해라."
+      },
+      "141": {
+        "name": "사브리나",
+        "text": "뭐어?! 서프라이즈였는데!!!<br>엘림스, 눈치가 너무 빠르잖아!!!"
+      },
+      "142": {
+        "name": "시오넬",
+        "text": "..............풉..."
+      },
+      "143": {
+        "name": "사브리나",
+        "text": "아! 오빠도 웃었다!"
+      },
+      "144": {
+        "name": "엘림스 스마일",
+        "text": "뭡니까, 왕자님?<br>왜 날 보면서 실실 웃고 있어요? 아직도 내 꼴이 웃깁니까?<br>왕자님 꼴이 더 웃기다니까."
+      },
+      "145": {
+        "name": "시오넬",
+        "text": "....풋. 아니. 리본 매고 이쪽 쳐다보지 마라, 엘림스 스마일."
+      },
+      "146": {
+        "name": "사브리나",
+        "text": "오빠, 웃음 참고 있지?<br>그냥 시원하게 웃어! 아하하!"
+      },
+      "147": {
+        "name": "엘림스 스마일",
+        "text": "크하핫! 그러니까 말입니다.<br>그렇게 무게 잡느라 입술을 움찔거리는 편이 더 웃긴데 말이죠."
+      },
+      "148": {
+        "name": "사브리나",
+        "text": "그러니까!! 아하하하!!"
+      },
+      "149": {
+        "name": "엘림스 스마일",
+        "text": "하하하하핫!"
+      },
+      "150": {
+        "text": "...............................",
+        "background": "gui3/2026_PreWinter/StoryContents/bg019.png",
+        "bgm": "off",
+        "sound": "sound\\wishstone_BrokenGlass.wav"
+      },
+      "151": {
+        "text": ".......................아?"
+      },
+      "152": {
+        "text": "...................잠깐.<br>나, 지금 웃고 있었나?"
+      },
+      "153": {
+        "name": "아슈의 목소리",
+        "text": "하나도 괜찮지 않아.<br>너 때문에. 너 때문에.......",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "bgm": "sound\\bgm\\developer_2019_06_bgm.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_029", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "154": {
+        "text": "..................난 여기서 왜 웃고 있는 거야?<br>아무 일도 없었던 것처럼?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg019.png"
+      },
+      "155": {
+        "text": "그 녀석에게 '그런 짓'을 저질러놓고?<br>왜? 어떻게? 어째서?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg019.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "156": {
+        "text": "지금 내가 느끼는 이 감정을... 뭐라고 정의해야 하지?"
+      },
+      "157": {
+        "text": "안정감? 소속감? <br>이건, 행복 에너지? 기쁨?<br>이런 게 왜 발생하는 거지? "
+      },
+      "158": {
+        "name": "일그러진 목소리",
+        "text": "『『니가 무슨 자격으로?』』",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png"
+      },
+      "159": {
+        "text": "........................................",
+        "background": "gui3/2026_PreWinter/StoryContents/bg019.png",
+        "bgm": "off"
+      },
+      "160": {
+        "name": "엘림스 스마일",
+        "text": "하... 하하..... 하......"
+      },
+      "161": {
+        "name": "시오넬",
+        "text": ".....엘림스 스마일?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_embarrassed", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "162": {
+        "name": "엘림스 스마일",
+        "text": ".......................",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "163": {
+        "name": "사브리나",
+        "text": "왜 그래, 엘림스? 갑자기 식은땀을 흘리고."
+      },
+      "164": {
+        "name": "엘림스 스마일",
+        "text": "....아뇨. 급한 일이 떠올라서."
+      },
+      "165": {
+        "name": "엘림스 스마일",
+        "text": "........먼저, 들어가 보겠습니다.<br>그럼.",
+        "sound": "sound\\wishstone_walk2.wav"
+      },
+      "166": {
+        "name": "사브리나",
+        "text": "엘림스! 엘림스!!!<br>뭐야...! 파티해야지! 어디 가는 거야!!"
+      },
+      "167": {
+        "name": "시오넬",
+        "text": "...............",
+        "sound": "sound\\wishstone_door.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"xn_embarrassed_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "168": {
+        "text": ".............<br>.....................<br>......................",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "169": {
+        "text": "감정의 제도는 나의 훌륭한 실험체다.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg021.png",
+        "sound": "sound\\wishstone_Seaside.wav"
+      },
+      "170": {
+        "text": "시오넬 클라우스는 귀찮게 떠맡은 나의 환자."
+      },
+      "171": {
+        "text": "사브리나 클라우스는 그저 스쳐갈 뿐인 인연."
+      },
+      "172": {
+        "text": "나는 조만간 이곳을 떠나, 나의 과오를 바로잡는다."
+      },
+      "173": {
+        "text": "그것뿐이다."
+      },
+      "174": {
+        "text": "내겐 딱 그 정도일 뿐."
+      },
+      "175": {
+        "name": "엘림스 스마일",
+        "text": "..............................."
+      },
+      "176": {
+        "name": "엘림스 스마일",
+        "text": ".................아.",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png"
+      },
+      "177": {
+        "name": "엘림스 스마일",
+        "text": "또 도망쳤네, 나는."
+      }
+    },
+    {
+      "1": {
+        "text": "한편, 감정의 제도<br>기쁨의 왕국 내 귀족 회의실",
+        "background": "gui3/2026_PreWinter/StoryContents/bg022.png"
+      },
+      "2": {
+        "name": "귀족A",
+        "text": "동화나라에서 다시 서신이 왔습니다.<br>벌써 세 번째군요.",
+        "bgm": "sound\\bgm\\wishstone_StrangeMatter.ogg",
+        "sound": "sound\\wishstone_papper.wav"
+      },
+      "3": {
+        "name": "귀족A",
+        "text": "세라피스 노엘의 소재 확인을 요청한다.<br>....모두 동일한 내용입니다."
+      },
+      "4": {
+        "name": "귀족B",
+        "text": "하아... 시오넬 왕자.<br>왕실의 일엔 손 뗀 걸로 아는데."
+      },
+      "5": {
+        "name": "귀족B",
+        "text": "세라피스 노엘을 왜 갑자기 만나려 하는 거지?<br>뭔가 눈치챈 게 있는 거 아닌가?"
+      },
+      "6": {
+        "name": "귀족A",
+        "text": "표면상으론 사브리나 공주 전하의 안위를 위해서라고 하는데...<br>진실은 모릅니다.<br>그 시오넬 왕자니까요."
+      },
+      "7": {
+        "name": "귀족B",
+        "text": "일단 왕실엔 보고하지 않겠다.<br>쓸데없이 일을 키울 필욘 없지."
+      },
+      "8": {
+        "name": "귀족들",
+        "text": "동의하오."
+      },
+      "9": {
+        "name": "귀족C",
+        "text": "...시오넬 왕자에게 붙인 감시원의 새로운 정보다.",
+        "sound": "sound\\wishstone_papper.wav"
+      },
+      "10": {
+        "name": "귀족C",
+        "text": "왕자가 서리꽃 빙도로 직접 향하고 있다고 하는군."
+      },
+      "11": {
+        "name": "귀족B",
+        "text": "뭐? 최대한 시간을 끌라고 했을 텐데!",
+        "sound": "sound\\wishstone_effect1.wav"
+      },
+      "12": {
+        "name": "귀족A",
+        "text": "입항을 막아야 합니다."
+      },
+      "13": {
+        "name": "귀족A",
+        "text": "그자가 세라피스 노엘과 접촉하기라도 하면....!!!!"
+      },
+      "14": {
+        "name": "???",
+        "text": "왜 막으려 들지?",
+        "bgm": "off",
+        "sound": "sound\\wishstone_unrest.wav"
+      },
+      "15": {
+        "name": "귀족들",
+        "text": "!!!!!"
+      },
+      "16": {
+        "name": "귀족A",
+        "text": "블랭크 님...."
+      },
+      "17": {
+        "name": "블랭크",
+        "text": "막을 이유는 없지 않나?<br>먼 길을 오는 손님인데... 관광이라도 실컷 시켜줘야지.",
+        "bgm": "sound\\bgm\\wishstone_StrangeMatter.ogg",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "18": {
+        "name": "블랭크",
+        "text": "나는........ '런너'들을, 아주 만나고 싶거든."
+      },
+      "19": {
+        "name": "귀족B",
+        "text": "블랭크 님!! 약속이 다르지 않소!",
+        "sound": "sound\\wishstone_effect1.wav"
+      },
+      "20": {
+        "name": "블랭크",
+        "text": ".........약속?<br>내가 언제 약속을 어긴 적이 있었나?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "21": {
+        "name": "블랭크",
+        "text": "하하하. 다들 이 정도로 긴장하다니.<br>나를 아직 못 믿는 걸까... 아니면...<br>경들이 나약한 걸까?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "22": {
+        "name": "블랭크",
+        "text": "후후, 설령 나약해도... 괜찮아.<br>그대들은 날 믿으면 되니까."
+      },
+      "23": {
+        "name": "귀족B",
+        "text": "...................."
+      },
+      "24": {
+        "name": "블랭크",
+        "text": "그 가엾은 아이는..... 잘 지내고 있나?"
+      },
+      "25": {
+        "name": "귀족A",
+        "text": "얌전히 붙잡혀 있습니다.<br>저항의 의지도 전혀 없어 보여서..."
+      },
+      "26": {
+        "name": "블랭크",
+        "text": "그럼 문제없겠군. <br>손님들과 천천히 인사를 나눌 여유도 있겠어.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "27": {
+        "name": "블랭크",
+        "text": "오는 손님들의 이름을 알려주겠나?<br>그들을 맞이할 준비를 해야 하니 말이지.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "28": {
+        "name": "귀족C",
+        "text": "...시오넬 클라우스. 엘림스 스마일.<br>시그문드 오시아스. 셀리아 벨라트릭스. 나르시스.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg015.png",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "29": {
+        "name": "블랭크",
+        "text": "...셀리아?",
+        "background": "gui3/2026_PreWinter/StoryContents/bg022.png",
+        "sound": "sound\\wishstone_unrest.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_030", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "30": {
+        "name": "블랭크",
+        "text": "하하. 하하하하!",
+        "sound": "sound\\wishstone_effect1.wav"
+      },
+      "31": {
+        "name": "블랭크",
+        "text": "그렇구나. 보고 싶었다고 하니 만나러 와주는 거니, 셀리아.<br>기특하기도 하지."
+      },
+      "32": {
+        "name": "귀족B",
+        "text": "아는 사람이오?"
+      },
+      "33": {
+        "name": "블랭크",
+        "text": "알고 말고. 잘 아는 사이지.<br>그 아이는... 날 전혀 기억하지 못하지만 말이야.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "34": {
+        "name": "귀족A",
+        "text": "그, 그럼.. 더욱더 입항을 막아야 하는 거 아닙니까."
+      },
+      "35": {
+        "name": "블랭크",
+        "text": "글쎄. 난 만나고 싶은데...."
+      },
+      "36": {
+        "name": "블랭크",
+        "text": "그 아이가 날 마주하고도...<br>끝까지 모른 척할 수 있을지 궁금해서 말이지."
+      },
+      "37": {
+        "name": "블랭크",
+        "text": "........흐음... 그런데...<br>시오넬 클라우스라...",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"cut_027", "rect":{"x":403, "y":235, "x1":474, "y1":354}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "38": {
+        "name": "블랭크",
+        "text": "세라피스 노엘과 같은 사관학교 출신이었지?"
+      },
+      "39": {
+        "name": "귀족A",
+        "text": "그를 조심해야 합니다.<br>평범한 왕실의 아이가 아닙니다.<br>그는, 정령 네레이드의 각인을 품은....."
+      },
+      "40": {
+        "name": "블랭크",
+        "text": "....음. 각인? 정령?<br>....아. 그런가. 재미있는 몸을 가진 아이로군...",
+        "sound": "sound\\wishstone_unrest.wav"
+      },
+      "41": {
+        "name": "블랭크",
+        "text": "길들이는 건, 내 쪽이 더 자신 있는데 말이지."
+      },
+      "42": {
+        "name": "귀족들",
+        "text": "...........",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "43": {
+        "name": "블랭크",
+        "text": "후후. 경들은 체스 좋아하나?",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_normal2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "44": {
+        "name": "귀족A",
+        "text": ".....예?"
+      },
+      "45": {
+        "name": "귀족B",
+        "text": "그게 무슨...."
+      },
+      "46": {
+        "name": "블랭크",
+        "text": "재미있는 판에는 예상하지 못한 말들이 필요한 법이지."
+      },
+      "47": {
+        "name": "블랭크",
+        "text": "나를 찾아온 셀리아와...<br>세라피스 노엘을 찾는 시오넬 클라우스."
+      },
+      "48": {
+        "name": "블랭크",
+        "text": "서로 다른 이유로 움직인 말들이, 결국 같은 곳에 모였군."
+      },
+      "49": {
+        "name": "블랭크",
+        "text": "후후, 궁금하네.<br>이 우연이... 판을 어떻게 바꿔놓을지 말이야.",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"blank_back", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "50": {
+        "text": "..................<br>.........",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "bgm": "off",
+        "sound": "sound\\wishstone_cave.wav",
+        "ImgList":{
+          "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg3":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
+          "NPCImg4":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 }
+        }
+      },
+      "51": {
+        "name": "??",
+        "text": "..........................♬",
+        "background": "gui3/2026_PreWinter/StoryContents/bg023.png"
+      },
+      "52": {
+        "name": "??",
+        "text": "...아. 오늘은 날씨가 진짜 좋네."
+      },
+      "53": {
+        "name": "??",
+        "text": "여기까지 햇살이 들잖아. 후후."
+      },
+      "54": {
+        "name": "??",
+        "text": "음... 너무 따뜻한가?<br>얼음 기운을 조금 나눠줄게."
+      },
+      "55": {
+        "text": "────",
+        "background": "gui3/2026_PreWinter/StoryContents/bgwhite.png",
+        "sound": "sound\\wishstone_magicTwinkle.wav"
+      },
+      "56": {
+        "name": "??",
+        "text": "....이 정도면 괜찮으려나.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg024.png",
+        "bgm": "sound\\bgm\\wishstone_DwellingPlace.ogg"
+      },
+      "57": {
+        "text": "철컹-",
+        "sound": "sound\\wishstone_JailDoor.wav"
+      },
+      "58": {
+        "name": "간수 A",
+        "text": "죄수번호 9117.<br>뭔가 문제 있나."
+      },
+      "59": {
+        "name": "??",
+        "text": "....응? 아무것도 아니에요."
+      },
+      "60": {
+        "name": "??",
+        "text": "그냥 날씨가 좋아서요. 하하!"
+      },
+      "61": {
+        "name": "간수 A",
+        "text": "....................."
+      },
+      "62": {
+        "name": "??",
+        "text": "...어, 음... 간수님도 드릴까요?<br>얼음꽃을 하나 만들었는데..."
+      },
+      "63": {
+        "name": "간수 A",
+        "text": "..............허튼짓 하지 말고 얌전히 있도록."
+      },
+      "64": {
+        "text": "끼익- 철컹",
+        "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
+        "sound": "sound\\wishstone_JailDoor2.wav"
+      },
+      "65": {
+        "name": "간수 B",
+        "text": ".....정말 괜찮은 건가?"
+      },
+      "66": {
+        "name": "간수 B",
+        "text": "솔직히, 이상하잖아....<br>1급 죄수가 매일 해맑게 웃고 있는 게....."
+      },
+      "67": {
+        "name": "간수 B",
+        "text": "꿍꿍이가 있는 거 아니야?"
+      },
+      "68": {
+        "name": "간수 A",
+        "text": "...아직 별다른 행동을 보인 적은 없어.<br>어차피 곧 사형 집행일이잖아."
+      },
+      "69": {
+        "name": "간수 A",
+        "text": "세라피스 노엘이 저렇게 웃는 것도....<br>얼마 안 남았어.",
+        "background": "gui3/2026_PreWinter/StoryContents/bg024.png"
+      },
+      "70": {
+        "name": "세라피스",
+        "text": "............................"
+      },
+      "71": {
+        "name": "세라피스",
+        "text": ".....아. 이쪽 이파리.<br>녹아버렸다...."
+      }
+    }
+  ]
+}
