@@ -15,7 +15,7 @@
 | 缺少 SFX | 0 | **0** |
 | `customimage.txt` 無實體檔案的映射 | 29 | **0** |
 
-<badge>Episode 1 和 Episode 2 的劇情素材引用均已找到對應實體檔案。</badge>
+**Episode 1 和 Episode 2 的劇情素材引用均已找到對應實體檔案。**
 
 ## 本次改名內容
 
@@ -48,4 +48,4 @@
 - `script_frostflower1.txt` SHA：`395d7cd5f6a815ca80ef6a3e018128e263ba58e6`
 - `script_frostflower2.txt` SHA：`653a60fa2731830b354e7a498bb49a9d7bb8e7ff`
 - `customimage.txt` SHA：`d0c4a586666c9ed8e9b0f17a80ef98744a311596`
-- Repository tree SHA：`76a36e8e7767fc6fbed06a2f09b86378fb79a86c`
+- 本次改名 Commit：`76a36e8e7767fc6fbed06a2f09b86378fb79a86c`
