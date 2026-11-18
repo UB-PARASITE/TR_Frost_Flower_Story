@@ -303,6 +303,25 @@ function buildEpisodeList(){
     box.appendChild(b);
   });
 }
+async function ensureEpisodePackage(number){
+  const cached=EPISODE_DATA_CACHE.get(number);
+  const cachedTitles=String(cached?.story?.chapter_title||'').split('@').filter(Boolean);
+  if(cached?.story&&Array.isArray(cached.guide)&&cached.guide.length>=cachedTitles.length)return cached;
+  const [storyResponse,guideResponse]=await Promise.all([
+    fetch(new URL(`./script_frostflower${number}.txt`,window.location.href),{cache:'no-store'}),
+    fetch(new URL(`./storyguide_frostflower${number}.txt`,window.location.href),{cache:'no-store'})
+  ]);
+  if(!storyResponse.ok)throw new Error(`讀取 script_frostflower${number}.txt 失敗（HTTP ${storyResponse.status}）`);
+  if(!guideResponse.ok)throw new Error(`讀取 storyguide_frostflower${number}.txt 失敗（HTTP ${guideResponse.status}）`);
+  const parsedStory=JSON.parse((await storyResponse.text()).replace(/^\uFEFF/,'').trim());
+  const parsedGuide=JSON.parse((await guideResponse.text()).replace(/^\uFEFF/,'').trim());
+  const titles=String(parsedStory.chapter_title||'').split('@').filter(Boolean);
+  if(parsedStory.episode!==`Episode.${number}`||!Array.isArray(parsedStory.script)||!parsedStory.script.length||!titles.length)throw new Error('劇情 TXT 格式或 Episode 編號不符合預期');
+  if(!Array.isArray(parsedGuide.guide)||parsedGuide.guide.length<titles.length)throw new Error('Chapter 導覽資料不完整');
+  const packageData={story:parsedStory,guide:parsedGuide.guide};
+  EPISODE_DATA_CACHE.set(number,packageData);
+  return packageData;
+}
 async function selectEpisode(number){
   const ep=EPISODE_OPTIONS.find(x=>x.number===number);
   if(!ep||!ep.available||episodeLoading)return;
@@ -311,40 +330,18 @@ async function selectEpisode(number){
   episodeLoading=true;
   loadingEpisodeNumber=number;
   buildEpisodeList();
-  if(loadedEpisodeNumber!==number){
-    $('selectionHint').textContent=`正在載入 Episode. ${String(number).padStart(2,'0')} 的劇情與導覽資料…`;
-    try{
-      let packageData=EPISODE_DATA_CACHE.get(number);
-      if(!packageData){
-        const [storyResponse,guideResponse]=await Promise.all([
-          fetch(new URL(`./script_frostflower${number}.txt`,window.location.href),{cache:'no-store'}),
-          fetch(new URL(`./storyguide_frostflower${number}.txt`,window.location.href),{cache:'no-store'})
-        ]);
-        if(!storyResponse.ok)throw new Error(`讀取 script_frostflower${number}.txt 失敗（HTTP ${storyResponse.status}）`);
-        if(!guideResponse.ok)throw new Error(`讀取 storyguide_frostflower${number}.txt 失敗（HTTP ${guideResponse.status}）`);
-        const parsedStory=JSON.parse((await storyResponse.text()).replace(/^\uFEFF/,'').trim());
-        const parsedGuide=JSON.parse((await guideResponse.text()).replace(/^\uFEFF/,'').trim());
-        const titles=String(parsedStory.chapter_title||'').split('@').filter(Boolean);
-        if(parsedStory.episode!==`Episode.${number}`||!Array.isArray(parsedStory.script)||!parsedStory.script.length||!titles.length)throw new Error('劇情 TXT 格式或 Episode 編號不符合預期');
-        if(!Array.isArray(parsedGuide.guide)||parsedGuide.guide.length<titles.length)throw new Error('Chapter 導覽資料不完整');
-        packageData={story:parsedStory,guide:parsedGuide.guide};
-        EPISODE_DATA_CACHE.set(number,packageData);
-      }
-      STORY=packageData.story;
-      chapterTitles=String(STORY.chapter_title).split('@').filter(Boolean);
-      storyGuide=packageData.guide;
-      loadedEpisodeNumber=number;
-    }catch(error){
-      console.error(`Episode ${number} 載入失敗：`,error);
-      toast(`Episode. ${number} 載入失敗，請確認劇情及導覽 TXT`);
-      $('selectionHint').textContent=`Episode. ${number} 載入失敗：${error.message}`;
-      return;
-    }finally{
-      episodeLoading=false;
-      loadingEpisodeNumber=null;
-      buildEpisodeList();
-    }
-  }else{
+  try{
+    const packageData=await ensureEpisodePackage(number);
+    STORY=packageData.story;
+    chapterTitles=String(STORY.chapter_title).split('@').filter(Boolean);
+    storyGuide=packageData.guide;
+    loadedEpisodeNumber=number;
+  }catch(error){
+    console.error(`Episode ${number} 載入失敗：`,error);
+    toast(`Episode. ${number} 載入失敗，請確認劇情及導覽 TXT`);
+    $('selectionHint').textContent=`Episode. ${number} 載入失敗：${error.message}`;
+    return;
+  }finally{
     episodeLoading=false;
     loadingEpisodeNumber=null;
     buildEpisodeList();
@@ -477,17 +474,17 @@ function chooseBranch(id){stopAuto();if(chapter!==0||node().key!=='18'){toast('�
 function skipChapter(){stopAuto();if(chapter===0){let keys=chapterKeys(0);route=[...keys.slice(0,keys.indexOf('18')),...keys.slice(keys.indexOf('19'))]}else route=chapterKeys(chapter);position=route.length-1;render();next()}
 function toggleAuto(){auto=!auto;$('autoBtn').textContent=`${auto?'開啟':'關閉'}`;if(auto)scheduleAuto();else stopAuto()}
 
-function collectStoryAssetRefs(){
+function collectStoryAssetRefs(stories=[STORY]){
   const refs=new Set();
   const visit=(value,key='')=>{
     if(typeof value==='string'){
-      if(['background','image','bgm','sound','CustomImage_Name'].includes(key)&&value&&value!=='keep'&&value!=='off')refs.add(value);
+      if(['background','image','bgm','sound','CustomImage_Name'].includes(key)&&value&&value!=='keep'&&value!=='off'&&value!=='sound\\off')refs.add(value);
       return;
     }
     if(Array.isArray(value)){value.forEach(item=>visit(item,key));return;}
     if(value&&typeof value==='object')Object.entries(value).forEach(([childKey,child])=>visit(child,childKey));
   };
-  visit(STORY);
+  stories.filter(Boolean).forEach(story=>visit(story));
   (characterList.length?characterList:FALLBACK_CHARACTERS).forEach(item=>{if(item.image)refs.add(item.image);if(item.background)refs.add(item.background)});
   return [...refs].map(resolveAssetURL).filter(Boolean).filter(url=>/\.(?:png|jpe?g|webp|gif|ogg|wav|mp3|m4a)(?:[?#]|$)/i.test(url));
 }
@@ -497,18 +494,31 @@ async function preloadStoryAssets(){
   preloadRunning=true;
   const button=$('preloadBtn');
   button.disabled=true;
-  $('preloadStatus').textContent='正在整理素材清單…';
+  $('preloadStatus').textContent='正在整理所有已開放 Episode 的劇情與導覽…';
   openModal('preloadModal');
   let assetIndexTimer;
   try{
-    $('preloadStatus').textContent='正在等待素材索引…';
+    const availableEpisodes=EPISODE_OPTIONS.filter(ep=>ep.available);
+    const packageResults=await Promise.allSettled(availableEpisodes.map(ep=>ensureEpisodePackage(ep.number)));
+    const loadedPackages=[];
+    const packageFailures=[];
+    packageResults.forEach((result,index)=>{
+      if(result.status==='fulfilled')loadedPackages.push(result.value);
+      else{
+        packageFailures.push({episode:availableEpisodes[index].number,error:result.reason});
+        console.warn('Episode 劇情／導覽預載入失敗：',availableEpisodes[index].number,result.reason);
+      }
+    });
+    if(!loadedPackages.length)throw new Error('所有已開放 Episode 的劇情與導覽都無法載入');
+    $('preloadStatus').textContent=`已載入 ${loadedPackages.length} / ${availableEpisodes.length} 個 Episode 的劇情與導覽，正在等待素材索引…`;
     await Promise.race([assetIndexReady,new Promise(resolve=>{assetIndexTimer=setTimeout(resolve,8000)})]);
     if(assetIndexTimer)clearTimeout(assetIndexTimer);
-    if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的素材…';
-    const urls=[...new Set(collectStoryAssetRefs())];
+    if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的全部 Episode 素材…';
+    const allStories=loadedPackages.map(pkg=>pkg.story);
+    const urls=[...new Set(collectStoryAssetRefs(allStories))];
     let completed=0,failed=0,newlyCached=0,nextIndex=0;
     const cachedBefore=urls.filter(url=>preloadedAssetURLs.has(url)).length;
-    $('preloadStatus').textContent=`共找到 ${urls.length} 個素材，開始預載入…`;
+    $('preloadStatus').textContent=`已整理 ${loadedPackages.length} 個 Episode，共 ${urls.length} 個素材，開始預載入…`;
     const worker=async()=>{
       while(nextIndex<urls.length){
         const url=urls[nextIndex++];
@@ -524,21 +534,29 @@ async function preloadStoryAssets(){
           }
         }catch(error){failed++;console.warn('素材預載入失敗：',url,error)}
         completed++;
-        $('preloadStatus').textContent=`已完成 ${completed} / ${urls.length}（已使用快取 ${cachedBefore} 個，新增 ${newlyCached} 個）${failed?'；失敗 '+failed+' 個':''}`;
+        $('preloadStatus').textContent=`素材 ${completed} / ${urls.length}（已載入 ${loadedPackages.length} 個 Episode；快取 ${cachedBefore+newlyCached} 個）${failed?'；失敗 '+failed+' 個':''}`;
       }
     };
     await Promise.all(Array.from({length:Math.min(6,urls.length)},worker));
     if(storyStarted)refreshCurrentPreloadedAssets();
-    $('preloadStatus').textContent=failed?`預載入完成；本次新增 ${newlyCached} 個，原有快取 ${cachedBefore} 個，失敗 ${failed} 個。`:`所有素材已就緒；本次新增 ${newlyCached} 個，原有快取 ${cachedBefore} 個。`;
+    const episodeMessage=`劇情及導覽 ${loadedPackages.length} / ${availableEpisodes.length} 個 Episode 已載入`;
+    const issueCount=failed+packageFailures.length;
+    $('preloadStatus').textContent=issueCount
+      ?`預載入完成；${episodeMessage}；新增素材快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個；Episode 讀取失敗 ${packageFailures.length} 個，素材失敗 ${failed} 個。`
+      :`全部已開放 Episode 的劇情、導覽及素材均已就緒；新增快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個。`;
     await new Promise(resolve=>setTimeout(resolve,650));
     closeModal('preloadModal');
-    toast(failed?`素材預載入完成，另有 ${failed} 個檔案載入失敗`:'所有劇情素材已預載入');
+    toast(issueCount
+      ?`預載入完成：${loadedPackages.length} 個 Episode 已載入，另有 ${packageFailures.length+failed} 項失敗`
+      :`所有已開放 Episode（${loadedPackages.length} 個）的劇情、導覽和素材已預載入`);
   }catch(error){
     console.error('素材預載入失敗：',error);
-    $('preloadStatus').textContent='預載入時發生錯誤，請稍後再試。';
-    await new Promise(resolve=>setTimeout(resolve,1200));
+    $('preloadStatus').textContent='預載入時發生錯誤：'+error.message;
+    await new Promise(resolve=>setTimeout(resolve,1400));
     closeModal('preloadModal');
+    toast('預載入未能完成，請檢查網絡後再試');
   }finally{
+    if(assetIndexTimer)clearTimeout(assetIndexTimer);
     preloadRunning=false;
     button.disabled=false;
   }
@@ -593,9 +611,9 @@ async function bootstrapRepository(){
     }catch(e){
       console.warn('Chapter 劇情導覽載入失敗：',e);
       const cachedEpisode1=EPISODE_DATA_CACHE.get(1)||{story:STORY,guide:[]};
-      cachedEpisode1.guide=[];
+      if(!Array.isArray(cachedEpisode1.guide)||cachedEpisode1.guide.length===0)cachedEpisode1.guide=[];
       EPISODE_DATA_CACHE.set(1,cachedEpisode1);
-      if(loadedEpisodeNumber===1)storyGuide=[];
+      if(loadedEpisodeNumber===1&&(!Array.isArray(storyGuide)||storyGuide.length===0))storyGuide=[];
       updateGuideButton();
     }
   })();
