@@ -474,7 +474,7 @@
       },
       "51": {
         "name": "微笑伊林斯",
-        "text": "公主怎麼樣了？<br>飛空艇上可沒有空位了。",
+        "text": "公主是有甚麼事嗎？<br>飛空艇上可沒有空位了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"ce_surprised_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
