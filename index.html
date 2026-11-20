@@ -533,12 +533,16 @@ function renderSprites(imgList){
     });
   }
 
-  // Cut images use the same mapped source bounds and fixed scale, then center on stage.
+  // Cut images use the same mapped source bounds and fixed scale.
+  // Keep their authored story y position, moving upward only when needed to
+  // keep the enlarged image above the dialogue panel (bottom 30% of the stage).
   cutItems.forEach(item=>{
     item.displayWidth=item.width*CHARACTER_DISPLAY_SCALE;
     item.displayHeight=item.height*CHARACTER_DISPLAY_SCALE;
     item.displayX=(STAGE_REF_WIDTH-item.displayWidth)/2;
-    item.displayY=(STAGE_REF_HEIGHT-item.displayHeight)/2;
+    const dialogueTop=STAGE_REF_HEIGHT*0.7;
+    const highestSafeY=Math.max(0,dialogueTop-item.displayHeight);
+    item.displayY=Math.max(0,Math.min(item.y,highestSafeY));
   });
 
   const appendSprite=(item,isCutImage)=>{
