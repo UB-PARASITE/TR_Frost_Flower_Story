@@ -86,9 +86,9 @@
 <aside class="settings-panel" aria-label="功能">
   <div class="panel-kicker">FUNCTION</div><h2>功能</h2>
   <div class="setting-item">
-    <div class="setting-title"><span>▣ 劇情舞台</span></div>
-     <button id="dialogueToggleBtn" type="button" style="width:100%;margin-top:9px" disabled>隱藏對話框</button>
-     <p class="setting-hint">隱藏或顯示舞台下方的對話框與文字。</p>
+    <div class="setting-title"><span>▣ 對話框</span></div>
+     <button id="dialogueToggleBtn" class="primary" type="button" style="width:100%;margin-top:9px" disabled>隱藏對話框</button>
+     <p class="setting-hint">隱藏或顯示對話框。</p>
    </div>
    <div class="setting-item">
      <div class="setting-title"><span>▶ 自動播放</span></div>
@@ -124,7 +124,7 @@
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
 <div class="modal" id="chapterPasswordModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="chapterPasswordTitle"><div class="modalhead"><h2 id="chapterPasswordTitle">章節解鎖</h2><button data-close="chapterPasswordModal" aria-label="關閉">✕</button></div><p id="chapterPasswordDescription">此章節需要密碼才能閱讀。</p><form id="chapterPasswordForm"><input class="chapter-password-input" id="chapterPasswordInput" type="password" autocomplete="off" placeholder="請輸入解鎖密碼" aria-label="解鎖密碼"><div class="chapter-password-error" id="chapterPasswordError" role="alert"></div><div class="controls"><button class="primary" type="submit">解鎖章節</button><button type="button" data-close="chapterPasswordModal">取消</button></div></form></div></div>
 <div class="modal" id="finishModal"><div class="card"><div class="modalhead"><h2>本話閱讀完成</h2><button data-close="finishModal">✕</button></div><p id="finishText"></p><div class="controls"><button class="primary" id="nextChapterBtn">前往下一話 →</button><button id="replayBtn">重新閱讀這一話</button><button data-close="finishModal">返回</button></div></div></div>
-<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情舞台。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
+<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
 <div class="toast" id="toast"></div>
 <script>
 let STORY;
