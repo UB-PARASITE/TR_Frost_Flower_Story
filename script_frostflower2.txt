@@ -474,7 +474,7 @@
       },
       "51": {
         "name": "微笑伊林斯",
-        "text": "公主是有甚麼事嗎？<br>飛空艇上可沒有空位了。",
+        "text": "公主怎麼樣了？<br>飛空艇上可沒有空位了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"ce_surprised_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1042,35 +1042,35 @@
     },
     {
       "1": {
-        "text": "감정의 제도는 나의 훌륭한 실험체였다.",
+        "text": "情感群島是我最棒的試驗場。",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "bgm": "sound\\bgm\\wishstone_BeyondStars.ogg"
       },
       "2": {
-        "text": "내 감정의 균형 이론을 완성시키기 위해<br>구국을 명분으로, 한 나라의 멸망과 내 개인의 이익을 저울질했다.",
+        "text": "為了完善我的情感均衡理論，<br>我以拯救國家為藉口，完美平衡了滅國和私利的關係。",
         "background": "gui3/2026_PreWinter/StoryContents/bg025.png"
       },
       "3": {
-        "text": "...사실 이 나라가 망하든 말든 상관없었다.<br>나는 실험만 성공시키면 그만이었고<br>그것으로 나는..."
+        "text": "...我不關心這個國家會不會滅亡就是了。<br>我要的只有成功的實驗，<br>這樣我就能..."
       },
       "4": {
-        "text": "「내 과거의 실수를 만회한다.」<br>오직 그것만이 나의 목적이었으니까."
+        "text": "「彌補我的過錯。」<br>因為那就是我仍生存在世的唯一目標。"
       },
       "5": {
-        "text": "그 후, 한 나라를 상대로 한 감정 이론의 검증은 성공했고<br>나라를 구한 영웅이 되어 꽤 짭짤한 보수를 받았다."
+        "text": "之後，成功利用情感均衡理論對一個國家進行了驗證，<br>成為了拯救國家的英雄，順勢獲得了豐厚的獎勵。"
       },
       "6": {
-        "text": "모든 건 계획대로였다.<br>그 망할 남매를 만나기 전까진.",
+        "text": "一切都按著計劃進行。<br>直到我遇見了那對該死的兄妹。",
         "bgm": "off"
       },
       "7": {
-        "text": "쨍그랑!",
+        "text": "噹啷！",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "sound": "sound\\wishstone_BrokenGlass.wav"
       },
       "8": {
         "name": "斯奧萊爾",
-        "text": "........꺼져.",
+        "text": ".........滾。",
         "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1081,23 +1081,23 @@
       },
       "9": {
         "name": "前主治醫生",
-        "text": "왕자님!!<br>아, 안정을 취하셔야 합니다!!!"
+        "text": "王子！！<br>應，應該要好好休息才行！！！"
       },
       "10": {
         "name": "前主治醫生",
-        "text": "그렇지 않으면 정말 목숨이 위험할 수도...."
+        "text": "不然的話真的會有生命危險..."
       },
       "11": {
-        "text": "와장창!!!!",
+        "text": "碰！！！！",
         "sound": "sound\\wishstone_Falldown2.wav"
       },
       "12": {
         "name": "前主治醫生",
-        "text": "으허어억!!"
+        "text": "哇啊啊啊！！"
       },
       "13": {
         "name": "斯奧萊爾",
-        "text": "목숨? 아아, 그래. 내 목숨 말인가.",
+        "text": "生命？啊，是啊。是說我的生命嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_smiling4_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1107,7 +1107,7 @@
       },
       "14": {
         "name": "斯奧萊爾",
-        "text": "하루하루 내 숨통을 조여대는 걸로 모자라서,<br>이젠 고작 기계 덩어리에게 목숨을 의존한다?",
+        "text": "每天讓我氣喘不過來還不夠，<br>現在還得靠區區一台機器來維持生命嗎？",
         "bgm": "sound\\bgm\\park\\bgm-horror-park-.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_smiling4", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1118,7 +1118,7 @@
       },
       "15": {
         "name": "斯奧萊爾",
-        "text": "크크, 아주 날벌레만도 못한 나약함이로군!!<br>내일 죽어도 모를 목숨이지 않느냐.",
+        "text": "顆顆，真是個連螻蟻都不如的懦夫！！<br>連明天的太陽都不知道看不看到。",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_laugh2_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1129,15 +1129,15 @@
       },
       "16": {
         "name": "斯奧萊爾",
-        "text": "그래. 이 파리 목숨을 살려낸 구국의 영웅은 누구지?"
+        "text": "是啊。救了我這隻螻蟻性命的國家英雄是誰？"
       },
       "17": {
         "name": "斯奧萊爾",
-        "text": "내 눈앞에 당장 데려놔.<br>내 친히 감사의 인사를 해야 할 것 같으니."
+        "text": "把他帶來。<br>我還得親自答謝他呢。"
       },
       "18": {
         "name": "微笑伊林斯",
-        "text": "접니다만?",
+        "text": "找我嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1147,7 +1147,7 @@
       },
       "19": {
         "name": "斯奧萊爾",
-        "text": "뭐지, 이 가면은?<br>하. 나라에 인재가 없어서 이젠 수상쩍은 외부인에게 목숨을 구걸하나?",
+        "text": "這是，哪來的面具男？<br>哈。這國家缺人缺到要向這個可疑的外來乞丐求救了嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1157,7 +1157,7 @@
       },
       "20": {
         "name": "斯奧萊爾",
-        "text": "네 녀석은 어째서 날 살린 것이지?<br>왜? 죽어가는 내가 가여웠나?",
+        "text": "為甚麼要救我？<br>啊？是覺得快要死掉的我很可憐嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1167,7 +1167,7 @@
       },
       "21": {
         "name": "斯奧萊爾",
-        "text": "아니면 대신들이 날 무력한 인형으로 만들라고 사주라도 했나?",
+        "text": "還是那些貴族指使你來，想把我變成無法反抗的傀儡？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1176,7 +1176,7 @@
         }
       },
       "22": {
-        "text": "시오넬은 침대 옆에 세워둔 검을 빼들었다.",
+        "text": "斯奧萊爾拔除放在床邊的劍。",
         "sound": "sound\\wishstone_Sword.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1187,7 +1187,7 @@
       },
       "23": {
         "name": "前主治醫生",
-        "text": "와, 왕자님!!! 그 몸으로 움직이시면.....!!"
+        "text": "哇，王子！！！要是以這樣的身體活動的話......！！"
       },
       "24": {
         "name": "微笑伊林斯",
@@ -1201,7 +1201,7 @@
       },
       "25": {
         "name": "斯奧萊爾",
-        "text": "네 진료는 받지 않겠다.<br>나약하게 살아갈 바에 순순히 죽음을 받아들이는 게.....",
+        "text": "我不會接受治療。<br>與其在世上苟且偷生，倒不如就這樣死掉算了......",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry3", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1211,7 +1211,7 @@
       },
       "26": {
         "name": "斯奧萊爾",
-        "text": "........크윽... 쿨럭... 쿨럭!!!",
+        "text": ".........咳啊... 咳咳... 咳咳！！！",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_damaged2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1222,7 +1222,7 @@
       },
       "27": {
         "name": "微笑伊林斯",
-        "text": "...............하아. 이것 참.<br>기껏 치료해 놨더니 또 각혈을 하시네.",
+        "text": "...............哈啊。真是要命。<br>我費盡心思治療他，結果又咳血了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1232,7 +1232,7 @@
       },
       "28": {
         "name": "微笑伊林斯",
-        "text": "...거기 의사 양반? 잠시 나가주시겠습니까?",
+        "text": "...那邊的？能請你先出去嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1242,11 +1242,11 @@
       },
       "29": {
         "name": "微笑伊林斯",
-        "text": "제가 왕자님과 오붓~하게.<br>의료 상담을 좀 해야 할 것 같아서요."
+        "text": "我想對王子一起做一些非常～私密的檢查呢。<br>所以首先要獲得醫生的意見呢。"
       },
       "30": {
         "name": "前主治醫生",
-        "text": "힉!!! 아.. 아, 알겠습니다!!!<br>전 목숨만 살려주십쇼!!!!!"
+        "text": "噫！！！我... 我，我知道了！！！<br>求你饒我一命吧！！！！！"
       },
       "31": {
         "name": "微笑伊林斯",
@@ -1256,7 +1256,7 @@
       },
       "32": {
         "name": "微笑伊林斯",
-        "text": ".....시오넬 클라우스 왕자.",
+        "text": "......斯奧萊爾．克勞斯王子。",
         "sound": "sound\\wishstone_Magic.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1267,7 +1267,7 @@
       },
       "33": {
         "name": "斯奧萊爾",
-        "text": "............손대지 마.",
+        "text": "............別碰我。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_damaged", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1277,7 +1277,7 @@
       },
       "34": {
         "name": "微笑伊林斯",
-        "text": "그럼 계속 피 토하고 계시든가.",
+        "text": "為甚麼還會咳血呢？",
         "bgm": "sound\\bgm\\hide_n_seek_shadowland_ghost.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1288,7 +1288,7 @@
       },
       "35": {
         "name": "微笑伊林斯",
-        "text": "하아... 가여워? 대신들이 사주해?<br>무슨 헛소릴 하는지 모르겠는데...",
+        "text": "哈啊... 可憐你？貴族們的指使？<br>我不知道你在說甚麼傻話...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_damaged_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1298,7 +1298,7 @@
       },
       "36": {
         "name": "微笑伊林斯",
-        "text": "내가 딱히 당신을 가여워할 것도 없고.<br>별로 가여워 보이지도 않고."
+        "text": "我沒甚麼理由要同情你。<br>我也不會覺得你很可憐。"
       },
       "37": {
         "name": "斯奧萊爾",
@@ -1312,7 +1312,7 @@
       },
       "38": {
         "name": "微笑伊林斯",
-        "text": "치료가 끝나면 가지 말라고 바짓가랑이 붙들어도 떠날 거니까,<br>그렇게 아시길.",
+        "text": "治好之後，就算你跪地求我別走，我也不會理會，<br>請你理解。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1322,7 +1322,7 @@
       },
       "39": {
         "name": "微笑伊林斯",
-        "text": "....아직 아픕니까?",
+        "text": "...現在還會痛嗎？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1342,11 +1342,11 @@
       },
       "41": {
         "name": "斯奧萊爾",
-        "text": "(........고통이... 사라졌군.)"
+        "text": "(.........居然... 不痛了。)"
       },
       "42": {
         "name": "微笑伊林斯",
-        "text": "감정 에너지를 안정화시켰습니다.<br>멍청한 짓 하지 말고. 얌전히 있어주면 좋겠는데.",
+        "text": "已經穩定了你的情感。<br>別給我做傻事。希望你保持安靜。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1356,7 +1356,7 @@
       },
       "43": {
         "name": "微笑伊林斯",
-        "text": "어쨌든 당신 몸속에 내 아티팩트가 박힌 이상,<br>적어도 정상적으로 작동할 때까진 책임지고 싶거든.",
+        "text": "既然我的Artifact已經植入你體內，<br>我想至少在它正常運作之前負些責任。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_embarrassed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1366,13 +1366,13 @@
       },
       "44": {
         "name": "微笑伊林斯",
-        "text": "난 당신을 '불량품'으로 만들고 싶지 않으니까.",
+        "text": "我可不希望你成為「殘缺品」呢。",
         "bgm": "off",
         "sound": "sound\\wishstone_unrest.wav"
       },
       "45": {
         "name": "斯奧萊爾",
-        "text": ".................불량품?",
+        "text": ".................殘缺品？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_talk_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1382,7 +1382,7 @@
       },
       "46": {
         "name": "微笑伊林斯",
-        "text": ".......................아.",
+        "text": ".......................啊。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1392,7 +1392,7 @@
       },
       "47": {
         "name": "微笑伊林斯",
-        "text": "(조금 흥분해서 실언했나.<br>......그렇지만......)"
+        "text": "(過於激動說漏嘴了。<br>......但是......)"
       },
       "48": {
         "name": "微笑伊林斯",
@@ -1407,7 +1407,7 @@
       },
       "49": {
         "name": "微笑伊林斯",
-        "text": "....아니. 아닙니다.<br>그저... 아주 속물적이고도 단순한 이유입니다.<br>뭐, 개인적인 연구 과제가 좀 남아 있는데...",
+        "text": "...不。別放在心上。<br>那只是... 非常勢利又簡單的理由而已。<br>嘛，我有些個人的研究項目...",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_angry", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1417,11 +1417,11 @@
       },
       "50": {
         "name": "微笑伊林斯",
-        "text": "왕자님의 주치의가 되어주는 대가로,<br>이곳의 왕께서 연구 설비 지원을 해주기로 했거든."
+        "text": "作為王子私人醫生的交換條件，<br>國王同意向我提供研究設施。"
       },
       "51": {
         "name": "微笑伊林斯",
-        "text": "길어 봤자 몇 개월입니다.<br>...대충 살아갈 수는 있게 책임지고 관리할 테니, 조금만 참으십쇼.",
+        "text": "最多幾個月而已。<br>...我會至少讓你活下去，那會需要些時間。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1430,7 +1430,7 @@
         }
       },
       "52": {
-        "text": "........솔직히, 저 폭군에게 총알이라도 한 대 박히나 싶었는데.",
+        "text": "........說真的，我當時真的覺得我會被那個暴君一槍射殺。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1440,7 +1440,7 @@
       },
       "53": {
         "name": "斯奧萊爾",
-        "text": "..............그래.<br>나가 봐.",
+        "text": "..............好吧。<br>隨便你。",
         "bgm": "sound\\bgm\\wishstone_Chill.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_crying", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1460,7 +1460,7 @@
         }
       },
       "55": {
-        "text": "왕자는 의외로 더는 나를 쫓아내지 않았다.",
+        "text": "出乎意料的是，王子沒有再把我趕出去。",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1470,23 +1470,23 @@
         }
       },
       "56": {
-        "text": "처음엔 변덕인 줄 알았다.<br>그러나 진료를 거듭하며, 나는 조금씩 그 이유를 알게 됐다."
+        "text": "一開始以為只是他一時興起。<br>但在後續的治療中，我逐漸明白了其中的原因。"
       },
       "57": {
-        "text": "나는 이 나라의 왕위에도, 귀족들의 속셈에도 관심이 없었다.<br>왕자에게 충성을 맹세하지도, 신임을 얻으려 들지도 않았다."
+        "text": "我對這個國家的王毫無興趣，也不在意貴族們不可告人的詭計。<br>我既沒有效忠於王子，也沒有試圖博取他的信任。"
       },
       "58": {
-        "text": "연구에 필요한 것을 받고, 치료가 끝나면 떠날 사람."
+        "text": "我只是獲取研究所需的能量，在王子的治療結束之後就離開的人。"
       },
       "59": {
-        "text": "왕자는 나의 그런 점에 안도하고 있었다.<br>내가 자신에게 무엇을 바라고 접근하는지, 굳이 의심할 필요 없었으니까."
+        "text": "王子對我的這一點很放心。<br>他不必懷疑我想要甚麼，或者從他身上獲取甚麼。"
       },
       "60": {
-        "text": "물론 상을 뒤엎고, 윽박을 지르고,<br>아프면 온갖 성질을 내는 버릇은 여전했지만."
+        "text": "當然他掀桌子、大喊大叫、<br>大發脾氣的壞習慣還是絲毫不改。"
       },
       "61": {
         "name": "微笑伊林斯",
-        "text": "크크크, 오늘도 밥상 엎으시게요?<br>힘들지도 않나.",
+        "text": "顆顆顆，今天也要掀桌子嗎？<br>都不累的嗎？",
         "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1497,7 +1497,7 @@
       },
       "62": {
         "name": "斯奧萊爾",
-        "text": "...됐어. 오늘은 귀찮아.",
+        "text": "...算了。懶得跟你吵。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_laugh_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1507,7 +1507,7 @@
       },
       "63": {
         "name": "微笑伊林斯",
-        "text": "......흐음?",
+        "text": "......哼嗯？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_mask_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1516,7 +1516,7 @@
         }
       },
       "64": {
-        "text": "그렇게 서로에게 익숙해지는 날들이 생겼다.<br>내가 왕자 취급을 해주지 않는 만큼, 그의 비위를 맞추지 않는 만큼.<br>아주 조금씩, 천천히.",
+        "text": "一天一天的過去，我們都習慣了彼此的存在。<br>我既沒有把他當成王子，也沒有刻意討好他。<br>一點一點，慢慢地。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1525,26 +1525,26 @@
         }
       },
       "65": {
-        "text": "......길고양이도 아니고. 성가시긴."
+        "text": "......又不是流浪貓。真煩。"
       },
       "66": {
-        "text": "그 정도면 충분했다.<br>그와 내가 환자와 주치의로 지내는 데는."
+        "text": "不過那就足夠了。<br>這就是我們扮演著病人與主治醫生角色的原因。"
       },
       "67": {
-        "text": "그 무렵, 그 사이에 아무렇지도 않게 끼어든 것이<br>어느 철부지 공주님이었다.",
+        "text": "那個時候，一位天真無邪的公主<br>在我們之間出現。",
         "bgm": "off"
       },
       "68": {
-        "text": "어쩌면 이 불필요한 부산물 같은 감정의 원흉일지도 모르는....<br>기쁨이 가득했던, 그 소녀."
+        "text": "或許引發這些不必要的情緒的原因...<br>就是充滿喜悅的，那個少女。"
       },
       "69": {
-        "text": "털썩-",
+        "text": "嘎吱-",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "sound": "sound\\wishstone_Falldown.wav"
       },
       "70": {
         "name": "微笑伊林斯",
-        "text": "...........윽... 뭐지?",
+        "text": "............唔... 是誰？",
         "background": "gui3/2026_PreWinter/StoryContents/bg002.png",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1555,15 +1555,15 @@
       },
       "71": {
         "name": "???",
-        "text": "아야야.... 아파...."
+        "text": "哎呀呀... 好痛..."
       },
       "72": {
         "name": "???",
-        "text": "....그런데... 누구?"
+        "text": "...不過... 是誰啊？"
       },
       "73": {
         "name": "斯奧萊爾",
-        "text": "사브리나. 또 복도에서 뛰어다닌 건가.",
+        "text": "莎賓娜。你又在走廊上跑來跑去了？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset_2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1573,7 +1573,7 @@
       },
       "74": {
         "name": "微笑伊林斯",
-        "text": "......사브리나?",
+        "text": "......莎賓娜？",
         "bgm": "sound\\bgm\\wishstone_Chill.ogg",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_normal", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1583,7 +1583,7 @@
         }
       },
       "75": {
-        "text": "그러고 보니, 얼핏 들은 적이 있다.<br>이 왕국에... 왕위 계승 후보자가 한 명 더 있다고 했던가.",
+        "text": "這樣一想，好像聽說過。<br>好像是... 這個國家還有另外一位繼承人。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1593,7 +1593,7 @@
       },
       "76": {
         "name": "莎賓娜",
-        "text": "아아, 겨우 면회도 허락받았는데 만나자마자 잔소리!<br>그런데...... 이 사람은 누구야?",
+        "text": "啊啊，好不容易批准我來探望，結果一看到就在抱怨！<br>然後...... 這個人是誰？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_normal_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_normal_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1603,7 +1603,7 @@
       },
       "77": {
         "name": "斯奧萊爾",
-        "text": "...신경 쓸 것 없어. 그냥... 내 주치의다.",
+        "text": "...不用那麼緊張。他只是... 我的醫生。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_smiling2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1613,7 +1613,7 @@
       },
       "78": {
         "name": "微笑伊林斯",
-        "text": "엘림스 스마일입니다.",
+        "text": "我是微笑．伊林斯。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_smiling2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"xn_closed_dark", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1634,12 +1634,12 @@
       },
       "80": {
         "name": "莎賓娜",
-        "text": "..........잘생겼어.",
+        "text": "..........好帥。",
         "sound": "sound\\wishstone_unrest.wav"
       },
       "81": {
         "name": "微笑伊林斯",
-        "text": "...예?",
+        "text": "...嗯？",
         "sound": "sound\\wishstone_effect13.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1650,7 +1650,7 @@
       },
       "82": {
         "name": "斯奧萊爾",
-        "text": "......허?",
+        "text": "......哼？",
         "sound": "sound\\wishstone_effect4.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1661,7 +1661,7 @@
       },
       "83": {
         "name": "莎賓娜",
-        "text": "오빠!! 이렇게 잘생긴 주치의라곤 말 안 했잖아!!!",
+        "text": "哥哥！！醫生長那麼帥怎麼都沒告訴我啊！！！",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1672,7 +1672,7 @@
       },
       "84": {
         "name": "斯奧萊爾",
-        "text": "...그러고 보니 가면이 떨어졌군.",
+        "text": "...面具似乎沒有戴上。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_upset2_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
           "NPCImg2":{ "CustomImage_Name":"xn_crying2", "rect":{"x":570, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1682,7 +1682,7 @@
       },
       "85": {
         "name": "微笑伊林斯",
-        "text": "....과찬이십니다만, 이제 슬슬 가면을 써도 될까요?<br>가면이 없으면 조금 불편해서 말입니다.",
+        "text": "...您太客氣了，我現在可以戴回去了嗎？<br>不戴面具有點不自在。",
         "sound": "sound\\wishstone_effect3.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_smiling", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
@@ -1693,7 +1693,7 @@
       },
       "86": {
         "name": "莎賓娜",
-        "text": "안 돼!",
+        "text": "不 行！",
         "sound": "sound\\wishstone_effect1.wav",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"el_smiling_dark", "rect":{"x":127, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-0.9 },
@@ -1714,7 +1714,7 @@
       },
       "88": {
         "name": "莎賓娜",
-        "text": "오빠, 나..... 결심했어.",
+        "text": "哥哥，我...... 決定好了。",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -1724,7 +1724,7 @@
       },
       "89": {
         "name": "莎賓娜",
-        "text": "나.......... 엘림스랑 결혼할래!!!",
+        "text": "我......... 我要嫁給伊林斯！！！",
         "sound": "sound\\wishstone_unrest.wav"
       },
       "90": {
@@ -1734,18 +1734,18 @@
       },
       "91": {
         "name": "微笑伊林斯",
-        "text": "...........결..... 혼......?"
+        "text": "............結...... 婚......？"
       },
       "92": {
         "name": "莎賓娜",
-        "text": "아하하!! 응!<br>오빠 말고, 이렇게 잘 생긴 사람은 처음인걸!<br>오빠도 당연히 허락해 줄 거지?",
+        "text": "啊哈哈！！對！<br>除了哥哥之外，我還是第一次看到那麼帥的人呢！<br>哥哥也會同意的吧？",
         "background": "gui3/2026_PreWinter/StoryContents/bg017.png",
         "bgm": "sound\\bgm\\wishstone_Rain.ogg",
         "sound": "sound\\off"
       },
       "93": {
         "name": "斯奧萊爾",
-        "text": ".............................................<br>아. 그렇군. 네 녀석도 혼기가 되었던가."
+        "text": ".............................................<br>啊。這樣啊。莎賓娜也到了適婚年齡了。"
       },
       "94": {
         "name": "斯奧萊爾",
