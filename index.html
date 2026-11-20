@@ -9,7 +9,7 @@
 *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:18px;background:radial-gradient(ellipse at 50% 0,#29334a 0,#111827 52%,#080b12 100%);color:#f0f3fa;font-family:system-ui,"Noto Sans TC","Noto Sans KR",sans-serif}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #ffffff26;background:#1b2438d9;border-radius:10px;padding:9px 13px;transition:.16s}button:hover{border-color:var(--gold);background:#303b53}button:disabled{opacity:.36;cursor:not-allowed}.shell{max-width:1280px;margin:auto}.header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 auto 14px;max-width:1520px}.brand{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f1dfb2,#997c4c);color:#1b2030;font-size:22px}.brand b{letter-spacing:.12em}.brand small{display:block;color:#aeb9cc;font-size:10px;letter-spacing:.13em;margin-top:3px}.head-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.head-actions button{font-size:12px}.chapters{display:flex;gap:7px;overflow:auto;max-width:100%;margin:0 auto 12px;padding:2px 1px 8px}.chapter{min-width:112px;text-align:left;flex:1 0 auto;background:#172137d9;border-color:#ffffff19}.chapter small{display:block;color:var(--gold);font-size:10px;letter-spacing:.15em;margin-bottom:3px}.chapter span{font-size:12px;white-space:nowrap}.chapter.active{border-color:#d8bd82;background:linear-gradient(130deg,#77644577,#202c45)}
 .chapter.locked{border-style:dashed;border-color:#c9b77d88;background:linear-gradient(130deg,#202a3a,#121a29)}
 .chapter.locked small{color:#e8d09a}
-.stage{position:relative;isolation:isolate;width:min(100%,1024px,calc((100vh - 245px)*1.333));max-width:1024px;aspect-ratio:4/3;margin:auto;border:1px solid #ddcfaa66;border-radius:17px;overflow:hidden;background-color:transparent;background-image:none;box-shadow:0 24px 65px #0009}.stage:before{content:"";position:absolute;inset:-20px;z-index:0;pointer-events:none;background-image:var(--scene-image,none);background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(18px) brightness(.58) saturate(.85);transform:scale(1.04)}.scene-clear{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none;-webkit-user-drag:none}.stage:after{z-index:1}.stage:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,#070b161c,transparent 24%,transparent 76%,#070b1629)}.art{position:absolute;z-index:3;top:9%;left:50%;transform:translateX(-50%);width:52%;height:43%;display:none;align-items:center;justify-content:center;pointer-events:none}.art.show{display:flex}.art img{max-height:100%;max-width:100%;object-fit:contain;border:1px solid #e8d09a66;border-radius:10px;box-shadow:0 16px 40px #0009}.art .missing{background:#0a1020dd;border:1px solid #e8d09a55;border-radius:10px;padding:17px 20px;text-align:center;max-width:90%;font-size:11px;color:#c5cede}.art .missing b{display:block;color:#f2dfb6;margin-bottom:6px}.sprites{position:absolute;z-index:2;inset:0;pointer-events:none;overflow:hidden}.sprite{position:absolute;display:block;left:0;top:auto;bottom:0;width:0;height:0;max-width:none;max-height:none;object-fit:contain;object-position:center bottom;transform-origin:bottom center;filter:drop-shadow(0 12px 13px #0009);user-select:none;-webkit-user-drag:none}.sprite.cut-sprite{top:0;bottom:auto;object-fit:fill;object-position:top left;transform-origin:top left}.tags{position:absolute;z-index:4;bottom:32%;left:18px;display:flex;flex-wrap:wrap;gap:5px;max-width:48%;pointer-events:none}.tag{font-size:9px;padding:5px 8px;border-radius:20px;border:1px solid #e8d09a44;background:#0b1020b8;color:#e8e1d1;backdrop-filter:blur(5px)}
+.stage{position:relative;isolation:isolate;width:min(100%,1024px,calc((100vh - 245px)*1.333));max-width:1024px;aspect-ratio:4/3;margin:auto;border:1px solid #ddcfaa66;border-radius:17px;overflow:hidden;background-color:transparent;background-image:none;box-shadow:0 24px 65px #0009}.stage:before{content:"";position:absolute;inset:-20px;z-index:0;pointer-events:none;background-image:var(--scene-image,none);background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(18px) brightness(.58) saturate(.85);transform:scale(1.04)}.scene-clear{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none;-webkit-user-drag:none}.stage:after{z-index:1}.stage:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,#070b161c,transparent 24%,transparent 76%,#070b1629)}.art{position:absolute;z-index:3;top:9%;left:50%;transform:translateX(-50%);width:52%;height:43%;display:none;align-items:center;justify-content:center;pointer-events:none}.art.show{display:flex}.art img{max-height:100%;max-width:100%;object-fit:contain;border:1px solid #e8d09a66;border-radius:10px;box-shadow:0 16px 40px #0009}.art .missing{background:#0a1020dd;border:1px solid #e8d09a55;border-radius:10px;padding:17px 20px;text-align:center;max-width:90%;font-size:11px;color:#c5cede}.art .missing b{display:block;color:#f2dfb6;margin-bottom:6px}.sprites{position:absolute;z-index:2;inset:0;pointer-events:none;overflow:hidden}.sprite{position:absolute;display:block;left:0;top:auto;bottom:0;width:0;height:0;max-width:none;max-height:none;object-fit:fill;object-position:fill;transform-origin:bottom center;filter:drop-shadow(0 12px 13px #0009);user-select:none;-webkit-user-drag:none}.sprite.cut-sprite{top:0;bottom:auto;object-fit:fill;object-position:top left;transform-origin:top left}.tags{position:absolute;z-index:4;bottom:32%;left:18px;display:flex;flex-wrap:wrap;gap:5px;max-width:48%;pointer-events:none}.tag{font-size:9px;padding:5px 8px;border-radius:20px;border:1px solid #e8d09a44;background:#0b1020b8;color:#e8e1d1;backdrop-filter:blur(5px)}
 .dialogue{position:absolute;z-index:6;left:0;right:0;bottom:0;height:30%;min-height:30%;max-height:30%;padding:19px clamp(18px,3.3vw,40px) 15px;background:linear-gradient(180deg,#070b1650,#070b16ee 30%,#060914f7);border-top:1px solid #e8d09a50;display:flex;flex-direction:column;cursor:pointer;overflow:hidden}.speaker{display:flex;align-items:center;gap:9px;margin-bottom:8px;color:#f0dcae;font-size:16px;font-weight:800;letter-spacing:.08em;flex:0 0 auto}.speaker:before{content:"";height:1px;width:25px;background:var(--gold)}.line{font-size:14px;line-height:1.3;text-shadow:0 2px 8px #000;height:91px;min-height:91px;max-height:91px;overflow-y:auto;flex:0 0 91px;scrollbar-width:thin}.dialogue-foot{margin-top:auto;display:flex;justify-content:space-between;gap:10px;color:#aeb9cc;font-size:10px}.hint{color:#dce3ef}.choices{position:absolute;z-index:9;left:50%;top:38%;transform:translate(-50%,-50%);width:min(58%,620px);display:flex;flex-direction:column;gap:9px}.choices[hidden]{display:none}.choice{border:1px solid #d7d9e5a8;background:linear-gradient(100deg,#111e3bf5,#333956f2);box-shadow:0 6px 18px #0008;text-align:center;padding:12px 14px;font-size:clamp(12px,1.2vw,15px)}.choice:hover{background:linear-gradient(100deg,#63543bf5,#3e465cf5);border-color:#f2dfb6}
 .under{max-width:1160px;margin:12px auto 0;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.progress{flex:1;min-width:200px}.progress-label{display:flex;justify-content:space-between;color:#b1bdd0;font-size:10px;margin-bottom:6px}.bar{height:4px;background:#303b50;border-radius:10px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#9e804d,#f2dfb6);transition:width .2s}.controls{display:flex;gap:7px;flex-wrap:wrap}.controls button{font-size:12px}.primary{background:linear-gradient(135deg,#efdfb4,#b3945e);color:#1a2030;border-color:#f5e4bc;font-weight:800}.note{max-width:1160px;margin:10px auto 0;color:#8e9bb0;font-size:10px;line-height:1.7}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#cda75f;margin-right:7px}.modal{position:fixed;z-index:20;inset:0;background:#03060dcc;backdrop-filter:blur(8px);display:none;place-items:center;padding:16px}.modal.open{display:grid}.card{width:min(620px,100%);max-height:86vh;overflow:auto;background:linear-gradient(145deg,#1c263b,#0d1322);border:1px solid #e8d09a55;border-radius:17px;padding:21px;box-shadow:0 30px 90px #000b}.modalhead{display:flex;justify-content:space-between;align-items:center;gap:12px}.modalhead h2{font-size:18px;margin:0}.card p,.card li{font-size:13px;line-height:1.75;color:#c0cada}.file{display:block;width:100%;padding:13px;background:#0a1120;border:1px dashed #e8d09a66;border-radius:11px;margin:15px 0;color:#cdd6e5}.status{padding:10px 12px;border-radius:9px;background:#070d1b80;color:#b8c4d6;font-size:11px;line-height:1.6}.guide-text{margin-top:14px;max-height:68vh;overflow:auto;font-size:13px;line-height:1.9;color:#d8e0ec;overflow-wrap:anywhere}
 .chapter-password-input{display:block;width:100%;margin:14px 0 8px;padding:12px 13px;border:1px solid #e8d09a66;border-radius:9px;background:#080f1d;color:#f0f3fa;font:inherit;letter-spacing:.08em;outline:none}
@@ -497,33 +497,67 @@ function refreshCurrentPreloadedAssets(){
 // TXT NPCImg rect uses a 1280x960 reference canvas: x/y are the top-left position; x1/y1 are the target width/height (not the bottom-right corner). Percent positioning keeps the layout proportional as the 4:3 stage resizes.
 const STAGE_REF_WIDTH=1280, STAGE_REF_HEIGHT=960;
 function renderSprites(imgList){
-  let layer=$('sprites'),tags=$('tags');layer.innerHTML='';tags.innerHTML='';
+  const layer=$('sprites'),tags=$('tags');
+  layer.innerHTML='';tags.innerHTML='';
+  const characterItems=[],cutItems=[];
   Object.entries(imgList||{}).forEach(([slot,v],i)=>{
     if(!v?.CustomImage_Name)return;
     const name=String(v.CustomImage_Name).trim(),rect=v.rect||{};
     const x=Number(rect.x??0),y=Number(rect.y??0),w=Number(rect.x1??0),h=Number(rect.y1??0);
     const isCutImage=/^cut_/i.test(name);
     const sourceRect=customImageSourceRects[name.toLowerCase()];
-    const roleWidth=Number(sourceRect?.x1)||w;
-    const roleHeight=Number(sourceRect?.y1)||h;
-    const displayWidth=isCutImage?w:roleWidth;
-    const displayHeight=isCutImage?h:roleHeight;
-    const u=fileURL(name);
-    if(u){
-      const im=document.createElement('img');im.className=isCutImage?'sprite cut-sprite':'sprite character-sprite';im.src=u;im.alt=name;im.dataset.slot=slot;
-      im.style.left=`${x/STAGE_REF_WIDTH*100}%`;
-      if(isCutImage)im.style.top=`${y/STAGE_REF_HEIGHT*100}%`;
-      im.style.width=`${displayWidth/STAGE_REF_WIDTH*100}%`;
-      im.style.height=`${displayHeight/STAGE_REF_HEIGHT*100}%`;
-      im.style.opacity=String(v.alpha??1);
-      const z=Number(v.z);
-      im.style.zIndex=Number.isFinite(z)?String(Math.round((z+2)*1000)):String(1000+i);
+    const displayWidth=isCutImage?w:(Number(sourceRect?.x1)||w);
+    const displayHeight=isCutImage?h:(Number(sourceRect?.y1)||h);
+    const item={slot,v,name,x,y,width:displayWidth,height:displayHeight,z:Number(v.z),order:i,url:fileURL(name)};
+    (isCutImage?cutItems:characterItems).push(item);
+  });
+
+  // Stretch normal portraits to their customimage.txt source_rect dimensions first,
+  // then enlarge the complete character group proportionally to the largest size
+  // that fits inside the 1280x960 stage. Relative horizontal positions are retained.
+  const visibleCharacters=characterItems.filter(item=>item.url&&item.width>0&&item.height>0);
+  if(visibleCharacters.length){
+    const minX=Math.min(...visibleCharacters.map(item=>item.x));
+    const maxX=Math.max(...visibleCharacters.map(item=>item.x+item.width));
+    const maxHeight=Math.max(...visibleCharacters.map(item=>item.height));
+    const groupWidth=Math.max(1,maxX-minX);
+    const scale=Math.min(STAGE_REF_WIDTH/groupWidth,STAGE_REF_HEIGHT/maxHeight);
+    const offsetX=(STAGE_REF_WIDTH-groupWidth*scale)/2;
+    visibleCharacters.forEach(item=>{
+      item.displayX=offsetX+(item.x-minX)*scale;
+      item.displayWidth=item.width*scale;
+      item.displayHeight=item.height*scale;
+    });
+  }
+
+  const appendSprite=(item,isCutImage)=>{
+    if(item.url){
+      const im=document.createElement('img');
+      im.className=isCutImage?'sprite cut-sprite':'sprite character-sprite';
+      im.src=item.url;im.alt=item.name;im.dataset.slot=item.slot;
+      if(isCutImage){
+        im.style.left=`${item.x/STAGE_REF_WIDTH*100}%`;
+        im.style.top=`${item.y/STAGE_REF_HEIGHT*100}%`;
+        im.style.width=`${item.width/STAGE_REF_WIDTH*100}%`;
+        im.style.height=`${item.height/STAGE_REF_HEIGHT*100}%`;
+      }else{
+        im.style.left=`${item.displayX/STAGE_REF_WIDTH*100}%`;
+        im.style.width=`${item.displayWidth/STAGE_REF_WIDTH*100}%`;
+        im.style.height=`${item.displayHeight/STAGE_REF_HEIGHT*100}%`;
+      }
+      im.style.opacity=String(item.v.alpha??1);
+      im.style.zIndex=Number.isFinite(item.z)?String(Math.round((item.z+2)*1000)):String(1000+item.order);
       layer.appendChild(im);
     }else{
       const t=document.createElement('span');t.className='tag';
-      t.textContent=`${slot}: ${name} · x${x} y${y} · ${displayWidth}×${displayHeight}`;tags.appendChild(t);
+      const width=isCutImage?item.width:item.displayWidth||item.width;
+      const height=isCutImage?item.height:item.displayHeight||item.height;
+      t.textContent=`${item.slot}: ${item.name} · x${item.x} y${item.y} · ${Math.round(width)}×${Math.round(height)}`;
+      tags.appendChild(t);
     }
-  });
+  };
+  characterItems.forEach(item=>appendSprite(item,false));
+  cutItems.forEach(item=>appendSprite(item,true));
 }
 function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList.remove('show');return}box.classList.add('show');let u=fileURL(ref);if(u){let im=document.createElement('img');im.src=u;im.alt=ref;box.appendChild(im)}else{let m=document.createElement('div');m.className='missing';m.innerHTML=`<b>劇情圖片素材尚未載入</b>${escapeHTML(ref)}`;box.appendChild(m)}}
 function renderChoices(d){let box=$('choices');box.innerHTML='';let selection=d.selection;if(!selection){box.hidden=true;return}box.hidden=false;Object.entries(selection).forEach(([id,label])=>{let b=document.createElement('button');b.className='choice';b.textContent=label;b.onclick=e=>{e.stopPropagation();chooseBranch(id)};box.appendChild(b)})}
