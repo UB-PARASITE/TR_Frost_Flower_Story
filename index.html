@@ -496,6 +496,10 @@ function refreshCurrentPreloadedAssets(){
 }
 // TXT NPCImg rect uses a 1280x960 reference canvas: x/y are the top-left position; x1/y1 are the target width/height (not the bottom-right corner). Percent positioning keeps the layout proportional as the 4:3 stage resizes.
 const STAGE_REF_WIDTH=1280, STAGE_REF_HEIGHT=960;
+// Fixed portrait scale based on the current standard two-character layout:
+// x=127 and x=570, with each portrait stretched to 583px wide (group span 1026px).
+const CHARACTER_REFERENCE_GROUP_WIDTH=1026;
+const CHARACTER_DISPLAY_SCALE=STAGE_REF_WIDTH/CHARACTER_REFERENCE_GROUP_WIDTH;
 function renderSprites(imgList){
   const layer=$('sprites'),tags=$('tags');
   layer.innerHTML='';tags.innerHTML='';
@@ -513,15 +517,14 @@ function renderSprites(imgList){
   });
 
   // Stretch normal portraits to their customimage.txt source_rect dimensions first,
-  // then enlarge the complete character group proportionally to the largest size
-  // that fits inside the 1280x960 stage. Relative horizontal positions are retained.
+  // then apply one fixed scale matching the standard two-character layout,
+  // regardless of how many characters are present. Relative horizontal positions are retained.
   const visibleCharacters=characterItems.filter(item=>item.url&&item.width>0&&item.height>0);
   if(visibleCharacters.length){
     const minX=Math.min(...visibleCharacters.map(item=>item.x));
     const maxX=Math.max(...visibleCharacters.map(item=>item.x+item.width));
-    const maxHeight=Math.max(...visibleCharacters.map(item=>item.height));
     const groupWidth=Math.max(1,maxX-minX);
-    const scale=Math.min(STAGE_REF_WIDTH/groupWidth,STAGE_REF_HEIGHT/maxHeight);
+    const scale=CHARACTER_DISPLAY_SCALE;
     const offsetX=(STAGE_REF_WIDTH-groupWidth*scale)/2;
     visibleCharacters.forEach(item=>{
       item.displayX=offsetX+(item.x-minX)*scale;
