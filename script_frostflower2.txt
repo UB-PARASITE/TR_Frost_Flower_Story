@@ -1167,7 +1167,7 @@
       },
       "21": {
         "name": "斯奧萊爾",
-        "text": "還是那些貴族 指使你來，想把我變成無法反抗的傀儡？",
+        "text": "還是那些貴族指使你來，想把我變成無法反抗的傀儡？",
         "ImgList":{
           "NPCImg1":{ "CustomImage_Name":"xn_angry_2", "rect":{"x":349, "y":213, "x1":583, "y1":651}, "alpha":1.0, "z":-1.0 },
           "NPCImg2":{ "CustomImage_Name":"", "rect":{"x":0, "y":0, "x1":0, "y1":0}, "alpha":1.0, "z":-1.0 },
@@ -2218,7 +2218,7 @@
     },
     {
       "1": {
-        "text": "同時，情感群島。<br>喜悅王國貴族 議事廳。",
+        "text": "同時，情感群島。<br>喜悅王國貴族議事廳。",
         "background": "gui3/2026_PreWinter/StoryContents/bg022.png"
       },
       "2": {
