@@ -510,15 +510,15 @@ function renderSprites(imgList){
     const x=Number(rect.x??0),y=Number(rect.y??0),w=Number(rect.x1??0),h=Number(rect.y1??0);
     const isCutImage=/^cut_/i.test(name);
     const sourceRect=customImageSourceRects[name.toLowerCase()];
-    const displayWidth=isCutImage?w:(Number(sourceRect?.x1)||w);
-    const displayHeight=isCutImage?h:(Number(sourceRect?.y1)||h);
-    const item={slot,v,name,x,y,width:displayWidth,height:displayHeight,z:Number(v.z),order:i,url:fileURL(name)};
+    const sourceWidth=Number(sourceRect?.x1)||w;
+    const sourceHeight=Number(sourceRect?.y1)||h;
+    const item={slot,v,name,x,y,width:sourceWidth,height:sourceHeight,z:Number(v.z),order:i,url:fileURL(name)};
     (isCutImage?cutItems:characterItems).push(item);
   });
 
-  // Stretch normal portraits to their customimage.txt source_rect dimensions first,
-  // then apply one fixed scale matching the standard two-character layout,
-  // regardless of how many characters are present. Relative horizontal positions are retained.
+  // Stretch normal portraits to customimage.txt source_rect dimensions first,
+  // then apply one fixed scale matching the standard two-character layout.
+  // Relative horizontal positions are retained for character groups.
   const visibleCharacters=characterItems.filter(item=>item.url&&item.width>0&&item.height>0);
   if(visibleCharacters.length){
     const minX=Math.min(...visibleCharacters.map(item=>item.x));
@@ -533,16 +533,24 @@ function renderSprites(imgList){
     });
   }
 
+  // Cut images use the same mapped source bounds and fixed scale, then center on stage.
+  cutItems.forEach(item=>{
+    item.displayWidth=item.width*CHARACTER_DISPLAY_SCALE;
+    item.displayHeight=item.height*CHARACTER_DISPLAY_SCALE;
+    item.displayX=(STAGE_REF_WIDTH-item.displayWidth)/2;
+    item.displayY=(STAGE_REF_HEIGHT-item.displayHeight)/2;
+  });
+
   const appendSprite=(item,isCutImage)=>{
     if(item.url){
       const im=document.createElement('img');
       im.className=isCutImage?'sprite cut-sprite':'sprite character-sprite';
       im.src=item.url;im.alt=item.name;im.dataset.slot=item.slot;
       if(isCutImage){
-        im.style.left=`${item.x/STAGE_REF_WIDTH*100}%`;
-        im.style.top=`${item.y/STAGE_REF_HEIGHT*100}%`;
-        im.style.width=`${item.width/STAGE_REF_WIDTH*100}%`;
-        im.style.height=`${item.height/STAGE_REF_HEIGHT*100}%`;
+        im.style.left=`${item.displayX/STAGE_REF_WIDTH*100}%`;
+        im.style.top=`${item.displayY/STAGE_REF_HEIGHT*100}%`;
+        im.style.width=`${item.displayWidth/STAGE_REF_WIDTH*100}%`;
+        im.style.height=`${item.displayHeight/STAGE_REF_HEIGHT*100}%`;
       }else{
         im.style.left=`${item.displayX/STAGE_REF_WIDTH*100}%`;
         im.style.width=`${item.displayWidth/STAGE_REF_WIDTH*100}%`;
@@ -553,9 +561,9 @@ function renderSprites(imgList){
       layer.appendChild(im);
     }else{
       const t=document.createElement('span');t.className='tag';
-      const width=isCutImage?item.width:item.displayWidth||item.width;
-      const height=isCutImage?item.height:item.displayHeight||item.height;
-      t.textContent=`${item.slot}: ${item.name} · x${item.x} y${item.y} · ${Math.round(width)}×${Math.round(height)}`;
+      const width=item.displayWidth||item.width;
+      const height=item.displayHeight||item.height;
+      t.textContent=`${item.slot}: ${item.name} · x${Math.round(item.displayX??item.x)} y${Math.round(item.displayY??0)} · ${Math.round(width)}×${Math.round(height)}`;
       tags.appendChild(t);
     }
   };
