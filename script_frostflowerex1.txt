@@ -1,8 +1,8 @@
 {
   "name": "FrostFlowerEX1",
   "episode": "EX.1",
-  "episode_title": "斯奧萊爾的軍校畢業紀念冊",
-  "chapter_title": "軍校畢業紀念冊",
+  "episode_title": "軍校畢業紀念冊",
+  "chapter_title": "斯奧萊爾的軍校畢業紀念冊",
   "CustomImage_CtrlNameList": ["NPCImg1","NPCImg2","NPCImg3","NPCImg4"],
   "script": [
     {
