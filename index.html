@@ -584,17 +584,19 @@ const CHARACTER_DISPLAY_SCALE=STAGE_REF_WIDTH/CHARACTER_REFERENCE_GROUP_WIDTH;
 function renderSprites(imgList){
   const layer=$('sprites'),tags=$('tags');
   layer.innerHTML='';tags.innerHTML='';
-  const characterItems=[],cutItems=[];
+  const characterItems=[],cutItems=[],xnItems=[];
   Object.entries(imgList||{}).forEach(([slot,v],i)=>{
     if(!v?.CustomImage_Name)return;
     const name=String(v.CustomImage_Name).trim(),rect=v.rect||{};
     const x=Number(rect.x??0),y=Number(rect.y??0),w=Number(rect.x1??0),h=Number(rect.y1??0);
     const isCutImage=/^(?:cut_|pageimage)/i.test(name);
+    const isPageImage=/^pageimage/i.test(name);
+    const isXnReading=/^xn_reading(?:_none)?$/i.test(name);
     const sourceRect=customImageSourceRects[name.toLowerCase()];
     const sourceWidth=Number(sourceRect?.x1)||w;
     const sourceHeight=Number(sourceRect?.y1)||h;
-    const item={slot,v,name,x,y,width:sourceWidth,height:sourceHeight,z:Number(v.z),order:i,url:fileURL(name)};
-    (isCutImage?cutItems:characterItems).push(item);
+    const item={slot,v,name,x,y,width:sourceWidth,height:sourceHeight,z:Number(v.z),order:i,url:fileURL(name),isPageImage};
+    (isXnReading?xnItems:isCutImage?cutItems:characterItems).push(item);
   });
 
   // Stretch normal portraits to customimage.txt source_rect dimensions first,
@@ -614,16 +616,23 @@ function renderSprites(imgList){
     });
   }
 
-  // Cut and page images use the same mapped source bounds and fixed scale.
-  // Keep their authored story y position, moving upward only when needed to
-  // keep the enlarged image above the dialogue panel (bottom 30% of the stage).
+  // Cut and page images use mapped source bounds and the fixed scale.
+  // Page images retain their authored x coordinate; cut images stay centered.
+  // Both retain story y unless the dialogue panel would cover the enlarged image.
   cutItems.forEach(item=>{
     item.displayWidth=item.width*CHARACTER_DISPLAY_SCALE;
     item.displayHeight=item.height*CHARACTER_DISPLAY_SCALE;
-    item.displayX=(STAGE_REF_WIDTH-item.displayWidth)/2;
+    item.displayX=item.isPageImage?item.x*CHARACTER_DISPLAY_SCALE:(STAGE_REF_WIDTH-item.displayWidth)/2;
     const dialogueTop=STAGE_REF_HEIGHT*0.7;
     const highestSafeY=Math.max(0,dialogueTop-item.displayHeight);
     item.displayY=Math.max(0,Math.min(item.y,highestSafeY));
+  });
+
+  // Reading overlays use their own authored x coordinate and the same 1.2476x scale.
+  xnItems.forEach(item=>{
+    item.displayX=item.x*CHARACTER_DISPLAY_SCALE;
+    item.displayWidth=item.width*CHARACTER_DISPLAY_SCALE;
+    item.displayHeight=item.height*CHARACTER_DISPLAY_SCALE;
   });
 
   const appendSprite=(item,isCutImage)=>{
@@ -653,6 +662,7 @@ function renderSprites(imgList){
     }
   };
   characterItems.forEach(item=>appendSprite(item,false));
+  xnItems.forEach(item=>appendSprite(item,false));
   cutItems.forEach(item=>appendSprite(item,true));
 }
 function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList.remove('show');return}box.classList.add('show');let u=fileURL(ref);if(u){let im=document.createElement('img');im.src=u;im.alt=ref;box.appendChild(im)}else{let m=document.createElement('div');m.className='missing';m.innerHTML=`<b>劇情圖片素材尚未載入</b>${escapeHTML(ref)}`;box.appendChild(m)}}
