@@ -307,7 +307,7 @@ function buildChapterTabs(){
   let n=$('chapters');
   n.innerHTML='';
   chapterTitles.forEach((t,i)=>{
-    const locked=STORY?.episode==='Episode.2'&&(i===1||i===2)&&!episode2ChaptersUnlocked;
+    const locked=STORY?.episode==='Episode.2'&&i===2&&!episode2ChaptersUnlocked;
     let b=document.createElement('button');
     b.className='chapter'+(storyStarted&&i===chapter?' active':'')+(locked?' locked':'');
     b.innerHTML=`<small>CHAPTER. ${i+1}${locked?'　🔒':''}</small><span>${escapeHTML(t)}</span>`;
@@ -335,7 +335,7 @@ function submitChapterPassword(event){
   pendingLockedChapter=null;
   closeModal('chapterPasswordModal');
   buildChapterTabs();
-  toast('Episode 2 Chapter 2、3 已解鎖');
+  toast('Episode 2 Chapter 3 已解鎖');
   if(Number.isInteger(target))loadChapter(target);
 }
 const EPISODE_OPTIONS=[{number:1,title:'追尋你的明天',available:true},{number:2,title:'那天．我們',available:true},{number:3,title:'沉睡在霜花下的名字',available:false},{number:4,title:'陽光照射不到的地方',available:false},{number:5,title:'微笑的死囚',available:false},{number:6,title:'絕對零度',available:false},{number:7,title:'融冰',available:false},{number:8,title:'永恆的明天',available:false}];
@@ -435,7 +435,7 @@ function buildBranchRoute(choice){
 }
 function loadChapter(i){
   if(selectedEpisode===null){toast('請先選擇章節');return}
-  if(STORY?.episode==='Episode.2'&&(i===1||i===2)&&!episode2ChaptersUnlocked){requestChapterPassword(i);return}
+  if(STORY?.episode==='Episode.2'&&i===2&&!episode2ChaptersUnlocked){requestChapterPassword(i);return}
   stopAuto();auto=false;storyStarted=true;chapter=Math.max(0,Math.min(STORY.script.length-1,i));position=0;historyEntries=[];bgm.pause();bgm.removeAttribute('src');sfx.pause();currentBGMRef='';currentSFXRef='';$('autoBtn').textContent='關閉';route=chapter===0?initialRoute():chapterKeys(chapter);setSceneBG(FALLBACK);buildChapterTabs();buildEpisodeList();updateStartScreen();render()}
 function setSceneBG(ref){
   const u=ref?fileURL(ref):'';
