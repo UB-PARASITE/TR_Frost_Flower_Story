@@ -85,7 +85,7 @@
 </main>
 <aside class="settings-panel" aria-label="功能">
   <div class="panel-kicker">FUNCTION</div>
-  <h2 class="settings-heading"><button id="settingsToggleBtn" type="button" aria-expanded="true" aria-controls="settingsControls"><span>功能</span><span id="settingsToggleIcon" aria-hidden="true">⌄</span></button></h2>
+  <h2 class="settings-heading"><button id="settingsToggleBtn" type="button" aria-expanded="true" aria-controls="settingsControls"><span>功能</span><span id="settingsToggleIcon" aria-hidden="true">▲</span></button></h2>
   <div class="settings-controls" id="settingsControls">
     <div class="setting-item">
       <div class="setting-title"><span>▣ 對話框</span></div>
@@ -302,7 +302,7 @@ function toggleSettingsCollapse(){
   const collapsed=!controls.hidden;
   controls.hidden=collapsed;
   $('settingsToggleBtn').setAttribute('aria-expanded',String(!collapsed));
-  $('settingsToggleIcon').textContent=collapsed?'▶️':'🔽';
+  $('settingsToggleIcon').textContent=collapsed?'▼':'▲';
 }
 function playCurrentNodeVoice(){
   if(selectedEpisode!==EXTRA_STORY_OPTION.id||STORY?.episode!=='EX.1'||!storyStarted){
