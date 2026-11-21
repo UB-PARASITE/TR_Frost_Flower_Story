@@ -154,6 +154,7 @@ let loadedEpisodeNumber=0,episodeLoading=false,loadingEpisodeNumber=null;
 let episode2ChaptersUnlocked=false,pendingLockedChapter=null;
 let dialogueHidden=false,screenshotLibraryPromise=null,screenshotBlob=null,screenshotObjectURL="";
 const EPISODE_DATA_CACHE=new Map();
+const EXTRA_STORY_OPTION={id:'EX1',label:'EX. 1',title:'斯奧萊爾的軍校畢業紀念冊'};
 let assetIndexSettled=false,resolveAssetIndexReady;
 const assetIndexReady=new Promise(resolve=>{resolveAssetIndexReady=resolve});
 function markAssetIndexReady(){if(assetIndexSettled)return;assetIndexSettled=true;resolveAssetIndexReady()}
@@ -166,19 +167,25 @@ const RAW_ASSET_BASE='https://raw.githubusercontent.com/UB-PARASITE/TR_Frost_Flo
 const MISSING_ASSETS=new Set([
   'gui3/2026_prewinter/storycontents/black.png'
 ]);
+function normalizeAssetPathCase(value){
+  const path=String(value||'').replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();
+  return path
+    .replace(/^gui3\/2026_prewinter\/parkstorycontents\//,'gui3/2026_prewinter/ParkStoryContents/')
+    .replace(/^sound\/2026prewinter_character_voice\//,'sound/2026PreWinter_character_voice/');
+}
 function resolveAssetURL(ref){
   if(!ref)return '';
   const value=String(ref).trim();
   if(/^data:/i.test(value)||/^https?:\/\//i.test(value))return value;
-  const path=value.replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();
-  const base=path.split('/').pop().replace(/\.[^.]+$/,'');
-  const mapped=customImagePaths[path]||customImagePaths[base]||'';
-  const assetPath=(mapped||(path.includes('/')?path:'')).replace(/\\/g,'/').replace(/^\.\//,'').toLowerCase();
+  const normalized=value.replace(/\\/g,'/').replace(/^\.\//,'');
+  const lookupPath=normalized.toLowerCase();
+  const base=lookupPath.split('/').pop().replace(/\.[^.]+$/,'');
+  const mapped=customImagePaths[lookupPath]||customImagePaths[base]||'';
+  const assetPath=normalizeAssetPathCase(mapped||(normalized.includes('/')?normalized:''));
   if(assetPath){
-    if(MISSING_ASSETS.has(assetPath))return '';
+    if(MISSING_ASSETS.has(assetPath.toLowerCase()))return '';
     return RAW_ASSET_BASE+assetPath.split('/').map(encodeURIComponent).join('/');
   }
-  // Legacy index is used only if customimage.txt could not be loaded or an unmapped name is encountered.
   const f=files.find(x=>String(x.name||'').replace(/\\/g,'/').toLowerCase().split('/').pop().replace(/\.[^.]+$/,'')===base);
   return f?.url||'';
 }
@@ -286,6 +293,7 @@ function showStoryGuide(){
 }
 function updateStartScreen(){
   const hasEpisode=selectedEpisode!==null;
+  const isExtraStory=selectedEpisode===EXTRA_STORY_OPTION.id;
   $('selectionScreen').hidden=storyStarted;
   $('chapters').hidden=!hasEpisode;
   $('dialoguePanel').hidden=!storyStarted||dialogueHidden;
@@ -299,8 +307,13 @@ function updateStartScreen(){
   $('skipBtn').hidden=!storyStarted;
   updateGuideButton();
   if(!storyStarted){
-    $('selectionTitle').textContent=hasEpisode?`Episode. ${String(selectedEpisode).padStart(2,'0')} · ${EPISODE_OPTIONS.find(x=>x.number===selectedEpisode)?.title||''}`:'請先選擇章節';
-    $('selectionHint').textContent=hasEpisode?'請從上方選擇其中一話':'請從左側選擇章節。建議先進行「預載入素材」。';
+    $('selectionTitle').textContent=isExtraStory
+      ?'Ex. 1 · '+(STORY?.episode_title||EXTRA_STORY_OPTION.title)
+      :hasEpisode?'Episode. '+String(selectedEpisode).padStart(2,'0')+' · '+(EPISODE_OPTIONS.find(x=>x.number===selectedEpisode)?.title||'')
+      :'請先選擇章節';
+    $('selectionHint').textContent=hasEpisode
+      ?(isExtraStory?'請從上方選擇「軍校畢業紀念冊」章節':'請從上方選擇其中一話')
+      :'請從左側選擇章節。建議先進行「預載入素材」。';
   }
 }
 function buildChapterTabs(){
@@ -350,9 +363,25 @@ function buildEpisodeList(){
     const status=episodeLoading&&loadingEpisodeNumber===ep.number
       ?'<span class="episode-status">載入中…</span>'
       :(!ep.available?'<span class="episode-status">尚未開放</span>':'');
-    b.innerHTML=`<span class="episode-number">EPISODE. ${ep.number}</span><span class="episode-name">${escapeHTML(ep.title)}</span>${status}`;
+    b.innerHTML='<span class="episode-number">EPISODE. '+ep.number+'</span><span class="episode-name">'+escapeHTML(ep.title)+'</span>'+status;
     if(ep.available)b.onclick=()=>selectEpisode(ep.number);
     box.appendChild(b);
+    if(ep.number===2){
+      const divider=document.createElement('div');
+      divider.className='panel-kicker';
+      divider.textContent='EXTRA STORY';
+      divider.style.margin='10px 4px 4px';
+      box.appendChild(divider);
+      const extra=document.createElement('button');
+      extra.type='button';
+      extra.className='episode-option'+(selectedEpisode===EXTRA_STORY_OPTION.id?' active':'');
+      extra.disabled=!STORY||episodeLoading;
+      const extraStatus=episodeLoading&&loadingEpisodeNumber===EXTRA_STORY_OPTION.id
+        ?'<span class="episode-status">載入中…</span>':'';
+      extra.innerHTML='<span class="episode-number">'+EXTRA_STORY_OPTION.label+'</span><span class="episode-name">'+escapeHTML(EXTRA_STORY_OPTION.title)+'</span>'+extraStatus;
+      extra.onclick=selectExtraStory;
+      box.appendChild(extra);
+    }
   });
 }
 async function ensureEpisodePackage(number){
@@ -373,6 +402,58 @@ async function ensureEpisodePackage(number){
   const packageData={story:parsedStory,guide:parsedGuide.guide};
   EPISODE_DATA_CACHE.set(number,packageData);
   return packageData;
+}
+async function ensureExtraStoryPackage(){
+  const cached=EPISODE_DATA_CACHE.get(EXTRA_STORY_OPTION.id);
+  if(cached?.story&&Array.isArray(cached.guide))return cached;
+  const response=await fetch(new URL('./script_frostflowerex1.txt',window.location.href),{cache:'no-store'});
+  if(!response.ok)throw new Error('讀取 script_frostflowerex1.txt 失敗（HTTP '+response.status+'）');
+  const parsedStory=JSON.parse((await response.text()).replace(/^\uFEFF/,'').trim());
+  const titles=String(parsedStory.chapter_title||'').split('@').filter(Boolean);
+  if(parsedStory.episode!=='EX.1'||!Array.isArray(parsedStory.script)||!parsedStory.script.length||!titles.length)throw new Error('Ex. 1 劇情 TXT 格式不符合預期');
+  if(parsedStory.script.length!==titles.length)throw new Error('Ex. 1 章節標題與劇情資料數量不一致');
+  const packageData={story:parsedStory,guide:[]};
+  EPISODE_DATA_CACHE.set(EXTRA_STORY_OPTION.id,packageData);
+  return packageData;
+}
+async function selectExtraStory(){
+  if(episodeLoading||!STORY)return;
+  stopAuto();
+  auto=false;
+  episodeLoading=true;
+  loadingEpisodeNumber=EXTRA_STORY_OPTION.id;
+  buildEpisodeList();
+  try{
+    const packageData=await ensureExtraStoryPackage();
+    STORY=packageData.story;
+    chapterTitles=String(STORY.chapter_title).split('@').filter(Boolean);
+    storyGuide=[];
+    loadedEpisodeNumber=0;
+  }catch(error){
+    console.error('Ex. 1 載入失敗：',error);
+    toast('Ex. 1 載入失敗，請確認 script_frostflowerex1.txt');
+    $('selectionHint').textContent='Ex. 1 載入失敗：'+error.message;
+    return;
+  }finally{
+    episodeLoading=false;
+    loadingEpisodeNumber=null;
+    buildEpisodeList();
+  }
+  selectedEpisode=EXTRA_STORY_OPTION.id;
+  storyStarted=false;
+  chapter=0;
+  route=[];
+  position=0;
+  historyEntries=[];
+  bgm.pause();
+  bgm.removeAttribute('src');
+  sfx.pause();
+  currentBGMRef='';
+  currentSFXRef='';
+  $('autoBtn').textContent='關閉';
+  buildChapterTabs();
+  buildEpisodeList();
+  updateStartScreen();
 }
 async function selectEpisode(number){
   const ep=EPISODE_OPTIONS.find(x=>x.number===number);
@@ -608,27 +689,30 @@ async function preloadStoryAssets(){
   openModal('preloadModal');
   let assetIndexTimer;
   try{
-    const availableEpisodes=EPISODE_OPTIONS.filter(ep=>ep.available);
-    const packageResults=await Promise.allSettled(availableEpisodes.map(ep=>ensureEpisodePackage(ep.number)));
+    const availableStories=[
+      ...EPISODE_OPTIONS.filter(ep=>ep.available).map(ep=>({label:'Episode '+ep.number,load:()=>ensureEpisodePackage(ep.number)})),
+      {label:EXTRA_STORY_OPTION.label,load:()=>ensureExtraStoryPackage()}
+    ];
+    const packageResults=await Promise.allSettled(availableStories.map(item=>item.load()));
     const loadedPackages=[];
     const packageFailures=[];
     packageResults.forEach((result,index)=>{
       if(result.status==='fulfilled')loadedPackages.push(result.value);
       else{
-        packageFailures.push({episode:availableEpisodes[index].number,error:result.reason});
-        console.warn('Episode 劇情／導覽預載入失敗：',availableEpisodes[index].number,result.reason);
+        packageFailures.push({label:availableStories[index].label,error:result.reason});
+        console.warn(availableStories[index].label+' 劇情／導覽預載入失敗：',result.reason);
       }
     });
-    if(!loadedPackages.length)throw new Error('所有已開放 Episode 的劇情與導覽都無法載入');
-    $('preloadStatus').textContent=`已載入 ${loadedPackages.length} / ${availableEpisodes.length} 個 Episode 的劇情與導覽，正在等待素材索引…`;
+    if(!loadedPackages.length)throw new Error('所有已開放故事的劇情資料都無法載入');
+    $('preloadStatus').textContent='已載入 '+loadedPackages.length+' / '+availableStories.length+' 組故事資料，正在等待素材索引…';
     await Promise.race([assetIndexReady,new Promise(resolve=>{assetIndexTimer=setTimeout(resolve,8000)})]);
     if(assetIndexTimer)clearTimeout(assetIndexTimer);
-    if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的全部 Episode 素材…';
+    if(!assetIndexSettled)$('preloadStatus').textContent='素材索引仍在載入，先預載入目前可辨識的全部故事素材…';
     const allStories=loadedPackages.map(pkg=>pkg.story);
     const urls=[...new Set(collectStoryAssetRefs(allStories))];
     let completed=0,failed=0,newlyCached=0,nextIndex=0;
     const cachedBefore=urls.filter(url=>preloadedAssetURLs.has(url)).length;
-    $('preloadStatus').textContent=`已整理 ${loadedPackages.length} 個 Episode，共 ${urls.length} 個素材，開始預載入…`;
+    $('preloadStatus').textContent=`已整理 ${loadedPackages.length} 組故事，共 ${urls.length} 個素材，開始預載入…`;
     const worker=async()=>{
       while(nextIndex<urls.length){
         const url=urls[nextIndex++];
@@ -644,21 +728,21 @@ async function preloadStoryAssets(){
           }
         }catch(error){failed++;console.warn('素材預載入失敗：',url,error)}
         completed++;
-        $('preloadStatus').textContent=`素材 ${completed} / ${urls.length}（已載入 ${loadedPackages.length} 個 Episode；快取 ${cachedBefore+newlyCached} 個）${failed?'；失敗 '+failed+' 個':''}`;
+        $('preloadStatus').textContent=`素材 ${completed} / ${urls.length}（已載入 ${loadedPackages.length} 組故事；快取 ${cachedBefore+newlyCached} 個）${failed?'；失敗 '+failed+' 個':''}`;
       }
     };
     await Promise.all(Array.from({length:Math.min(6,urls.length)},worker));
     if(storyStarted)refreshCurrentPreloadedAssets();
-    const episodeMessage=`劇情及導覽 ${loadedPackages.length} / ${availableEpisodes.length} 個 Episode 已載入`;
+    const episodeMessage=`故事劇情資料 ${loadedPackages.length} / ${availableStories.length} 組已載入`;
     const issueCount=failed+packageFailures.length;
     $('preloadStatus').textContent=issueCount
-      ?`預載入完成；${episodeMessage}；新增素材快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個；Episode 讀取失敗 ${packageFailures.length} 個，素材失敗 ${failed} 個。`
-      :`全部已開放 Episode 的劇情、導覽及素材均已就緒；新增快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個。`;
+      ?`預載入完成；${episodeMessage}；新增素材快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個；故事資料讀取失敗 ${packageFailures.length} 組，素材失敗 ${failed} 個。`
+      :`全部已開放 Episode 與 Ex. 1 的劇情、素材均已就緒；新增快取 ${newlyCached} 個，原有快取 ${cachedBefore} 個。`;
     await new Promise(resolve=>setTimeout(resolve,650));
     closeModal('preloadModal');
     toast(issueCount
-      ?`預載入完成：${loadedPackages.length} 個 Episode 已載入，另有 ${packageFailures.length+failed} 項失敗`
-      :`所有已開放 Episode（${loadedPackages.length} 個）的劇情、導覽和素材已預載入`);
+      ?`預載入完成：${loadedPackages.length} 組故事已載入，另有 ${packageFailures.length+failed} 項失敗`
+      :`所有已開放 Episode 與 Ex. 1（共 ${loadedPackages.length} 組）的劇情和素材已預載入`);
   }catch(error){
     console.error('素材預載入失敗：',error);
     $('preloadStatus').textContent='預載入時發生錯誤：'+error.message;
@@ -761,6 +845,32 @@ async function saveStageScreenshot(){
 $('chapterPasswordForm').addEventListener('submit',submitChapterPassword);
 $('screenshotBtn').onclick=captureStageScreenshot;$('copyScreenshotBtn').onclick=copyStageScreenshot;$('saveScreenshotBtn').onclick=saveStageScreenshot;$('dialogueToggleBtn').onclick=toggleDialogueVisibility;$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>closeModal(m.id));return}if($('charactersModal').classList.contains('open')){if(e.key==='ArrowRight')changeCharacter(1);else if(e.key==='ArrowLeft')changeCharacter(-1);return}if(document.querySelector('.modal.open'))return;if(!storyStarted)return;if(e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft')previous();else if(e.key.toLowerCase()==='a')toggleAuto();else if(e.key.toLowerCase()==='s')skipChapter()});
+async function mergeCustomImageMapFile(fileName,reset=false){
+  const response=await fetch(new URL('./'+fileName,window.location.href),{cache:'no-store'});
+  if(!response.ok)throw new Error('讀取 '+fileName+' 失敗（HTTP '+response.status+'）');
+  const parsed=JSON.parse((await response.text()).replace(/^\uFEFF/,'').trim());
+  const info=parsed?.CustomImage_ListInfo;
+  if(!info||typeof info!=='object'||Array.isArray(info))throw new Error(fileName+' 缺少 CustomImage_ListInfo');
+  if(reset){
+    customImagePaths=Object.create(null);
+    customImageSourceRects=Object.create(null);
+  }
+  Object.entries(info).forEach(([name,item])=>{
+    const key=String(name).toLowerCase();
+    if(typeof item?.file==='string'&&item.file.trim()){
+      customImagePaths[key]=item.file.replace(/\\/g,'/').replace(/^\.\//,'');
+    }
+    if(item?.source_rect&&typeof item.source_rect==='object'){
+      customImageSourceRects[key]={
+        x:Number(item.source_rect.x??0),
+        y:Number(item.source_rect.y??0),
+        x1:Number(item.source_rect.x1??0),
+        y1:Number(item.source_rect.y1??0)
+      };
+    }
+  });
+  return Object.keys(info).length;
+}
 async function bootstrapRepository(){
   // Render the Episode menu immediately; it must not wait for the GitHub asset API.
   buildEpisodeList();
@@ -817,32 +927,16 @@ async function bootstrapRepository(){
 
   // Load the image-name map. This replaces the full recursive GitHub tree scan during normal startup.
   try{
-    const mapUrl=new URL('./customimage.txt',window.location.href);
-    const mapResponse=await fetch(mapUrl.href);
-    if(!mapResponse.ok)throw new Error('讀取 customimage.txt 失敗（HTTP '+mapResponse.status+'）');
-    const mapText=(await mapResponse.text()).replace(/^\uFEFF/,'').trim();
-    const mapData=JSON.parse(mapText);
-    const mapInfo=mapData.CustomImage_ListInfo;
-    if(!mapInfo||typeof mapInfo!=='object'||Array.isArray(mapInfo))throw new Error('customimage.txt 缺少 CustomImage_ListInfo');
-    customImagePaths=Object.create(null);
-    customImageSourceRects=Object.create(null);
-    Object.entries(mapInfo).forEach(([name,item])=>{
-      const key=String(name).toLowerCase();
-      if(typeof item?.file==='string'&&item.file.trim()){
-        customImagePaths[key]=item.file.replace(/\\/g,'/').replace(/^\.\//,'');
-      }
-      if(item?.source_rect&&typeof item.source_rect==='object'){
-        customImageSourceRects[key]={
-          x:Number(item.source_rect.x??0),
-          y:Number(item.source_rect.y??0),
-          x1:Number(item.source_rect.x1??0),
-          y1:Number(item.source_rect.y1??0)
-        };
-      }
-    });
+    await mergeCustomImageMapFile('customimage.txt',true);
+    let supplementalMapCount=0;
+    try{
+      supplementalMapCount=await mergeCustomImageMapFile('customimage2.txt');
+    }catch(extraMapError){
+      console.warn('customimage2.txt 載入失敗，Ex. 1 圖片可能無法顯示：',extraMapError);
+    }
     const imageMapCount=Object.keys(customImagePaths).length;
     if(!imageMapCount)throw new Error('customimage.txt 沒有可用的圖片路徑');
-    $('assetNote').textContent='已連接 customimage.txt（'+imageMapCount+' 筆圖片路徑）；場景與音效依劇情 TXT 路徑直接載入。';
+    $('assetNote').textContent='已連接 customimage.txt（主素材）及 customimage2.txt（額外素材），共 '+imageMapCount+' 筆圖片路徑。';
     markAssetIndexReady();
     $('preloadBtn').disabled=false;
     if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
@@ -858,7 +952,8 @@ async function bootstrapRepository(){
       const allowed=/\.(png|jpe?g|webp|gif|ogg|wav|mp3|m4a|mp4)$/i;
       files=tree.tree.filter(x=>x.type==='blob'&&allowed.test(x.path))
         .map(x=>({name:x.path,url:RAW_ASSET_BASE+x.path.split('/').map(encodeURIComponent).join('/')}));
-      $('assetNote').textContent='customimage.txt 無法使用；已改用 GitHub 素材索引（'+files.length+' 個檔案）。';
+      try{await mergeCustomImageMapFile('customimage2.txt')}catch(extraMapError){console.warn('customimage2.txt 載入失敗：',extraMapError)}
+      $('assetNote').textContent='customimage.txt 無法使用；已改用 GitHub 素材索引（'+files.length+' 個檔案），並嘗試載入 customimage2.txt。';
       markAssetIndexReady();
       $('preloadBtn').disabled=false;
       if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
