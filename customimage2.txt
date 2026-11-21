@@ -1,0 +1,13 @@
+﻿{
+  "CustomImage_ListInfo":{
+    "pageimage01":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage01.png", "source_rect":{"x":0, "y":0, "x1":275, "y1":330} },
+	"pageimage02":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage02.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"pageimage03":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage03.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"pageimage04":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage04.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"pageimage05":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage05.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"pageimage06":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage06.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"pageimage07":{ "file":"gui3/2026_PreWinter/ParkStoryContents/pageimage07.png", "source_rect":{"x":0, "y":0, "x1":400, "y1":430} },
+	"xn_reading":{ "file":"gui3/2026_PreWinter/ParkStoryContents/xn_reading.png", "source_rect":{"x":0, "y":0, "x1":360, "y1":417} },
+	"xn_reading_none":{ "file":"gui3/2026_PreWinter/ParkStoryContents/xn_reading_none.png", "source_rect":{"x":0, "y":0, "x1":360, "y1":417} }
+  }
+}
