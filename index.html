@@ -102,8 +102,8 @@
       <input id="volumeSlider" type="range" min="0" max="100" step="1" value="100" aria-label="音量">
       <div class="volume-range"><span>靜音</span><span>最大</span></div>
       <p class="setting-hint">調整整體音量。</p>
-      <button class="primary" id="playVoiceBtn" type="button" style="width:100%;margin-top:10px" disabled>▶ 播放音效</button>
-      <p class="setting-hint">重播目前 Node 的 .wav 角色配音（僅支援 Ex. 1）。</p>
+      <button class="primary" id="playVoiceBtn" type="button" style="width:100%;margin-top:10px" disabled>播放音效</button>
+      <p class="setting-hint">重播目前配音。</p>
     </div>
     <div class="setting-item" id="historyControl" hidden>
       <div class="setting-title"><span>✎ 對話紀錄</span></div>
@@ -302,7 +302,7 @@ function toggleSettingsCollapse(){
   const collapsed=!controls.hidden;
   controls.hidden=collapsed;
   $('settingsToggleBtn').setAttribute('aria-expanded',String(!collapsed));
-  $('settingsToggleIcon').textContent=collapsed?'›':'⌄';
+  $('settingsToggleIcon').textContent=collapsed?'▶️':'🔽';
 }
 function playCurrentNodeVoice(){
   if(selectedEpisode!==EXTRA_STORY_OPTION.id||STORY?.episode!=='EX.1'||!storyStarted){
