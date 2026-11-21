@@ -312,7 +312,7 @@ function updateStartScreen(){
       :hasEpisode?'Episode. '+String(selectedEpisode).padStart(2,'0')+' · '+(EPISODE_OPTIONS.find(x=>x.number===selectedEpisode)?.title||'')
       :'請先選擇章節';
     $('selectionHint').textContent=hasEpisode
-      ?(isExtraStory?'請從上方選擇「軍校畢業紀念冊」章節':'請從上方選擇其中一話')
+      ?(isExtraStory?'請從上方選擇「軍校畢業紀念冊」':'請從上方選擇其中一話')
       :'請從左側選擇章節。建議先進行「預載入素材」。';
   }
 }
