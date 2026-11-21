@@ -1538,7 +1538,7 @@
         "text": "或許引發這些不必要的情緒的原因...<br>就是充滿喜悅的，那個少女。"
       },
       "69": {
-        "text": "嘎吱-",
+        "text": "碰撞-",
         "background": "gui3/2026_PreWinter/StoryContents/bgblack.png",
         "sound": "sound\\wishstone_Falldown.wav"
       },
