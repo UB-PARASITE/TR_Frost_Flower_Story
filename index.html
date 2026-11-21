@@ -366,7 +366,7 @@ function buildEpisodeList(){
     b.innerHTML='<span class="episode-number">EPISODE. '+ep.number+'</span><span class="episode-name">'+escapeHTML(ep.title)+'</span>'+status;
     if(ep.available)b.onclick=()=>selectEpisode(ep.number);
     box.appendChild(b);
-    if(ep.number===2){
+    if(ep.number===8){
       const divider=document.createElement('div');
       divider.className='panel-kicker';
       divider.textContent='EXTRA STORY';
