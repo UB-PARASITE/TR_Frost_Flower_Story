@@ -14,7 +14,7 @@
 .under{max-width:1160px;margin:12px auto 0;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.progress{flex:1;min-width:200px}.progress-label{display:flex;justify-content:space-between;color:#b1bdd0;font-size:10px;margin-bottom:6px}.bar{height:4px;background:#303b50;border-radius:10px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#9e804d,#f2dfb6);transition:width .2s}.controls{display:flex;gap:7px;flex-wrap:wrap}.controls button{font-size:12px}.primary{background:linear-gradient(135deg,#efdfb4,#b3945e);color:#1a2030;border-color:#f5e4bc;font-weight:800}.note{max-width:1160px;margin:10px auto 0;color:#8e9bb0;font-size:10px;line-height:1.7}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#cda75f;margin-right:7px}.modal{position:fixed;z-index:20;inset:0;background:#03060dcc;backdrop-filter:blur(8px);display:none;place-items:center;padding:16px}.modal.open{display:grid}.card{width:min(620px,100%);max-height:86vh;overflow:auto;background:linear-gradient(145deg,#1c263b,#0d1322);border:1px solid #e8d09a55;border-radius:17px;padding:21px;box-shadow:0 30px 90px #000b}.modalhead{display:flex;justify-content:space-between;align-items:center;gap:12px}.modalhead h2{font-size:18px;margin:0}.card p,.card li{font-size:13px;line-height:1.75;color:#c0cada}.file{display:block;width:100%;padding:13px;background:#0a1120;border:1px dashed #e8d09a66;border-radius:11px;margin:15px 0;color:#cdd6e5}.status{padding:10px 12px;border-radius:9px;background:#070d1b80;color:#b8c4d6;font-size:11px;line-height:1.6}.guide-text{margin-top:14px;max-height:68vh;overflow:auto;font-size:13px;line-height:1.9;color:#d8e0ec;overflow-wrap:anywhere}
 .chapter-password-input{display:block;width:100%;margin:14px 0 8px;padding:12px 13px;border:1px solid #e8d09a66;border-radius:9px;background:#080f1d;color:#f0f3fa;font:inherit;letter-spacing:.08em;outline:none}
 .chapter-password-input:focus{border-color:#e8d09a;box-shadow:0 0 0 2px #e8d09a22}
-.chapter-password-error{min-height:20px;color:#f0a6a6;font-size:12px;margin:5px 0 10px}.screenshot-preview{display:block;width:100%;max-height:58vh;object-fit:contain;background:#080f1d;border:1px solid #e8d09a55;border-radius:10px;margin:14px 0}.screenshot-actions{margin-top:12px}.history{display:flex;flex-direction:column;gap:9px;max-height:58vh;overflow:auto;margin-top:14px}.entry{padding:10px 12px;background:#ffffff08;border-left:2px solid #d4b779;border-radius:0 9px 9px 0}.entry b{font-size:11px;color:#f0dcae}.entry div{font-size:12px;line-height:1.6;margin-top:5px;color:#d8e0ec}.toast{position:fixed;z-index:30;left:50%;bottom:20px;transform:translate(-50%,15px);opacity:0;pointer-events:none;padding:10px 15px;border-radius:20px;background:#1d2a43;border:1px solid #e8d09a66;color:#f0e4c8;font-size:12px;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.chapter-password-error{min-height:20px;color:#f0a6a6;font-size:12px;margin:5px 0 10px}.screenshot-preview{display:block;width:100%;max-height:58vh;object-fit:contain;background:#080f1d;border:1px solid #e8d09a55;border-radius:10px;margin:14px 0}.screenshot-actions{margin-top:12px}.history{display:flex;flex-direction:column;gap:9px;max-height:58vh;overflow:auto;margin-top:14px}.entry{padding:10px 12px;background:#ffffff08;border-left:2px solid #d4b779;border-radius:0 9px 9px 0}.entry b{display:block;font-size:11px;color:#f0dcae}.entry div{font-size:12px;line-height:1.6;margin-top:5px;color:#d8e0ec}.history-entry{display:block;width:100%;text-align:left;white-space:normal;font:inherit;color:#d8e0ec;border:0;border-left:2px solid #d4b779;background:#ffffff08;cursor:pointer}.history-entry:hover{border-left-color:#f0dcae;background:#ffffff12}.history-entry:focus-visible{outline:2px solid #e8d09a;outline-offset:2px}.toast{position:fixed;z-index:30;left:50%;bottom:20px;transform:translate(-50%,15px);opacity:0;pointer-events:none;padding:10px 15px;border-radius:20px;background:#1d2a43;border:1px solid #e8d09a66;color:#f0e4c8;font-size:12px;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
 
 .character-card{width:min(900px,100%);height:min(680px,78vh);max-height:78vh;display:flex;flex-direction:column;overflow:hidden;padding:20px 22px}
 .character-modalhead{flex:0 0 auto;margin-bottom:14px}
@@ -721,7 +721,7 @@ function renderSprites(imgList){
 }
 function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList.remove('show');return}box.classList.add('show');let u=fileURL(ref);if(u){let im=document.createElement('img');im.src=u;im.alt=ref;box.appendChild(im)}else{let m=document.createElement('div');m.className='missing';m.innerHTML=`<b>劇情圖片素材尚未載入</b>${escapeHTML(ref)}`;box.appendChild(m)}}
 function renderChoices(d){let box=$('choices');box.innerHTML='';let selection=d.selection;if(!selection){box.hidden=true;return}box.hidden=false;Object.entries(selection).forEach(([id,label])=>{let b=document.createElement('button');b.className='choice';b.textContent=label;b.onclick=e=>{e.stopPropagation();chooseBranch(id)};box.appendChild(b)})}
-function render(){if(dialogueHidden)setDialogueVisibility(false);let {key,data:d}=node();const visual=visualStateAtCurrentNode();setSceneBG(visual.background||FALLBACK);if(d.bgm)setBGM(d.bgm);if(d.sound)playSound(d.sound);$('speaker').textContent=d.name||'';$('line').innerHTML=htmlText(d.text);$('count').textContent=`${position+1} / ${route.length}`;$('progressName').textContent=`CHAPTER. ${chapter+1} · ${chapterTitles[chapter]}`;let pct=Math.round((position+1)/route.length*100);$('percent').textContent=pct+'%';$('fill').style.width=pct+'%';$('prevBtn').disabled=position===0;$('nextBtn').textContent=position===route.length-1?'完成本話 ✓':'下一段 →';$('hint').textContent=d.selection?'請選擇一條劇情路線':'SPACE / 點擊對話框　下一段 ▾';renderChoices(d);renderSprites(visual.ImgList);updateCurrentVoiceButton(d);$('art').innerHTML='';$('art').classList.remove('show');if(!historyEntries.length||historyEntries.at(-1).key!==key){historyEntries.push({key,chapter,name:d.name||'',text:d.text||''})}scheduleAuto()}
+function render(){if(dialogueHidden)setDialogueVisibility(false);let {key,data:d}=node();const visual=visualStateAtCurrentNode();setSceneBG(visual.background||FALLBACK);if(d.bgm)setBGM(d.bgm);if(d.sound)playSound(d.sound);$('speaker').textContent=d.name||'';$('line').innerHTML=htmlText(d.text);$('count').textContent=`${position+1} / ${route.length}`;$('progressName').textContent=`CHAPTER. ${chapter+1} · ${chapterTitles[chapter]}`;let pct=Math.round((position+1)/route.length*100);$('percent').textContent=pct+'%';$('fill').style.width=pct+'%';$('prevBtn').disabled=position===0;$('nextBtn').textContent=position===route.length-1?'完成本話 ✓':'下一段 →';$('hint').textContent=d.selection?'請選擇一條劇情路線':'SPACE / 點擊對話框　下一段 ▾';renderChoices(d);renderSprites(visual.ImgList);updateCurrentVoiceButton(d);$('art').innerHTML='';$('art').classList.remove('show');if(!historyEntries.length||historyEntries.at(-1).key!==key){historyEntries.push({key,chapter,name:d.name||'',text:d.text||'',route:route.slice()})}scheduleAuto()}
 function scheduleAuto(){stopAuto();if(!auto)return;let d=node().data;if(d.selection)return;let delay=Math.min(7000,2200+String(d.text||'').length*35);autoTimer=setTimeout(next,delay)}
 function next(){stopAuto();let d=node().data;if(d.selection){toast('請先選擇一條劇情路線');return}if(position<route.length-1){position++;render()}else{auto=false;$('autoBtn').textContent='關閉';$('finishText').textContent=`「${chapterTitles[chapter]}」已閱讀完成。`;$('nextChapterBtn').style.display=chapter<STORY.script.length-1?'':'none';openModal('finishModal')}}
 function previous(){stopAuto();if(position>0){position--;render()}}
@@ -819,7 +819,63 @@ async function preloadStoryAssets(){
     button.disabled=false;
   }
 }
-function showHistory(){let box=$('history');box.innerHTML='';historyEntries.forEach(h=>{let e=document.createElement('div');e.className='entry';e.innerHTML=`<b>CHAPTER. ${h.chapter+1} · ${escapeHTML(h.name)} · ${escapeHTML(h.key)}</b><div>${htmlText(h.text)}</div>`;box.appendChild(e)});openModal('historyModal');box.scrollTop=box.scrollHeight}
+function jumpToHistoryEntry(entry){
+  if(!entry||!STORY){toast('無法讀取這筆對話紀錄');return}
+  const targetChapter=Number(entry.chapter);
+  const targetKey=String(entry.key??'');
+  const chapterData=STORY.script?.[targetChapter];
+  if(!Number.isInteger(targetChapter)||targetChapter<0||!chapterData||!Object.prototype.hasOwnProperty.call(chapterData,targetKey)){
+    toast('找不到這筆對話所屬的 Node');
+    return;
+  }
+  let targetRoute=Array.isArray(entry.route)?entry.route.slice():(targetChapter===chapter?route.slice():(targetChapter===0?initialRoute():chapterKeys(targetChapter)));
+  let targetPosition=targetRoute.indexOf(targetKey);
+  if(targetPosition<0&&targetChapter===0&&STORY.episode==='Episode.1'){
+    const branchMatch=targetKey.match(/^18-([123])-/);
+    if(branchMatch){
+      targetRoute=buildBranchRoute(branchMatch[1]);
+      targetPosition=targetRoute.indexOf(targetKey);
+    }
+  }
+  if(targetPosition<0){
+    toast('這筆對話不在目前可用的劇情路線中');
+    return;
+  }
+  stopAuto();
+  auto=false;
+  $('autoBtn').textContent='關閉';
+  if(targetChapter!==chapter){
+    bgm.pause();
+    bgm.removeAttribute('src');
+    sfx.pause();
+    currentBGMRef='';
+    currentSFXRef='';
+  }
+  chapter=targetChapter;
+  route=targetRoute;
+  position=targetPosition;
+  storyStarted=true;
+  buildChapterTabs();
+  buildEpisodeList();
+  updateStartScreen();
+  render();
+  closeModal('historyModal');
+  toast(`已跳轉至 Chapter ${chapter+1} · Node ${targetKey}`);
+}
+function showHistory(){
+  const box=$('history');
+  box.innerHTML='';
+  historyEntries.forEach(h=>{
+    const e=document.createElement('button');
+    e.type='button';
+    e.className='entry history-entry';
+    e.innerHTML=`<b>CHAPTER. ${h.chapter+1} · ${escapeHTML(h.name)} · ${escapeHTML(h.key)}</b><div>${htmlText(h.text)}</div>`;
+    e.addEventListener('click',()=>jumpToHistoryEntry(h));
+    box.appendChild(e);
+  });
+  openModal('historyModal');
+  box.scrollTop=box.scrollHeight;
+}
 function setDialogueVisibility(hidden){
   dialogueHidden=Boolean(hidden);
   $('dialoguePanel').hidden=dialogueHidden;
