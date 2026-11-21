@@ -295,7 +295,7 @@ function updateCurrentVoiceButton(data){
   const path=ref.replace(/\\/g,'/').split(/[?#]/,1)[0];
   const playable=/\.wav$/i.test(path);
   button.disabled=!playable;
-  button.title=playable?'重播目前 Node 的角色配音':'此按鈕只支援 Ex. 1 中含有 .wav 音效的 Node';
+  button.title=playable?'重播目前的角色配音':'此按鈕目前只支援 Ex. 1的角色配音';
 }
 function toggleSettingsCollapse(){
   const controls=$('settingsControls');
