@@ -685,7 +685,7 @@ async function preloadStoryAssets(){
   preloadRunning=true;
   const button=$('preloadBtn');
   button.disabled=true;
-  $('preloadStatus').textContent='正在整理所有已開放 Episode 的劇情與導覽…';
+  $('preloadStatus').textContent='正在整理所有已開放 Episode 與 Ex. 1 的劇情資料…';
   openModal('preloadModal');
   let assetIndexTimer;
   try{
@@ -927,7 +927,7 @@ async function bootstrapRepository(){
 
   // Load the image-name map. This replaces the full recursive GitHub tree scan during normal startup.
   try{
-    await mergeCustomImageMapFile('customimage.txt',true);
+    const mainMapCount=await mergeCustomImageMapFile('customimage.txt',true);
     let supplementalMapCount=0;
     try{
       supplementalMapCount=await mergeCustomImageMapFile('customimage2.txt');
@@ -936,7 +936,7 @@ async function bootstrapRepository(){
     }
     const imageMapCount=Object.keys(customImagePaths).length;
     if(!imageMapCount)throw new Error('customimage.txt 沒有可用的圖片路徑');
-    $('assetNote').textContent='已連接 customimage.txt（主素材）及 customimage2.txt（額外素材），共 '+imageMapCount+' 筆圖片路徑。';
+    $('assetNote').textContent='已連接 customimage.txt（'+mainMapCount+' 筆）及 customimage2.txt（'+supplementalMapCount+' 筆），共 '+imageMapCount+' 筆圖片路徑。';
     markAssetIndexReady();
     $('preloadBtn').disabled=false;
     if(storyStarted)render();if($('charactersModal').classList.contains('open'))renderCharacter();
