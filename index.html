@@ -128,7 +128,7 @@
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
 <div class="modal" id="finishModal"><div class="card"><div class="modalhead"><h2>本話閱讀完成</h2><button data-close="finishModal">✕</button></div><p id="finishText"></p><div class="controls"><button class="primary" id="nextChapterBtn">前往下一話 →</button><button id="replayBtn">重新閱讀這一話</button><button data-close="finishModal">返回</button></div></div></div>
-<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
+<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button><button id="openScreenshotBtn" type="button">另開圖片</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
 <div class="toast" id="toast"></div>
 <script>
 let STORY;
@@ -554,7 +554,7 @@ function setSceneBG(ref){
   if(u){
     stage.style.setProperty('--scene-image',`url("${u}")`);
     stage.style.backgroundImage=`linear-gradient(180deg,#060b1504 15%,#060b1520 54%,#060b15bb 100%),url("${u}")`;
-    if(sharp){sharp.crossOrigin='anonymous';sharp.src=u;}
+    if(sharp)sharp.src=u;
   }else{
     stage.style.setProperty('--scene-image','none');
     stage.style.backgroundImage='none';
@@ -668,7 +668,7 @@ function renderSprites(imgList){
     if(item.url){
       const im=document.createElement('img');
       im.className=isCutImage?'sprite cut-sprite':'sprite character-sprite';
-      im.crossOrigin='anonymous';im.src=item.url;im.alt=item.name;im.dataset.slot=item.slot;
+      im.src=item.url;im.alt=item.name;im.dataset.slot=item.slot;
       if(isCutImage){
         im.style.left=`${item.displayX/STAGE_REF_WIDTH*100}%`;
         im.style.top=`${item.displayY/STAGE_REF_HEIGHT*100}%`;
@@ -694,7 +694,7 @@ function renderSprites(imgList){
   xnItems.forEach(item=>appendSprite(item,false));
   cutItems.forEach(item=>appendSprite(item,true));
 }
-function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList.remove('show');return}box.classList.add('show');let u=fileURL(ref);if(u){let im=document.createElement('img');im.crossOrigin='anonymous';im.src=u;im.alt=ref;box.appendChild(im)}else{let m=document.createElement('div');m.className='missing';m.innerHTML=`<b>劇情圖片素材尚未載入</b>${escapeHTML(ref)}`;box.appendChild(m)}}
+function renderArt(ref){let box=$('art');box.innerHTML='';if(!ref){box.classList.remove('show');return}box.classList.add('show');let u=fileURL(ref);if(u){let im=document.createElement('img');im.src=u;im.alt=ref;box.appendChild(im)}else{let m=document.createElement('div');m.className='missing';m.innerHTML=`<b>劇情圖片素材尚未載入</b>${escapeHTML(ref)}`;box.appendChild(m)}}
 function renderChoices(d){let box=$('choices');box.innerHTML='';let selection=d.selection;if(!selection){box.hidden=true;return}box.hidden=false;Object.entries(selection).forEach(([id,label])=>{let b=document.createElement('button');b.className='choice';b.textContent=label;b.onclick=e=>{e.stopPropagation();chooseBranch(id)};box.appendChild(b)})}
 function render(){if(dialogueHidden)setDialogueVisibility(false);let {key,data:d}=node();const visual=visualStateAtCurrentNode();setSceneBG(visual.background||FALLBACK);if(d.bgm)setBGM(d.bgm);if(d.sound)playSound(d.sound);$('speaker').textContent=d.name||'';$('line').innerHTML=htmlText(d.text);$('count').textContent=`${position+1} / ${route.length}`;$('progressName').textContent=`CHAPTER. ${chapter+1} · ${chapterTitles[chapter]}`;let pct=Math.round((position+1)/route.length*100);$('percent').textContent=pct+'%';$('fill').style.width=pct+'%';$('prevBtn').disabled=position===0;$('nextBtn').textContent=position===route.length-1?'完成本話 ✓':'下一段 →';$('hint').textContent=d.selection?'請選擇一條劇情路線':'SPACE / 點擊對話框　下一段 ▾';renderChoices(d);renderSprites(visual.ImgList);updateCurrentVoiceButton(d);$('art').innerHTML='';$('art').classList.remove('show');if(!historyEntries.length||historyEntries.at(-1).key!==key){historyEntries.push({key,chapter,name:d.name||'',text:d.text||'',route:route.slice()})}scheduleAuto()}
 function scheduleAuto(){stopAuto();if(!auto)return;let d=node().data;if(d.selection)return;let delay=Math.min(7000,2200+String(d.text||'').length*35);autoTimer=setTimeout(next,delay)}
@@ -874,86 +874,36 @@ function loadScreenshotLibrary(){
   });
   return screenshotLibraryPromise;
 }
-function screenshotAbsoluteURL(value){
-  try{return new URL(value,document.baseURI).href}catch(e){return ''}
-}
-function screenshotCSSURLs(value){
-  const urls=[];
-  const pattern=/url\((?:"([^"]+)"|'([^']+)'|([^)]*))\)/g;
-  let match;
-  while((match=pattern.exec(String(value||'')))!==null){
-    const value=String(match[1]||match[2]||match[3]||'').trim();
-    if(value)urls.push(value);
-  }
-  return urls;
-}
-async function prepareStageScreenshotResources(stage){
-  const urls=new Set();
-  const addURL=value=>{
-    const url=screenshotAbsoluteURL(value);
-    if(url&&!/^(?:blob:|data:)/i.test(url))urls.add(url);
-  };
-  stage.querySelectorAll('img').forEach(img=>addURL(img.currentSrc||img.src));
-  const inlineStyles=[stage.style.backgroundImage,stage.style.getPropertyValue('--scene-image')];
-  try{inlineStyles.push(getComputedStyle(stage,'::before').backgroundImage)}catch(e){}
-  inlineStyles.forEach(style=>screenshotCSSURLs(style).forEach(addURL));
-  const resources=new Map(),temporaryURLs=[],failed=[];
-  await Promise.all([...urls].map(async url=>{
-    const cached=preloadedAssetURLs.get(url);
-    if(cached&&/^blob:/i.test(cached)){resources.set(url,cached);return;}
-    try{
-      const response=await fetch(url,{mode:'cors',credentials:'omit',cache:'force-cache'});
-      if(!response.ok)throw new Error('HTTP '+response.status);
-      const blob=await response.blob();
-      if(!blob.size)throw new Error('素材內容為空');
-      const objectURL=URL.createObjectURL(blob);
-      resources.set(url,objectURL);
-      temporaryURLs.push(objectURL);
-    }catch(error){
-      failed.push({url,error});
-      console.warn('截圖素材無法以 CORS 讀取：',url,error);
-    }
+async function waitForStageImages(stage){
+  const images=[...stage.querySelectorAll('img')];
+  await Promise.all(images.map(img=>{
+    if(img.complete)return Promise.resolve();
+    return new Promise(resolve=>{
+      const finish=()=>resolve();
+      img.addEventListener('load',finish,{once:true});
+      img.addEventListener('error',finish,{once:true});
+      setTimeout(finish,8000);
+    });
   }));
-  return {resources,temporaryURLs,failed,cleanup:()=>temporaryURLs.forEach(url=>URL.revokeObjectURL(url))};
-}
-function remapScreenshotCSS(value,resources){
-  return String(value||'').replace(/url\((?:"([^"]+)"|'([^']+)'|([^)]*))\)/g,(whole,a,b,c)=>{
-    const original=String(a||b||c||'').trim();
-    const mapped=resources.get(screenshotAbsoluteURL(original));
-    return mapped?'url("'+mapped+'")':whole;
-  });
 }
 async function captureStageScreenshot(){
   if(!storyStarted||$('stage').hidden){toast('請先開啟一段劇情再截圖');return}
   const button=$('screenshotBtn');
   button.disabled=true;
   button.textContent='截圖中…';
-  let prepared=null;
   try{
     const html2canvas=await loadScreenshotLibrary();
     const stage=$('stage');
-    prepared=await prepareStageScreenshotResources(stage);
-    if(prepared.failed.length){
-      throw new Error(prepared.failed.length+' 張舞台圖片無法通過 CORS 讀取。請重新整理後重試；若仍失敗，請確認圖片來源是否允許跨來源存取。');
-    }
+    await waitForStageImages(stage);
+    if(document.fonts?.ready)await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,2500))]);
     const canvas=await html2canvas(stage,{
       backgroundColor:null,
       scale:2,
       useCORS:true,
       allowTaint:false,
       logging:false,
-      imageTimeout:20000,
-      onclone:clonedDocument=>{
-        const clonedStage=clonedDocument.getElementById('stage');
-        if(!clonedStage)return;
-        clonedStage.querySelectorAll('img').forEach(img=>{
-          const original=screenshotAbsoluteURL(img.getAttribute('src')||img.src);
-          const mapped=prepared.resources.get(original);
-          if(mapped){img.setAttribute('crossorigin','anonymous');img.src=mapped;}
-        });
-        clonedStage.style.backgroundImage=remapScreenshotCSS(clonedStage.style.backgroundImage,prepared.resources);
-        clonedStage.style.setProperty('--scene-image',remapScreenshotCSS(clonedStage.style.getPropertyValue('--scene-image'),prepared.resources));
-      }
+      imageTimeout:30000,
+      foreignObjectRendering:false
     });
     const blob=await new Promise((resolve,reject)=>{
       try{canvas.toBlob(result=>result?resolve(result):reject(new Error('無法產生 PNG 圖片')),'image/png')}
@@ -963,24 +913,29 @@ async function captureStageScreenshot(){
     if(screenshotObjectURL)URL.revokeObjectURL(screenshotObjectURL);
     screenshotObjectURL=URL.createObjectURL(blob);
     $('screenshotPreview').src=screenshotObjectURL;
-    const framed=window.self!==window.top;
-    $('screenshotHelp').textContent=framed
-      ?'目前在 iframe 中：若複製失敗，嵌入端需允許 clipboard-write；若下載失敗，iframe 的 sandbox 需包含 allow-downloads。也可在圖片預覽上按右鍵，選擇「另存圖片」。'
-      :'若瀏覽器不支援檔案位置選擇，網頁會改用一般下載方式保存。';
+    $('screenshotHelp').textContent=window.self!==window.top
+      ?'Wix Embed HTML：若複製或直接下載受到限制，請使用「另開圖片」，再於新分頁按右鍵選擇「另存圖片」。'
+      :'可複製圖片，或選擇位置儲存；若瀏覽器不支援檔案選擇器，請使用「另開圖片」。';
     openModal('screenshotModal');
   }catch(error){
     console.error('劇情舞台截圖失敗：',error);
-    const framed=window.self!==window.top;
     const detail=error?.message||'未知錯誤';
-    toast(framed?'iframe 截圖失敗：'+detail.slice(0,55):detail);
-    $('screenshotHelp').textContent=framed
-      ?'截圖未能完成。若錯誤與 CORS 有關，圖片伺服器必須允許跨來源讀取；若只有複製／下載失敗，請由 iframe 嵌入端授予相應權限。'
-      :'截圖未能完成：'+detail;
+    $('screenshotHelp').textContent='截圖生成失敗：'+detail+'。請查看瀏覽器 Console 的詳細錯誤。';
+    toast('截圖失敗：'+detail.slice(0,65));
   }finally{
-    prepared?.cleanup();
     button.disabled=!storyStarted;
     button.textContent='截圖';
   }
+}
+function openScreenshotImage(){
+  if(!screenshotBlob){toast('請先擷取劇情舞台');return}
+  if(!screenshotObjectURL)screenshotObjectURL=URL.createObjectURL(screenshotBlob);
+  const opened=window.open(screenshotObjectURL,'_blank');
+  if(!opened){
+    toast('瀏覽器封鎖了新分頁，請允許此 Wix 網站開啟彈出視窗');
+    return;
+  }
+  toast('已在新分頁開啟圖片，可使用右鍵另存圖片');
 }
 async function copyStageScreenshot(){
   if(!screenshotBlob){toast('請先擷取劇情舞台');return}
@@ -995,7 +950,7 @@ async function copyStageScreenshot(){
   }catch(error){
     console.error('複製截圖失敗：',error);
     const framed=window.self!==window.top;
-    toast(framed?'iframe 未獲剪貼簿權限，請允許 clipboard-write':'複製失敗，請允許剪貼簿權限或改用儲存圖片');
+    toast(framed?'Wix iframe 不允許剪貼簿寫入；請使用「另開圖片」':'複製失敗，請允許剪貼簿權限或使用「另開圖片」');
   }
 }
 async function saveStageScreenshot(){
@@ -1003,31 +958,34 @@ async function saveStageScreenshot(){
   const now=new Date();
   const stamp=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0'),'_',String(now.getHours()).padStart(2,'0'),String(now.getMinutes()).padStart(2,'0'),String(now.getSeconds()).padStart(2,'0')].join('');
   const fileName=`FrostFlower_Episode${selectedEpisode||''}_Chapter${chapter+1}_${stamp}.png`;
-  let saved=false;
+  if(window.self!==window.top){
+    openScreenshotImage();
+    return;
+  }
   if(typeof window.showSaveFilePicker==='function'){
     try{
       const handle=await window.showSaveFilePicker({suggestedName:fileName,types:[{description:'PNG 圖片',accept:{'image/png':['.png']}}]});
       const writable=await handle.createWritable();
       await writable.write(screenshotBlob);
       await writable.close();
-      saved=true;
+      closeModal('screenshotModal');
+      toast('劇情舞台圖片已保存');
+      return;
     }catch(error){
       if(error?.name==='AbortError')return;
       console.warn('檔案選擇器不可用，改用一般下載：',error);
     }
   }
-  if(!saved){
-    const url=URL.createObjectURL(screenshotBlob);
-    const link=document.createElement('a');
-    link.href=url;link.download=fileName;link.style.display='none';
-    document.body.appendChild(link);link.click();link.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),3000);
-  }
+  const url=URL.createObjectURL(screenshotBlob);
+  const link=document.createElement('a');
+  link.href=url;link.download=fileName;link.style.display='none';
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),3000);
   closeModal('screenshotModal');
-  toast(window.self!==window.top?'已送出下載要求；若未下載，請讓 iframe 啟用 allow-downloads':'劇情舞台圖片已保存');
+  toast('劇情舞台圖片已送出下載');
 }
 $('settingsToggleBtn').onclick=toggleSettingsCollapse;$('playVoiceBtn').onclick=playCurrentNodeVoice;
-$('screenshotBtn').onclick=captureStageScreenshot;$('copyScreenshotBtn').onclick=copyStageScreenshot;$('saveScreenshotBtn').onclick=saveStageScreenshot;$('dialogueToggleBtn').onclick=toggleDialogueVisibility;$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
+$('screenshotBtn').onclick=captureStageScreenshot;$('copyScreenshotBtn').onclick=copyStageScreenshot;$('saveScreenshotBtn').onclick=saveStageScreenshot;$('openScreenshotBtn').onclick=openScreenshotImage;$('dialogueToggleBtn').onclick=toggleDialogueVisibility;$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>closeModal(m.id));return}if($('charactersModal').classList.contains('open')){if(e.key==='ArrowRight')changeCharacter(1);else if(e.key==='ArrowLeft')changeCharacter(-1);return}if(document.querySelector('.modal.open'))return;if(!storyStarted)return;if(e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft')previous();else if(e.key.toLowerCase()==='a')toggleAuto();else if(e.key.toLowerCase()==='s')skipChapter()});
 async function mergeCustomImageMapFile(fileName,reset=false){
   const response=await fetch(new URL('./'+fileName,window.location.href),{cache:'no-store'});
