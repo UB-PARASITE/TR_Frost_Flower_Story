@@ -57,7 +57,7 @@
 .setting-title b{font-variant-numeric:tabular-nums;color:#e8d09a;font-size:12px}
 #volumeSlider{display:block;width:100%;margin:14px 0 7px;accent-color:#d8bd82;cursor:pointer}
 .volume-range{display:flex;justify-content:space-between;color:#8e9bb0;font-size:9px}
-.setting-hint{margin:11px 2px 0;color:#98a5b9;font-size:10px;line-height:1.6}.guide-section{margin-top:16px;padding-top:14px;border-top:1px solid #ffffff20}.settings-panel .setting-title,.settings-panel .setting-title span,.settings-panel .volume-range,.settings-panel .volume-range span,.settings-panel .setting-hint,.settings-panel button{white-space:nowrap}.settings-panel .setting-hint{overflow:hidden;text-overflow:ellipsis}.settings-panel .settings-heading{margin:0 0 14px}.settings-panel #settingsToggleBtn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0;border:0;border-radius:0;background:transparent;color:#f0e4c8;font:inherit;font-size:17px;letter-spacing:.04em;text-align:left}.settings-panel #settingsToggleBtn:hover{border-color:transparent;background:transparent;color:var(--gold)}.settings-panel #settingsToggleBtn:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.settings-panel .settings-heading{margin:0 0 14px}.settings-panel #settingsToggleBtn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0;border:0;border-radius:0;background:transparent;color:#f0e4c8;font:inherit;font-size:17px;letter-spacing:.04em;text-align:left}.settings-panel #settingsToggleBtn:hover{border-color:transparent;background:transparent;color:var(--gold)}.settings-panel #settingsToggleBtn:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.setting-hint{margin:11px 2px 0;color:#98a5b9;font-size:10px;line-height:1.6}.guide-section{margin-top:16px;padding-top:14px;border-top:1px solid #ffffff20}.settings-panel .setting-title,.settings-panel .setting-title span,.settings-panel .volume-range,.settings-panel .volume-range span,.settings-panel .setting-hint,.settings-panel button{white-space:nowrap}.settings-panel .setting-hint{overflow:hidden;text-overflow:ellipsis}.settings-panel .settings-heading{margin:0 0 14px}.settings-panel #settingsToggleBtn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0;border:0;border-radius:0;background:transparent;color:#f0e4c8;font:inherit;font-size:17px;letter-spacing:.04em;text-align:left}.settings-panel #settingsToggleBtn:hover{border-color:transparent;background:transparent;color:var(--gold)}.settings-panel #settingsToggleBtn:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 @media(max-width:1250px){.workspace{grid-template-columns:150px minmax(0,1fr);grid-template-areas:"episodes main" "episodes settings";max-width:1200px}.episode-panel{grid-area:episodes}.story-column{grid-area:main}.settings-panel{grid-area:settings;position:static}.episode-panel{position:sticky;top:16px}}
 @media(max-width:820px){.workspace{grid-template-columns:minmax(0,1fr);grid-template-areas:"episodes" "settings" "main";gap:10px}.episode-panel,.settings-panel{position:static;padding:12px}.episode-panel h2,.settings-panel h2{margin-bottom:9px}.episode-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.episode-option{padding:7px 8px;min-height:62px}.episode-option .episode-name{font-size:10px}.settings-panel{display:block}.setting-item{display:grid;grid-template-columns:1fr;gap:2px}.story-column{width:100%}.header{align-items:flex-start}.head-actions{max-width:55%}}
 
@@ -128,7 +128,7 @@
 <div class="modal" id="historyModal"><div class="card"><div class="modalhead"><h2>對話紀錄</h2><button data-close="historyModal">✕</button></div><div class="history" id="history"></div></div></div>
 <div class="modal" id="guideModal"><div class="card"><div class="modalhead"><h2 id="guideModalTitle">本話導覽</h2><button data-close="guideModal" aria-label="關閉">✕</button></div><div class="guide-text" id="guideContent"></div></div></div>
 <div class="modal" id="finishModal"><div class="card"><div class="modalhead"><h2>本話閱讀完成</h2><button data-close="finishModal">✕</button></div><p id="finishText"></p><div class="controls"><button class="primary" id="nextChapterBtn">前往下一話 →</button><button id="replayBtn">重新閱讀這一話</button><button data-close="finishModal">返回</button></div></div></div>
-<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button><button id="openScreenshotBtn" type="button">另開圖片</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
+<div class="modal" id="screenshotModal"><div class="card" role="dialog" aria-modal="true" aria-labelledby="screenshotTitle"><div class="modalhead"><h2 id="screenshotTitle">劇情舞台截圖</h2><button data-close="screenshotModal" aria-label="關閉">✕</button></div><p>已擷取目前的劇情。你可以複製圖片，或選擇儲存位置將 PNG 保存至裝置。</p><img class="screenshot-preview" id="screenshotPreview" alt="劇情舞台截圖預覽"><div class="controls screenshot-actions"><button class="primary" id="copyScreenshotBtn" type="button">複製圖片至剪貼簿</button><button id="saveScreenshotBtn" type="button">選擇位置並儲存</button></div><p class="setting-hint">若瀏覽器不支援位置選擇，圖片會改用一般下載方式保存。</p></div></div>
 <div class="toast" id="toast"></div>
 <script>
 let STORY;
@@ -874,18 +874,6 @@ function loadScreenshotLibrary(){
   });
   return screenshotLibraryPromise;
 }
-async function waitForStageImages(stage){
-  const images=[...stage.querySelectorAll('img')];
-  await Promise.all(images.map(img=>{
-    if(img.complete)return Promise.resolve();
-    return new Promise(resolve=>{
-      const finish=()=>resolve();
-      img.addEventListener('load',finish,{once:true});
-      img.addEventListener('error',finish,{once:true});
-      setTimeout(finish,8000);
-    });
-  }));
-}
 async function captureStageScreenshot(){
   if(!storyStarted||$('stage').hidden){toast('請先開啟一段劇情再截圖');return}
   const button=$('screenshotBtn');
@@ -893,49 +881,21 @@ async function captureStageScreenshot(){
   button.textContent='截圖中…';
   try{
     const html2canvas=await loadScreenshotLibrary();
-    const stage=$('stage');
-    await waitForStageImages(stage);
-    if(document.fonts?.ready)await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,2500))]);
-    const canvas=await html2canvas(stage,{
-      backgroundColor:null,
-      scale:2,
-      useCORS:true,
-      allowTaint:false,
-      logging:false,
-      imageTimeout:30000,
-      foreignObjectRendering:false
-    });
-    const blob=await new Promise((resolve,reject)=>{
-      try{canvas.toBlob(result=>result?resolve(result):reject(new Error('無法產生 PNG 圖片')),'image/png')}
-      catch(error){reject(error)}
-    });
+    const canvas=await html2canvas($('stage'),{backgroundColor:null,scale:2,useCORS:true,allowTaint:false,logging:false,imageTimeout:20000});
+    const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+    if(!blob)throw new Error('無法產生 PNG 圖片');
     screenshotBlob=blob;
     if(screenshotObjectURL)URL.revokeObjectURL(screenshotObjectURL);
     screenshotObjectURL=URL.createObjectURL(blob);
     $('screenshotPreview').src=screenshotObjectURL;
-    $('screenshotHelp').textContent=window.self!==window.top
-      ?'Wix Embed HTML：若複製或直接下載受到限制，請使用「另開圖片」，再於新分頁按右鍵選擇「另存圖片」。'
-      :'可複製圖片，或選擇位置儲存；若瀏覽器不支援檔案選擇器，請使用「另開圖片」。';
     openModal('screenshotModal');
   }catch(error){
     console.error('劇情舞台截圖失敗：',error);
-    const detail=error?.message||'未知錯誤';
-    $('screenshotHelp').textContent='截圖生成失敗：'+detail+'。請查看瀏覽器 Console 的詳細錯誤。';
-    toast('截圖失敗：'+detail.slice(0,65));
+    toast(error?.message||'截圖失敗，請稍後再試');
   }finally{
     button.disabled=!storyStarted;
     button.textContent='截圖';
   }
-}
-function openScreenshotImage(){
-  if(!screenshotBlob){toast('請先擷取劇情舞台');return}
-  if(!screenshotObjectURL)screenshotObjectURL=URL.createObjectURL(screenshotBlob);
-  const opened=window.open(screenshotObjectURL,'_blank');
-  if(!opened){
-    toast('瀏覽器封鎖了新分頁，請允許此 Wix 網站開啟彈出視窗');
-    return;
-  }
-  toast('已在新分頁開啟圖片，可使用右鍵另存圖片');
 }
 async function copyStageScreenshot(){
   if(!screenshotBlob){toast('請先擷取劇情舞台');return}
@@ -949,8 +909,7 @@ async function copyStageScreenshot(){
     toast('劇情舞台圖片已複製至剪貼簿');
   }catch(error){
     console.error('複製截圖失敗：',error);
-    const framed=window.self!==window.top;
-    toast(framed?'Wix iframe 不允許剪貼簿寫入；請使用「另開圖片」':'複製失敗，請允許剪貼簿權限或使用「另開圖片」');
+    toast(error?.name==='NotAllowedError'?'瀏覽器未授權剪貼簿存取，請允許權限後重試':'複製失敗，請改用儲存圖片');
   }
 }
 async function saveStageScreenshot(){
@@ -958,34 +917,28 @@ async function saveStageScreenshot(){
   const now=new Date();
   const stamp=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0'),'_',String(now.getHours()).padStart(2,'0'),String(now.getMinutes()).padStart(2,'0'),String(now.getSeconds()).padStart(2,'0')].join('');
   const fileName=`FrostFlower_Episode${selectedEpisode||''}_Chapter${chapter+1}_${stamp}.png`;
-  if(window.self!==window.top){
-    openScreenshotImage();
-    return;
-  }
-  if(typeof window.showSaveFilePicker==='function'){
-    try{
+  try{
+    if(typeof window.showSaveFilePicker==='function'){
       const handle=await window.showSaveFilePicker({suggestedName:fileName,types:[{description:'PNG 圖片',accept:{'image/png':['.png']}}]});
       const writable=await handle.createWritable();
       await writable.write(screenshotBlob);
       await writable.close();
-      closeModal('screenshotModal');
-      toast('劇情舞台圖片已保存');
-      return;
-    }catch(error){
-      if(error?.name==='AbortError')return;
-      console.warn('檔案選擇器不可用，改用一般下載：',error);
+    }else{
+      const url=URL.createObjectURL(screenshotBlob);
+      const link=document.createElement('a');
+      link.href=url;link.download=fileName;document.body.appendChild(link);link.click();link.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1500);
     }
+    closeModal('screenshotModal');
+    toast('劇情舞台圖片已保存');
+  }catch(error){
+    if(error?.name==='AbortError')return;
+    console.error('儲存截圖失敗：',error);
+    toast('儲存圖片失敗，請檢查瀏覽器權限或改用下載設定');
   }
-  const url=URL.createObjectURL(screenshotBlob);
-  const link=document.createElement('a');
-  link.href=url;link.download=fileName;link.style.display='none';
-  document.body.appendChild(link);link.click();link.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),3000);
-  closeModal('screenshotModal');
-  toast('劇情舞台圖片已送出下載');
 }
 $('settingsToggleBtn').onclick=toggleSettingsCollapse;$('playVoiceBtn').onclick=playCurrentNodeVoice;
-$('screenshotBtn').onclick=captureStageScreenshot;$('copyScreenshotBtn').onclick=copyStageScreenshot;$('saveScreenshotBtn').onclick=saveStageScreenshot;$('openScreenshotBtn').onclick=openScreenshotImage;$('dialogueToggleBtn').onclick=toggleDialogueVisibility;$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
+$('screenshotBtn').onclick=captureStageScreenshot;$('copyScreenshotBtn').onclick=copyStageScreenshot;$('saveScreenshotBtn').onclick=saveStageScreenshot;$('dialogueToggleBtn').onclick=toggleDialogueVisibility;$('charactersBtn').onclick=openCharacters;$('characterPrevBtn').onclick=()=>changeCharacter(-1);$('characterNextBtn').onclick=()=>changeCharacter(1);$('historyBtn').onclick=showHistory;$('skipBtn').onclick=skipChapter;$('storyGuideBtn').onclick=showStoryGuide;$('prevBtn').onclick=previous;$('nextBtn').onclick=next;$('autoBtn').onclick=toggleAuto;$('preloadBtn').onclick=preloadStoryAssets;$('volumeSlider').oninput=e=>applyMasterVolume(e.target.value);$('dialoguePanel').onclick=next;$('nextChapterBtn').onclick=()=>{closeModal('finishModal');if(chapter<STORY.script.length-1)loadChapter(chapter+1)};$('replayBtn').onclick=()=>{closeModal('finishModal');loadChapter(chapter)};document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m.id)});
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>closeModal(m.id));return}if($('charactersModal').classList.contains('open')){if(e.key==='ArrowRight')changeCharacter(1);else if(e.key==='ArrowLeft')changeCharacter(-1);return}if(document.querySelector('.modal.open'))return;if(!storyStarted)return;if(e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft')previous();else if(e.key.toLowerCase()==='a')toggleAuto();else if(e.key.toLowerCase()==='s')skipChapter()});
 async function mergeCustomImageMapFile(fileName,reset=false){
   const response=await fetch(new URL('./'+fileName,window.location.href),{cache:'no-store'});
