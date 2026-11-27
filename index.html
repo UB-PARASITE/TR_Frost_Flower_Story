@@ -419,11 +419,11 @@ async function ensureEpisodePackage(number){
   const cachedTitles=String(cached?.story?.chapter_title||'').split('@').filter(Boolean);
   if(cached?.story&&Array.isArray(cached.guide)&&cached.guide.length>=cachedTitles.length)return cached;
   const [storyResponse,guideResponse]=await Promise.all([
-    fetch(new URL(`./script_frostflower${number}.txt`,window.location.href),{cache:'no-store'}),
-    fetch(new URL(`./storyguide_frostflower${number}.txt`,window.location.href),{cache:'no-store'})
+    fetch(new URL(`./Episode ${number}/script_frostflower${number}.txt`,window.location.href),{cache:'no-store'}),
+    fetch(new URL(`./Episode ${number}/storyguide_frostflower${number}.txt`,window.location.href),{cache:'no-store'})
   ]);
-  if(!storyResponse.ok)throw new Error(`讀取 script_frostflower${number}.txt 失敗（HTTP ${storyResponse.status}）`);
-  if(!guideResponse.ok)throw new Error(`讀取 storyguide_frostflower${number}.txt 失敗（HTTP ${guideResponse.status}）`);
+  if(!storyResponse.ok)throw new Error(`讀取 Episode ${number}/script_frostflower${number}.txt 失敗（HTTP ${storyResponse.status}）`);
+  if(!guideResponse.ok)throw new Error(`讀取 Episode ${number}/storyguide_frostflower${number}.txt 失敗（HTTP ${guideResponse.status}）`);
   const parsedStory=JSON.parse((await storyResponse.text()).replace(/^\uFEFF/,'').trim());
   const parsedGuide=JSON.parse((await guideResponse.text()).replace(/^\uFEFF/,'').trim());
   const titles=String(parsedStory.chapter_title||'').split('@').filter(Boolean);
@@ -436,8 +436,8 @@ async function ensureEpisodePackage(number){
 async function ensureExtraStoryPackage(){
   const cached=EPISODE_DATA_CACHE.get(EXTRA_STORY_OPTION.id);
   if(cached?.story&&Array.isArray(cached.guide))return cached;
-  const response=await fetch(new URL('./script_frostflowerex1.txt',window.location.href),{cache:'no-store'});
-  if(!response.ok)throw new Error('讀取 script_frostflowerex1.txt 失敗（HTTP '+response.status+'）');
+  const response=await fetch(new URL('./Ex 1/script_frostflowerex1.txt',window.location.href),{cache:'no-store'});
+  if(!response.ok)throw new Error('讀取 Ex 1/script_frostflowerex1.txt 失敗（HTTP '+response.status+'）');
   const parsedStory=JSON.parse((await response.text()).replace(/^\uFEFF/,'').trim());
   const titles=String(parsedStory.chapter_title||'').split('@').filter(Boolean);
   if(parsedStory.episode!=='EX.1'||!Array.isArray(parsedStory.script)||!parsedStory.script.length||!titles.length)throw new Error('Ex. 1 劇情 TXT 格式不符合預期');
@@ -461,7 +461,7 @@ async function selectExtraStory(){
     loadedEpisodeNumber=0;
   }catch(error){
     console.error('Ex. 1 載入失敗：',error);
-    toast('Ex. 1 載入失敗，請確認 script_frostflowerex1.txt');
+    toast('Ex. 1 載入失敗，請確認 Ex 1/script_frostflowerex1.txt');
     $('selectionHint').textContent='Ex. 1 載入失敗：'+error.message;
     return;
   }finally{
@@ -975,9 +975,9 @@ async function bootstrapRepository(){
 
   // Load the story independently of the optional asset index.
   try{
-    const storyUrl=new URL('./script_frostflower1.txt',window.location.href);
+    const storyUrl=new URL('./Episode 1/script_frostflower1.txt',window.location.href);
     const storyResponse=await fetch(storyUrl.href,{cache:'no-store'});
-    if(!storyResponse.ok)throw new Error(`讀取 script_frostflower1.txt 失敗（HTTP ${storyResponse.status}）`);
+    if(!storyResponse.ok)throw new Error(`讀取 Episode 1/script_frostflower1.txt 失敗（HTTP ${storyResponse.status}）`);
     const storyText=(await storyResponse.text()).replace(/^\uFEFF/,'').trim();
     const parsed=JSON.parse(storyText);
     if(!Array.isArray(parsed.script)||!parsed.chapter_title)throw new Error('TXT 格式不符合預期');
@@ -992,19 +992,19 @@ async function bootstrapRepository(){
     $('selectionHint').innerHTML='請從左側選擇章節。<br>建議先在右上角進行「預載入素材」。';
   }catch(e){
     console.error('Story TXT 載入失敗：',e);
-    $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。<br>請確認 script_frostflower1.txt 位於 Repository 根目錄。`;
+    $('selectionHint').textContent=`劇情資料載入失敗：${e.message}。<br>請確認 Episode 1/script_frostflower1.txt 存在。`;
     return;
   }
 
   // Load Episode 1 chapter summaries separately so a missing guide never blocks story playback or image loading.
   (async()=>{
     try{
-      const guideUrl=new URL('./storyguide_frostflower1.txt',window.location.href);
+      const guideUrl=new URL('./Episode 1/storyguide_frostflower1.txt',window.location.href);
       const guideResponse=await fetch(guideUrl.href);
-      if(!guideResponse.ok)throw new Error('讀取 storyguide_frostflower1.txt 失敗（HTTP '+guideResponse.status+'）');
+      if(!guideResponse.ok)throw new Error('讀取 Episode 1/storyguide_frostflower1.txt 失敗（HTTP '+guideResponse.status+'）');
       const guideText=(await guideResponse.text()).replace(/^\uFEFF/,'').trim();
       const parsedGuide=JSON.parse(guideText);
-      if(!Array.isArray(parsedGuide.guide))throw new Error('storyguide_frostflower1.txt 缺少 guide 陣列');
+      if(!Array.isArray(parsedGuide.guide))throw new Error('Episode 1/storyguide_frostflower1.txt 缺少 guide 陣列');
       const cachedEpisode1=EPISODE_DATA_CACHE.get(1)||{story:STORY,guide:[]};
       cachedEpisode1.guide=parsedGuide.guide;
       EPISODE_DATA_CACHE.set(1,cachedEpisode1);
@@ -1025,7 +1025,7 @@ async function bootstrapRepository(){
     const mainMapCount=await mergeCustomImageMapFile('customimage.txt',true);
     let supplementalMapCount=0;
     try{
-      supplementalMapCount=await mergeCustomImageMapFile('customimage2.txt');
+      supplementalMapCount=await mergeCustomImageMapFile('Ex 1/customimage2.txt');
     }catch(extraMapError){
       console.warn('customimage2.txt 載入失敗，Ex. 1 圖片可能無法顯示：',extraMapError);
     }
@@ -1047,7 +1047,7 @@ async function bootstrapRepository(){
       const allowed=/\.(png|jpe?g|webp|gif|ogg|wav|mp3|m4a|mp4)$/i;
       files=tree.tree.filter(x=>x.type==='blob'&&allowed.test(x.path))
         .map(x=>({name:x.path,url:RAW_ASSET_BASE+x.path.split('/').map(encodeURIComponent).join('/')}));
-      try{await mergeCustomImageMapFile('customimage2.txt')}catch(extraMapError){console.warn('customimage2.txt 載入失敗：',extraMapError)}
+      try{await mergeCustomImageMapFile('Ex 1/customimage2.txt')}catch(extraMapError){console.warn('customimage2.txt 載入失敗：',extraMapError)}
       $('assetNote').textContent='customimage.txt 無法使用；已改用 GitHub 素材索引（'+files.length+' 個檔案），並嘗試載入 customimage2.txt。';
       markAssetIndexReady();
       $('preloadBtn').disabled=false;
